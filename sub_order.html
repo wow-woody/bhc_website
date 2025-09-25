@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/Paperlogy.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/style_bhc.css">
+    <link rel="stylesheet" href="./css/sub_order.css">
+</head>
+
+<body>
+    <!-- <header>
+        <div class="wide_inner">
+            <h1 class="logo"><a href="#void"><img src="./images/bhc_Logo.svg" alt="logo"></a></h1>
+            <nav>
+                <ul class="main_menu">
+                    <li>
+                        <a class="main_menu_title" href="#void">메뉴</a>
+                        <ul class="sub_menu">
+                            <li><a href="#void">후라이드</a></li>
+                            <li><a href="#void">양념</a></li>
+                            <li><a href="#void">뿌링클</a></li>
+                            <li><a href="#void">킹시리즈</a></li>
+                            <li><a href="#void">핫시리즈</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="main_menu_title" href="#void">주문하기</a>
+                        <ul class="sub_menu">
+                            <li><a href="#void">온라인 주문</a></li>
+                            <li><a href="#void">E-쿠폰</a></li>
+                            <li><a href="#void">APP</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="main_menu_title" href="#void">매장</a>
+                    </li>
+                    <li>
+                        <a class="main_menu_title" href="#void">bhc소식</a>
+                        <ul class="sub_menu">
+                            <li><a href="#void">YOUTUBE</a></li>
+                            <li><a href="#void">SNS</a></li>
+                            <li><a href="#void">NEWS</a></li>
+                            <li><a href="#void">공지사항</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="main_menu_title" href="#void">BRAND</a>
+                        <ul class="sub_menu">
+                            <li><a href="#void">bhc소개</a></li>
+                            <li><a href="#void">차별화 전략</a></li>
+                            <li><a href="#void">연혁</a></li>
+                            <li><a href="#void">오시는 길</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="main_menu_title" href="#void">bhc Mall</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="search_box">
+                <input type="text" value="메뉴를 입력하세요">
+                <img src="./images/search_icon.svg" alt="search_icon">
+            </div>
+            <ul class="gnb">
+                <li class="search">
+                    <a class="search_icon" href="#void"><img src="./images/search_icon.svg" alt="search_icon"></a>
+                    <div class="search_x"><input type="text" value="메뉴를 입력하세요">
+                        <img src="./images/search_x.svg" alt="search_x">
+                    </div>
+                </li>
+                <li class="menu_icon"><a href="#void"><img src="./images/menu_icon.svg" alt="menu_icon"></a></li>
+            </ul>
+        </div>
+    </header> -->
+
+    <main>
+        <section class="order_wrap">
+            <div class="inner">
+                <div class="order_left">
+                    <h2>콰삭톡 콤보</h2>
+                    <p><img src="./images/Menu_img-1_410x271.jpg" alt="콰삭톡 치킨"></p>
+                </div>
+                <div class="order_right">
+                    <div class="order_list">
+                        <h3>시즈닝 추가</h3>
+                        <div class="order_box">
+                            <div class="add_seas">
+                                <label><input type="checkbox"><span class="bhc_checkbox"></span>트리플 페퍼톡 (+800원)</label>
+                                <label><input type="checkbox"><span class="bhc_checkbox"></span>버터 비스킷톡 (+800원)</label>
+                                <label><input type="checkbox"><span class="bhc_checkbox"></span>스윗 칠리톡 (+800원)</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="order_list">
+                        <h3>수량</h3>
+                        <div class="order_box count">
+                            <button>-</button>
+                            <span>1</span>
+                            <button>+</button>
+                        </div>
+                    </div>
+                    <div class="order_list">
+                        <h3>반마리 추가</h3>
+                        <div class="order_box">
+                            <div class="add">
+                                <div class="img"><img src="./images/order_page/half_FC.png" alt="후라이드 반마리(뼈)"></div>
+                                <div class="menu">
+                                    <p>후라이드 반마리(뼈)<br><span>12,000원</span></p>
+                                </div>
+                                <div>
+                                    <button>-</button>
+                                    <span>0</span>
+                                    <button>+</button>
+                                </div>
+                            </div>
+                            <div class="add">
+                                <div class="img"><img src="./images/order_page/half_HFC.png" alt="핫후라이드 반마리(뼈)"></div>
+                                <div class="menu">
+                                    <p>핫후라이드 반마리(뼈)<br><span>12,500원</span></p>
+                                </div>
+                                <div>
+                                    <button>-</button>
+                                    <span>0</span>
+                                    <button>+</button>
+                                </div>
+                            </div>
+                            <div class="add">
+                                <div class="img"><img src="./images/order_page/half_MC.png" alt="맛초킹 반마리"></div>
+                                <div class="menu">
+                                    <p>맛초킹 반마리<br><span>12,500원</span></p>
+                                </div>
+                                <div>
+                                    <button>-</button>
+                                    <span>0</span>
+                                    <button>+</button>
+                                </div>
+                            </div>
+                            <div class="add">
+                                <div class="img"><img src="./images/order_page/half_FSK.png" alt="콰삭킹 순살 하프"></div>
+                                <div class="menu">
+                                    <p>콰삭킹 순살 하프<br><span>13,500원</span></p>
+                                </div>
+                                <div>
+                                    <button>-</button>
+                                    <span>0</span>
+                                    <button>+</button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="order_list">
+                        <h3>사이드 추가</h3>
+                        <div class="order_box">
+                            <div class="add">
+                                <div class="img"><img src="./images/order_page/side_Mu.png" alt="치킨무"></div>
+                                <div class="menu">
+                                    <p>치킨무<br><span>1,000원</span></p>
+                                </div>
+                                <div>
+                                    <button>-</button>
+                                    <span>0</span>
+                                    <button>+</button>
+                                </div>
+                            </div>
+                            <div class="add">
+                                <div class="img"><img src="./images/order_page/side_Nachos.png" alt="뿌링클나쵸"></div>
+                                <div class="menu">
+                                    <p>뿌링클나쵸<br><span>2,000원</span></p>
+                                </div>
+                                <div>
+                                    <button>-</button>
+                                    <span>0</span>
+                                    <button>+</button>
+                                </div>
+                            </div>
+                            <div class="add">
+                                <div class="img"><img src="./images/order_page/side_Brice.png" alt="뿌링클라이스"></div>
+                                <div class="menu">
+                                    <p>뿌링클라이스<br><span>4,000원</span></p>
+                                </div>
+                                <div>
+                                    <button>-</button>
+                                    <span>0</span>
+                                    <button>+</button>
+                                </div>
+                            </div>
+                            <div class="add">
+                                <div class="img"><img src="./images/order_page/side_MCrice.png" alt="맛초킹라이스"></div>
+                                <div class="menu">
+                                    <p>맛초킹라이스<br><span>4,000원</span></p>
+                                </div>
+                                <div>
+                                    <button>-</button>
+                                    <span>0</span>
+                                    <button>+</button>
+                                </div>
+                            </div>
+                            <div class="add">
+                                <div class="img"><img src="./images/order_page/side_taco.png" alt="맛초타코야끼"></div>
+                                <div class="menu">
+                                    <p>맛초타코야끼<br><span>5,000원</span></p>
+                                </div>
+                                <div>
+                                    <button>-</button>
+                                    <span>0</span>
+                                    <button>+</button>
+                                </div>
+                            </div>
+                            <div class="add">
+                                <div class="img"><img src="./images/order_page/side_BBchee.png" alt="뿌링치즈볼"></div>
+                                <div class="menu">
+                                    <p>뿌링치즈볼<br><span>6,500원</span></p>
+                                </div>
+                                <div>
+                                    <button>-</button>
+                                    <span>0</span>
+                                    <button>+</button>
+                                </div>
+                            </div>
+                            <div class="add">
+                                <div class="img"><img src="./images/order_page/side_SWchee.png" alt="달콤바식치즈볼"></div>
+                                <div class="menu">
+                                    <p>달콤바식치즈볼<br><span>5,500원</span></p>
+                                </div>
+                                <div>
+                                    <button>-</button>
+                                    <span>0</span>
+                                    <button>+</button>
+                                </div>
+                            </div>
+                            <div class="add">
+                                <div class="img"><img src="./images/order_page/side_tteok.png" alt="분모자로제떡볶이"></div>
+                                <div class="menu">
+                                    <p>분모자로제떡볶이<br><span>6,000원</span></p>
+                                </div>
+                                <div>
+                                    <button>-</button>
+                                    <span>0</span>
+                                    <button>+</button>
+                                </div>
+                            </div>
+                            <div class="add">
+                                <div class="img"><img src="./images/order_page/side_churo.png" alt="치로스"></div>
+                                <div class="menu">
+                                    <p>치로스<br><span>6,000원</span></p>
+                                </div>
+                                <div>
+                                    <button>-</button>
+                                    <span>0</span>
+                                    <button>+</button>
+                                </div>
+                            </div>
+                            <div class="add">
+                                <div class="img"><img src="./images/order_page/side_BBpo.png" alt="뿌링감자"></div>
+                                <div class="menu">
+                                    <p>뿌링감자<br><span>5,000원</span></p>
+                                </div>
+                                <div>
+                                    <button>-</button>
+                                    <span>0</span>
+                                    <button>+</button>
+                                </div>
+                            </div>
+                            <div class="add">
+                                <div class="img"><img src="./images/order_page/side_sotteok.png" alt="빨간소떡"></div>
+                                <div class="menu">
+                                    <p>빨간소떡<br><span>3,500원</span></p>
+                                </div>
+                                <div>
+                                    <button>-</button>
+                                    <span>0</span>
+                                    <button>+</button>
+                                </div>
+                            </div>
+                            <div class="add">
+                                <div class="img"><img src="./images/order_page/side_BBsotteok.png" alt="뿌링소떡"></div>
+                                <div class="menu">
+                                    <p>뿌링소떡<br><span>4,500원</span></p>
+                                </div>
+                                <div>
+                                    <button>-</button>
+                                    <span>0</span>
+                                    <button>+</button>
+                                </div>
+                            </div>
+                            <div class="add">
+                                <div class="img"><img src="./images/order_page/side_BBcondog.png" alt="뿌링핫도그"></div>
+                                <div class="menu">
+                                    <p>뿌링핫도그<br><span>6,000원</span></p>
+                                </div>
+                                <div>
+                                    <button>-</button>
+                                    <span>0</span>
+                                    <button>+</button>
+                                </div>
+                            </div>
+                            <div class="add">
+                                <div class="img"><img src="./images/order_page/side_wedge.png" alt="웨지감자"></div>
+                                <div class="menu">
+                                    <p>웨지감자<br><span>6,000원</span></p>
+                                </div>
+                                <div>
+                                    <button>-</button>
+                                    <span>0</span>
+                                    <button>+</button>
+                                </div>
+                            </div>
+                            <div class="add">
+                                <div class="img"><img src="./images/order_page/side_sticks.png" alt="뿌링치즈스틱"></div>
+                                <div class="menu">
+                                    <p>뿌링치즈스틱<br><span>5,000원</span></p>
+                                </div>
+                                <div>
+                                    <button>-</button>
+                                    <span>0</span>
+                                    <button>+</button>
+                                </div>
+                            </div>
+                            <div class="add">
+                                <div class="img"><img src="./images/order_page/side_BBjinmi.png" alt="뿌링진미채튀김"></div>
+                                <div class="menu">
+                                    <p>뿌링진미채튀김<br><span>6,000원</span></p>
+                                </div>
+                                <div>
+                                    <button>-</button>
+                                    <span>0</span>
+                                    <button>+</button>
+                                </div>
+                            </div>
+                            <div class="add">
+                                <div class="img"><img src="./images/order_page/side_cajun.png" alt="케이준프라이"></div>
+                                <div class="menu">
+                                    <p>케이준프라이<br><span>4,000원</span></p>
+                                </div>
+                                <div>
+                                    <button>-</button>
+                                    <span>0</span>
+                                    <button>+</button>
+                                </div>
+                            </div>
+                            <div class="add">
+                                <div class="img"><img src="./images/order_page/side_Cstick.png" alt="치킨스넥"></div>
+                                <div class="menu">
+                                    <p>치킨스넥<br><span>11,000원</span></p>
+                                </div>
+                                <div>
+                                    <button>-</button>
+                                    <span>0</span>
+                                    <button>+</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="order_list">
+                        <h3>음료 & 소스</h3>
+                        <div class="order_box">
+                            <div class="add">
+                                <div class="img"><img src="./images/order_page/s_haba.png" alt="스윗하바네로소스"></div>
+                                <div class="menu">
+                                    <p>스윗하바네로소스<br><span>1,500원</span></p>
+                                </div>
+                                <div>
+                                    <button>-</button>
+                                    <span>0</span>
+                                    <button>+</button>
+                                </div>
+                            </div>
+                            <div class="add">
+                                <div class="img"><img src="./images/order_page/s_BB.png" alt="뿌링뿌링소스"></div>
+                                <div class="menu">
+                                    <p>뿌링뿌링소스<br><span>2,500원</span></p>
+                                </div>
+                                <div>
+                                    <button>-</button>
+                                    <span>0</span>
+                                    <button>+</button>
+                                </div>
+                            </div>
+                            <div class="add">
+                                <div class="img"><img src="./images/order_page/s_map.png" alt="맵소사소스"></div>
+                                <div class="menu">
+                                    <p>맵소사소스<br><span>2,500원</span></p>
+                                </div>
+                                <div>
+                                    <button>-</button>
+                                    <span>0</span>
+                                    <button>+</button>
+                                </div>
+                            </div>
+                            <div class="add">
+                                <div class="img"><img src="./images/order_page/s_yang.png" alt="양념소스"></div>
+                                <div class="menu">
+                                    <p>양념소스<br><span>500원</span></p>
+                                </div>
+                                <div>
+                                    <button>-</button>
+                                    <span>0</span>
+                                    <button>+</button>
+                                </div>
+                            </div>
+                            <div class="add">
+                                <div class="img"><img src="./images/order_page/s_mus.png" alt="머스타드소스"></div>
+                                <div class="menu">
+                                    <p>머스타드소스<br><span>500원</span></p>
+                                </div>
+                                <div>
+                                    <button>-</button>
+                                    <span>0</span>
+                                    <button>+</button>
+                                </div>
+                            </div>
+                            <div class="add">
+                                <div class="img"><img src="./images/order_page/d_c.png" alt="콜라 1.25L"></div>
+                                <div class="menu">
+                                    <p>콜라 1.25L<br><span>2,500원</span></p>
+                                </div>
+                                <div>
+                                    <button>-</button>
+                                    <span>0</span>
+                                    <button>+</button>
+                                </div>
+                            </div>
+                            <div class="add">
+                                <div class="img"><img src="./images/order_page/d_sp.png" alt="사이다 1.25L"></div>
+                                <div class="menu">
+                                    <p>사이다 1.25L<br><span>2,500원</span></p>
+                                </div>
+                                <div>
+                                    <button>-</button>
+                                    <span>0</span>
+                                    <button>+</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="order_bottom">
+                <div class="total_order">
+                    <div>
+                        <p>치킨<br><span>콰삭톡</span></p>
+                    </div>
+                    <div>
+                        <p>사이드</p>
+                    </div>
+                    <div>
+                        <p>음료&소스</p>
+                    </div>
+                    <div class="total">
+                        <p>총<span>23000</span>원<br>결제하기</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- <footer>
+        <div class="footer_top">
+            <div class="wide_inner">
+                <div class="footer_top_left">
+                    <ul class="info">
+                        <li><a href="#void">이용약관</a></li>
+                        <li><a href="#void">개인정보 처리방침</a></li>
+                        <li><a href="#void">위치기반서비스 이용약관</a></li>
+                        <li><a href="#void">영상정보처리기기 운영방침</a></li>
+                        <li><a href="#void">이메일무단수집거부</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer_top_right">
+                    <ul class="sns_list">
+                        <li><a href="#"><img src="./images/insta_icon.svg" alt="insta_icon"></a></li>
+                        <li><a href="#"><img src="./images/youtube_icon.svg" alt="youtube_icon"></a></li>
+                        <li><a href="#"><img src="./images/face_icon.svg" alt="face_icon"></a></li>
+                    </ul>
+
+                    <div class="site_map_wrap">
+                        <a class="site_map" href="#void">패밀리 사이트<img src="./images/arrow_icon.svg" alt="arrow_icon"></a>
+                        <ul class="site_list">
+                            <li><a href="#void">패밀리 사이트</a></li>
+                            <li><a href="#void">다이닝브랜즈그룹</a></li>
+                            <li><a href="#void">BHC MALL</a></li>
+                            <li><a href="#void">OUTBACK</a></li>
+                            <li><a href="#void">창고43</a></li>
+                            <li><a href="#void">큰맘할매순대국</a></li>
+                            <li><a href="#void">그램그램</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer_bottom">
+            <div class="wide_inner">
+                <div class="footer_bottom_left">
+                    <p class="footer_logo"><img src="./images/bhc_footer_logo.svg" alt="footer_logo"></p>
+                    <address>
+                        <p>
+                            <span>대표 : 송호섭</span>
+                            <span>주소 : 서울시 송파구 올림픽로 300, 19층 (신천동)</span>
+                        </p>
+                        <p>
+                            <span>다이닝브랜즈그룹 주식회사</span>
+                            <span>사업자등록번호 : 215_86_61559</span>
+                            <span>통신판매업 : 제2014_서울송파_0593호</span>
+                        </p>
+                        <p>
+                            <span>문의전화 : 02_6204_3406</span>
+                            <span> FAX : 02_6988_2199</span>
+                        </p>
+                    </address>
+                    <p class="copy">Copyright © 2024. 다이닝브랜즈그룹 주식회사. All Rights reserved.</p>
+                </div>
+                <div class="footer_bottom_right">
+                    <ul class="footer_menu">
+                        <li><a href="#void">메뉴</a></li>
+                        <li><a href="#void">주문하기</a></li>
+                        <li><a href="#void">매장</a></li>
+                        <li><a href="#void">bhc소식</a></li>
+                        <li><a href="#void">BRAND</a></li>
+                        <li><a href="#void">bhc Mall</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer> -->
+</body>
+
+</html>

@@ -5,6 +5,11 @@
         gap: 53px;
         aspect-ratio: 1/1;
 
+        button {
+            all: unset;
+            cursor: pointer;
+        }
+
         .order_left {
             h2 {
                 font-size: 40px;
@@ -32,6 +37,7 @@
 
             h3 {
                 font-size: 24px;
+                margin: 50px 0 15px;
             }
 
             .order_list {
@@ -40,12 +46,53 @@
                     border: 2px solid #d9d9d9;
                     border-radius: 20px;
                     width: 600px;
-                    padding: 20px 30px;
+                    padding: 32px 40px;
                 }
 
-                .add_seas{
+                .add_seas {
                     display: flex;
                     flex-direction: column;
+                    gap: 20px;
+
+                    label {
+                        position: relative;
+                        cursor: pointer;
+                        padding-left: 30px;
+
+                        input[type="checkbox"] {
+                            position: absolute;
+                            opacity: 0;
+
+                            &:checked+.bhc_checkbox {
+                                background-color: var(--subColor);
+                                border-color: var(--subColor);
+
+                                &::after {
+                                    content: "";
+                                    position: absolute;
+                                    left: 6px;
+                                    top: 2px;
+                                    width: 5px;
+                                    height: 10px;
+                                    border: solid var(--mainColor);
+                                    border-width: 0 2px 2px 0;
+                                    transform: rotate(45deg);
+                                }
+                            }
+                        }
+
+                        .bhc_checkbox {
+                            position: absolute;
+                            top: 50%;
+                            left: 0;
+                            transform: translateY(-50%);
+                            height: 20px;
+                            width: 20px;
+                            background-color: #D9D9D9;
+                            border: 1.5px solid #ccc;
+                            border-radius: 4px;
+                        }
+                    }
                 }
 
                 .add {

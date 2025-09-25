@@ -1,0 +1,48 @@
+/* 공통사항 */
+/* 모든 여백 제거 */
+/* 테두리와 여백이 포함된 크기가 width, height 안에 포함되도록. - box-sizing : border-box; */
+
+/* body */
+/* body {
+    font-family: Paperozi,"돋움", sans-serif;
+    font-size: 10px;
+    color: #111;
+} */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+}
+
+/* li 장식 제거 */
+li {
+    list-style: none;
+}
+
+/* a 밑줄 제거 & 글자색 */
+a {
+    text-decoration: none;
+    /* color: #222; */
+    color: inherit;
+    /* inherit
+       부모의 속성을 상속 받아서 사용하겠다는 명령어. */
+}
+
+/* img, video 위아래 정렬 */
+img,
+video {
+    vertical-align: middle;
+}
+
+/* em, i, address 기울기 변경 */
+em,
+i,
+address {
+    font-style: normal;
+}
+
+.blind {
+    position: absolute;
+    top: -99999px;
+}

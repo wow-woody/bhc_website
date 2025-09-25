@@ -1,0 +1,107 @@
+main {
+    /* background-color: rgba(255, 255, 0, 0.2); */
+
+    .youtube_wrap {
+        background-color: var(--pointColor);
+        height: 1000px;
+        padding: 100px 0 70px;
+        position: relative;
+        overflow: hidden;
+
+        .inner {
+            .section_title {
+                color: #fff;
+            }
+
+            .bg_text {
+                position: absolute;
+            }
+
+            .bg_text_01 {
+                left: 10rem;
+                top: 40%;
+                transform: translateY(-50%);
+            }
+
+            .bg_text_02 {
+                left: 0;
+                top: 55%;
+                /* transform: translateY(-50%); */
+            }
+
+            .video_wrap {
+                width: 1000px;
+                border-radius: 30px;
+                position: relative;
+                z-index: 100;
+                margin: 0 auto;
+
+                .youtube_img {
+                    position: absolute;
+                    z-index: 9999;
+                }
+
+                .youtube_img01 {
+                    height: 30rem;
+                    bottom: -130px;
+                    right: -290px;
+
+                    img {
+                        height: 100%;
+                    }
+                }
+
+                .youtube_img02 {
+                    height: 12rem;
+                    top: -120px;
+
+                    img {
+                        height: 100%;
+                    }
+                }
+
+                video {
+                    border-radius: 30px;
+                    width: 100%;
+                }
+            }
+
+            .link_btn {
+                display: flex;
+                justify-content: center;
+                margin-top: 5rem;
+
+                .btn_text {
+                    a {
+                        display: flex;
+                        width: 26rem;
+                        height: 6rem;
+                        background: #fff;
+                        border: 2px solid #fff;
+                        border-radius: 5rem;
+                        justify-content: space-between;
+                        align-items: center;
+                        padding: 0 5rem;
+                        font-size: 2rem;
+                        font-weight: 900;
+                        color: var(--pointColor);
+                        background-image: url(../images/arrow_or.svg);
+                        background-repeat: no-repeat;
+                        background-position: right 4rem center;
+                        transition: 0.2s;
+                    }
+
+                    &:hover {
+                        a {
+                            background: var(--pointColor);
+                            color: #fff;
+                            background-image: url(../images/arrow_w.svg);
+                            background-repeat: no-repeat;
+                            background-position: right 4rem center;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

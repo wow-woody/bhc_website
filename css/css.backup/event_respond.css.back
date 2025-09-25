@@ -1,0 +1,50 @@
+@media screen and (max-width:1024px) {
+
+    .main-menu,
+    .m-hide {
+        display: none !important;
+    }
+
+    .header-right .search-menu .ham-btn,
+    .m-hide {
+        display: none !important;
+    }
+
+    .footer-top .link-menu,
+    .m-hide {
+        display: none !important;
+    }
+
+    .footer-top .footer-right .family-menu,
+    .m-hide {
+        display: none !important;
+    }
+
+    .footer-top .inner {
+        justify-content: flex-end;
+    }
+
+    .search-menu {
+        width: 100%;
+        justify-content: center;
+    }
+
+    /* .wide-inner .event-menu {
+        display: flex;
+        position: relative;
+        gap: 60px;
+        /* left:350px; */
+        /* width:1425px;
+        margin:0 auto; 
+        overflow:hidden*/
+       
+    } 
+
+    .arrow {
+        background-color: red;
+        justify-content: center;
+        width:100%;
+    }
+
+
+

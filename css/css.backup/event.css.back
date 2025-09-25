@@ -1,0 +1,157 @@
+:root {
+    --mainColor: #ffcc00;
+    --subColor: #321F00;
+    --pointColor:#ff6601;
+}
+
+
+html {
+    font-size: 10px;
+    font-family: "Paperlogy", "돋움", sans-serif;
+}
+
+body{
+    font-size:1.6rem;
+    color:#222;
+}
+
+.container {
+    margin: 0 auto;
+}
+
+.event_wrap .inner {
+    /* max-width: 1680; */
+    /* margin-top: 70px; */
+    /* background-color: red; */
+    padding: 100px;
+}
+
+.section_title {
+    text-align: center;
+    width: 100%;
+    font-size: 6rem;
+    font-weight: 900;
+}
+
+.section_title>span{
+    color:var(--mainColor);
+}
+
+.event_list {
+    /* background-color: blue; */
+    margin: 0 auto;
+    width: 1430px;
+    position: relative;
+    overflow: hidden;
+}
+
+
+
+.inner .event_img {
+    /* background-color: blue; */
+    display: flex;
+    position: relative;
+    gap: 60px;
+    transition: transform 0.5s;
+}
+
+.event_img img {
+    border-radius: 20px 0 0 20px; 
+    overflow: hidden;
+}
+
+
+
+.event_arrow {
+    display: flex;
+    justify-content: flex-end;
+    /* background-color: rgb(107, 92, 92); */
+}
+
+.event_arrow .right_arr {
+    /* border: 1px solid black; */
+}
+
+.event_list .m_btn {
+    display:none;
+}
+
+
+
+
+@media screen and (max-width: 1024px) {
+    .section_title{
+        margin-bottom: 50px;
+    }
+    .event_arrow {
+        display:none;
+    }
+
+    .inner .event_list {
+        width: 100%;
+        padding: 0 20px;
+    }
+    
+    .inner .event_img {
+        gap: 20px;
+    }
+
+    .event_img>* {
+        flex: 0 0 calc((100% - 20px) / 2);
+
+        img {
+            width: 100%;
+        }
+    }
+
+        .event_list .m_btn {
+        display: block; /* 1280px 이하에서만 보이게 설정 */
+        margin-top: 30px;
+        text-align: center;
+        /* position:absolute; */
+    }
+
+    .event_list .m_btn a {
+    width: 170px;
+    height: 50px; /* 추가: 요소 높이 지정 */
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--mainColor);
+    color: #fff;
+    font-weight: bold;
+    padding: 0 20px 0 30px; /* 세로 패딩 제거, 수평 정렬 중심 */
+    border-radius: 500px;
+    border: 1px solid var(--mainColor);
+    transition: 0.3s;
+    background-image: url(../image/arrow_mbtn_w.svg);
+    background-repeat: no-repeat;
+    background-position: right 20px center;
+    box-sizing: border-box;
+}
+
+.event_list .m_btn a:hover {
+    background-image: url(../image/arrow_mbtn_or.svg);
+    background-color: #fff;
+    color: var(--mainColor);
+    border-radius: 30px;
+    border: 1px solid var(--sub-color);
+    opacity: 1;
+}
+}
+
+
+@media (max-width: 780px) {
+    .event_arrow {
+        justify-content: center;
+    }
+
+    .event_list {
+        width: 100%;
+        padding: 0 20px;
+    }
+
+    .event_img>* {
+        flex: 0 0 calc((100%)/1);
+    }
+}

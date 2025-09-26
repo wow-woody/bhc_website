@@ -7,13 +7,15 @@ const leftBtn = document.querySelector(".left_arr");
 const images = document.querySelector(".event_img");
 
 function updateImageWidth() {
-  if (window.matchMedia("(max-width: 780px)").matches) {
-    image_width = 385;
-  } else if (window.matchMedia("(max-width: 1024px)").matches) {
-    image_width = 494;
-  } else {
-    image_width = 496;
-  }
+const width = window.innerWidth;
+
+if (width <= 780) {
+  image_width = 385;
+} else if (width <= 1024) {
+  image_width = 494;
+} else {
+  image_width = 496;
+}
 }
 
 

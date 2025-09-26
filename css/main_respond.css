@@ -289,12 +289,12 @@
     }
 
     .event_list {
-        width: 100%;
+        width: 80%;
         padding: 0 20px;
     }
 
     .event_img>* {
-        flex: 0 0 calc((100%)/1);
+        flex: 0 0 calc((50%)/1);
     }
 }
 

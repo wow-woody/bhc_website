@@ -1,11 +1,23 @@
 let PosNum = 0; 
 let positionValue = 0; 
-const image_width = 496;
+let image_width = 496;
 
 const rightBtn = document.querySelector(".right_arr");
 const leftBtn = document.querySelector(".left_arr");
 const images = document.querySelector(".event_img");
 
+function updateImageWidth() {
+  if (window.matchMedia("(max-width: 780px)").matches) {
+    image_width = 385;
+  } else if (window.matchMedia("(max-width: 1024px)").matches) {
+    image_width = 494;
+  } else {
+    image_width = 496;
+  }
+}
+
+
+// 버튼 표시 상태 함수
 function hideBtn() {
   if (PosNum === 0) {
     rightBtn.style.display = "none";
@@ -38,7 +50,23 @@ function left() {
   }
 }
 
+function resetPosition() {
+  PosNum = 0;
+  positionValue = 0;
+  images.style.transform = `translateX(0px)`;
+  hideBtn();
+}
+
 function eventRolling() {
+  // 초기 width 설정
+  updateImageWidth();
+
+  // 화면 크기 변경시 image_width 값 업데이트 및 위치 초기화
+  window.addEventListener('resize', () => {
+    updateImageWidth();
+    resetPosition();
+  });
+
   rightBtn.addEventListener("click", (e) => {
     e.preventDefault();
     left();
@@ -51,12 +79,10 @@ function eventRolling() {
 
   hideBtn();
 
- 
   let startX = 0;
   let endX = 0;
   let isDragging = false;
 
-  // 모바일 터치 이벤트
   images.addEventListener("touchstart", (e) => {
     startX = e.touches[0].clientX;
   });
@@ -66,7 +92,6 @@ function eventRolling() {
     handleSwipe();
   });
 
-  // PC 마우스 이벤트
   images.addEventListener("mousedown", (e) => {
     isDragging = true;
     startX = e.clientX;
@@ -79,7 +104,6 @@ function eventRolling() {
     handleSwipe();
   });
 
-  // 마우스 밖에서 뗄 때도 처리
   images.addEventListener("mouseleave", (e) => {
     if (isDragging) {
       endX = e.clientX;
@@ -94,9 +118,9 @@ function eventRolling() {
 
     if (Math.abs(swipeDistance) > threshold) {
       if (swipeDistance < 0) {
-        right(); // 왼쪽으로 스와이프 → 다음
+        right();
       } else {
-        left(); // 오른쪽으로 스와이프 → 이전
+        left();
       }
     }
   }

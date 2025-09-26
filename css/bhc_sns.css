@@ -1,0 +1,426 @@
+* {
+    /* background-color: bisque; */
+}
+
+.inner {
+    background-color: rgba(0, 255, 255, 0.25);
+}
+
+.section_title {
+    color: var(--subColor);
+
+    >span {
+        color: var(--mainColor);
+    }
+}
+
+/* 슬라이드 배너 */
+.sub_slider_wrap {
+    background: var(--pointColor);
+    padding: 10rem 0;
+}
+
+.slider_wrap {
+    background-color: aliceblue;
+    padding: 2rem 0;
+}
+
+.sub_slider {
+    text-align: center;
+    position: relative;
+
+}
+
+.sub_slider a span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.sub_slider a video {
+    border-radius: 15rem 3rem 15rem 3rem;
+}
+
+.sub_slider_wrap .sub_slider_bottom>.section_title {
+    color: #fff;
+    padding-top: 3rem;
+    /* line-height: 10; */
+}
+
+.swiper-pagination-bullet {
+    gap: 2rem;
+    height: 1.5rem;
+    width: 1.5rem;
+    background: #eee;
+    border-radius: 10px;
+    transition: 0.6s;
+}
+
+.swiper-pagination-bullet-active {
+    width: 6rem;
+    background: var(--mainColor);
+}
+
+/* 탭버튼 */
+.sub_tab_btn_wrap {
+    padding: 8rem 0;
+
+    .tab_btn_list {
+        display: flex;
+        gap: 4rem;
+        justify-content: space-between;
+
+        .tab_btn {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 5rem;
+            padding: 0 5rem;
+            background: var(--subColor);
+            color: var(--mainColor);
+            border-radius: 4rem;
+            position: relative;
+
+            a {
+                font-size: 1.6rem;
+                font-weight: 700;
+            }
+
+            &::after {
+                content: "";
+                display: none;
+                position: absolute;
+                width: 4.7rem;
+                height: 5rem;
+                background-color: aqua;
+                background: url(../images/bhc_tab_btn.png) no-repeat center;
+                top: -5rem;
+                right: 0;
+            }
+
+            &:hover {
+                background: var(--mainColor);
+                color: var(--subColor);
+
+                &::after {
+                    display: block;
+                }
+            }
+        }
+
+        .active {
+            background: var(--mainColor);
+            color: var(--subColor);
+
+            &::after {
+                display: block;
+            }
+        }
+
+
+    }
+}
+
+/* 서브 인스타 */
+.sub_insta_wrap {
+    .sub_insta_top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .section_title {
+            color: var(--subColor);
+        }
+
+        .bhc_btn {
+            a {
+                display: flex;
+                width: 26rem;
+                height: 6rem;
+                background: #fff;
+                border: 2px solid #fff;
+                border-radius: 5rem;
+                justify-content: space-between;
+                align-items: center;
+                padding: 0 5rem;
+                font-size: 2rem;
+                font-weight: 900;
+                color: var(--subColor);
+                background-image: url(../images/arrow_or.svg);
+                background-repeat: no-repeat;
+                background-position: right 4rem center;
+                transition: 0.2s;
+            }
+
+            &:hover {
+                a {
+                    background: var(--pointColor);
+                    color: #fff;
+                    background-image: url(../images/arrow_w.svg);
+                    background-repeat: no-repeat;
+                    background-position: right 4rem center;
+                }
+            }
+        }
+    }
+
+    .insta_list {
+        display: flex;
+        gap: 6rem;
+        justify-content: center;
+        padding-top: 5rem;
+
+        .insta_card {
+            display: flex;
+            flex-direction: column;
+            /* justify-content: center; */
+            align-items: center;
+            width: 46rem;
+            height: 54rem;
+            border: 0.5px solid #b2b2b2;
+            border-radius: 2rem;
+            background: #fff;
+
+            &:hover {
+                border: 0.5px solid transparent;
+                outline: 3px solid var(--mainColor);
+            }
+
+            .card_top {
+                display: flex;
+                gap: 1.5rem;
+                align-items: center;
+                height: 6rem;
+
+                .sns_id {
+                    font-weight: 700;
+                }
+            }
+
+            .card_img {
+                width: 32rem;
+                height: 40rem;
+                background: url(../images/insta_1.png) no-repeat;
+                background-size: cover;
+            }
+
+            .card_footer {
+                display: flex;
+                justify-content: space-between;
+                height: 6rem;
+                padding-top: 1.2rem;
+
+                .card_footer_left {
+                    display: flex;
+                    gap: 1rem;
+                }
+
+            }
+        }
+    }
+}
+
+/* 서브 유튜브&숏츠 */
+.sub_youtube_wrap {
+    background: #eee;
+    height: 1000px;
+
+    .inner {
+        height: inherit;
+
+        .youtube_wrap {
+            margin: 0 auto;
+            height: 100%;
+            width: 93rem;
+            position: relative;
+            padding: 10rem 0;
+
+
+            .youtube_list {
+                position: relative;
+                height: 800px;
+
+                >div {
+                    position: absolute;
+
+                    a {
+                        span {
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+                        }
+                    }
+                }
+
+                .shorts {
+                    width: 30rem;
+                    height: 42.5rem;
+                    background-color: antiquewhite;
+                    border-radius: 3rem;
+                    left: 0;
+                    top: 0;
+                }
+
+                .youtube {
+                    width: 60rem;
+                    height: 33rem;
+                    background-color: antiquewhite;
+                    border-radius: 3rem;
+                }
+
+                .youtube1 {
+                    right: 0;
+                    top: 9.5rem;
+                }
+
+                .youtube2 {
+                    left: 0;
+                    bottom: 2rem;
+                }
+
+                .section_title {
+                    color: var(--subColor);
+                    position: absolute;
+                    left: 50%;
+                    top: -2rem;
+                }
+            }
+
+            .bhc_img {
+                height: 20rem;
+                position: absolute;
+                right: -6rem;
+                bottom: 2rem;
+
+                img {
+                    height: 100%;
+                }
+            }
+
+            .bhc_btn {
+                position: absolute;
+                right: 0;
+                bottom: 28rem;
+
+                a {
+                    display: flex;
+                    width: 26rem;
+                    height: 6rem;
+                    background: #fff;
+                    border: 2px solid #fff;
+                    border-radius: 5rem;
+                    justify-content: space-between;
+                    align-items: center;
+                    padding: 0 5rem;
+                    font-size: 2rem;
+                    font-weight: 900;
+                    color: var(--subColor);
+                    background-image: url(../images/arrow_or.svg);
+                    background-repeat: no-repeat;
+                    background-position: right 4rem center;
+                    transition: 0.2s;
+                }
+
+                &:hover {
+                    a {
+                        background: var(--pointColor);
+                        color: #fff;
+                        background-image: url(../images/arrow_w.svg);
+                        background-repeat: no-repeat;
+                        background-position: right 4rem center;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* 이벤트 */
+
+.sub_event_wrap {
+    .section_title {
+        text-align: center;
+        color: var(--subColor);
+
+    }
+
+    .event_list {
+        display: flex;
+        gap: 2rem;
+        padding: 5rem 0;
+
+        .event_card {
+            position: relative;
+            width: 71rem;
+            height: 38rem;
+            background-color: aliceblue;
+            border-radius: 3rem;
+            overflow: hidden;
+
+
+            .text_box {
+                position: absolute;
+                left: 0;
+                width: 30rem;
+                height: 100%;
+                background-color: cornsilk;
+            }
+
+            .img_box {
+                position: absolute;
+                right: 0;
+                width: 41rem;
+                height: 100%;
+                background-color: cadetblue;
+            }
+        }
+    }
+
+    .bhc_btn {
+        /* position: absolute; */
+        display: flex;
+        justify-content: center;
+        padding-bottom: 5rem;
+
+        a {
+            display: flex;
+            width: 26rem;
+            height: 6rem;
+            background: #fff;
+            border: 2px solid #fff;
+            border-radius: 5rem;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 5rem;
+            font-size: 2rem;
+            font-weight: 900;
+            color: var(--subColor);
+            background-image: url(../images/arrow_or.svg);
+            background-repeat: no-repeat;
+            background-position: right 4rem center;
+            transition: 0.2s;
+        }
+
+        &:hover {
+            a {
+                background: var(--pointColor);
+                color: #fff;
+                background-image: url(../images/arrow_w.svg);
+                background-repeat: no-repeat;
+                background-position: right 4rem center;
+            }
+        }
+    }
+
+}
+
+.footer_rolling {
+    .rolling_text1 {
+        /* font-size: 10rem;
+        font-weight: 900;
+        color:transparent; */
+    }
+}

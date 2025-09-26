@@ -1,0 +1,40 @@
+:root {
+    --mainColor: #ffcc00;
+    --subColor: #321F00;
+    --pointColor:#ff6601;
+}
+
+html {
+    font-size: 10px;
+    font-family: "Paperlogy", "돋움", sans-serif;
+}
+
+body{
+    font-size:1.6rem;
+    color:#222;
+}
+
+.wide_inner {
+    max-width: 1680px;
+    height: 100%;
+    margin: 0 auto;
+    padding:0 2.5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* background-color: aliceblue; */
+}
+
+.inner{
+    max-width:1440px;
+    margin:0 auto;
+    padding:0  2.5%;
+    /* background-color: cadetblue; */
+}
+
+.section_title{
+    font-size:5rem;
+    font-weight:900;
+    text-align: center;
+    margin:0 0 5rem;
+}

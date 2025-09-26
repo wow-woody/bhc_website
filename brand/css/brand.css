@@ -1,0 +1,304 @@
+:root {
+    --mainColor: #ffcc00;
+    --subColor: #321F00;
+    --pointColor: #ff6601;
+}
+
+
+html {
+    font-size: 10px;
+    font-family: "Paperlogy", "돋움", sans-serif;
+}
+
+body {
+    font-size: 1.6rem;
+    color: #222;
+}
+
+.inner {
+    /* background: aqua; */
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.sub_title {
+    font-size: 7rem;
+    font-weight: 900;
+    color: #000000;
+}
+
+/* main */
+.main_Brand {
+    margin-top: 100px;
+}
+
+.main_img {
+    text-align: center;
+}
+
+.main_text {
+    margin-top: 20px;
+    font-size: 2.8rem;
+    text-align: center;
+    font-weight: 700;
+}
+
+
+
+/* grow */
+.grow {
+    margin-top: 100px
+}
+
+
+
+/* recipe */
+.recipe {
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+    /* background-color: red; */
+}
+
+.recipe .rec {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 16px;
+    margin-top: 50px;
+    /* border: 1px solid black; */
+    border-radius: 30px;
+    width: 360px;
+    height: 360px;
+    background-color: var(--subColor);
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+
+.recipe .rec_img {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    width: fit-content;
+}
+
+.rec_img img {
+    display: block;
+    /* transition: opacity 0.3s ease-in-out; */
+}
+
+.rec_img .img_hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    pointer-events: none;
+}
+
+
+.rec_img .img_default {
+    display: block;
+}
+
+.rec:hover .img_hover {
+    opacity: 1;
+}
+
+.rec:hover .img_default {
+    opacity: 0;
+}
+
+.recipe .rec:hover {
+    background-color: var(--mainColor);
+}
+
+.recipe .rec:hover>span {
+    color: var(--subColor);
+}
+
+
+.recipe .rec .rec_title {
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: var(--mainColor);
+}
+
+.recipe .rec>span {
+    font-size: 1.4rem;
+    color: var(--mainColor);
+    line-height: 1.5;
+}
+
+
+/* mainColor */
+
+.main_color {
+    margin-top: 100px;
+}
+
+.color_wrap {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    gap: 200px;
+    /* background-color: red; */
+    width: 100%;
+}
+
+.color_title {
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+
+.sub_color {
+    display: flex;
+    gap: 30px;
+}
+
+
+.main_color .color_wrap .color1 {
+    display: block;
+    text-align: center;
+    /* background-color: red; */
+    gap: 10px
+}
+
+.main_color .color_wrap .color2 {
+    display: block;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.color1 .sub_text {
+    display: flex;
+    flex-direction: column;
+    font-size: 0.8rem;
+    font-weight: 300;
+}
+
+.color2 .sub_text {
+    display: flex;
+    flex-direction: column;
+    font-size: 0.8rem;
+    font-weight: 300;
+}
+
+.sub_color_title {
+    font-size: 1.3rem;
+    font-weight: 400;
+}
+
+.slogun_wrap {
+    margin-top: 50px;
+    /* background-color: red; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+
+
+.slogun1 {
+    border-radius: 30px;
+    background-color: var(--mainColor);
+    color: #000000;
+    width: 800px;
+    height: 240px;
+    gap: 30px;
+    align-items: center;
+    text-align: center;
+    line-height: 30px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    display: flex;
+}
+
+
+
+.slogun2 {
+    margin-top: 20px;
+    border-radius: 30px;
+    background-color: var(--subColor);
+    color: var(--mainColor);
+    width: 800px;
+    height: 240px;
+    align-items: center;
+    text-align: center;
+    line-height: 30px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    display: flex;
+
+}
+
+.history .sub_title {
+    margin-top: 100px;
+}
+
+
+.year .years {
+    display: flex;
+    /* background-color: red; */
+    font-size: 1.8rem;
+    font-weight: 300;
+    border-bottom: 1px dashed black;
+    padding: 100px;
+    width: 900px;
+    gap: 100px;
+    margin: 0 auto;
+    position: relative;
+
+}
+
+.year .years .year_text {
+    display: flex;
+    flex-direction: column;
+    line-height: 30px;
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+.year .years .history_title {
+    font-size: 6.0rem;
+    font-weight: 900;
+    color: var(--pointColor)
+}
+
+.more_btn {
+    /* position: absolute; */
+    display: block;
+    margin: 100px auto 0;
+    width: 160px;
+    height: 60px;
+    font-size: 2rem;
+    font-weight: 900;
+    background-color: var(--pointColor);
+    color: #fff;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+}
+
+.close_btn {
+    /* position: absolute; */
+    display: block;
+    margin: 100px auto 0;
+    width: 160px;
+    height: 60px;
+    font-size: 2rem;
+    font-weight: 900;
+    background-color: var(--pointColor);
+    color: #fff;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+}
+

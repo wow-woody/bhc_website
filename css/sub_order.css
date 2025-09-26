@@ -208,7 +208,20 @@ header {
 
                 .fitH {
                     height: 390px;
-                    overflow: hidden;
+                    overflow: auto;
+
+                    &::-webkit-scrollbar{
+                        width: 5px;
+                    }
+
+                    &::-webkit-scrollbar-track{
+                        background: transparent;
+                    }
+
+                    &::-webkit-scrollbar-thumb{
+                        background-color: var(--mainColor);
+                        border-radius: 30px;
+                    }
                 }
 
                 .add_seas {
@@ -314,7 +327,7 @@ header {
     .order_bottom {
         position: fixed;
         bottom: 0;
-        transform: translateX(20%);
+        transform: translateX(40%);
 
         .total_order {
             display: flex;

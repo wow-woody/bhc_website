@@ -5,12 +5,23 @@
     <meta charset="UTF_8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>bhc chicken</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./css/Paperlogy.css">
     <link rel="shortcut icon" href="./images/favicon.png">
     <link rel="stylesheet" href="./css/common.css">
     <link rel="stylesheet" href="./css/style_bhc.css">
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="./css/main_respond.css">
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        window.onload = function () {
+            var swiper = new Swiper(".insta_left", {
+                slidesPerView: 2,
+                spaceBetween: 20,
+                loop: true
+            });
+        }
+    </script>
 
     <!-- 채아 메인-->
     <!-- <link rel="stylesheet" href="./css/bhc_youtube_respond.css"> -->
@@ -334,9 +345,9 @@
 
             <!-- 인스타 섹션 -->
             <section class="insta_wrap">
-                <div class="insta_left">
-                    <div class="insta_card_list">
-                        <div class="card">
+                <div class="insta_left swiper">
+                    <div class="insta_card_list swiper-wrapper">
+                        <div class="card swiper-slide">
                             <div class="card_top">
                                 <img src="./images/Bhc_logo.png" alt="Bhc_logo">
                                 <p class="caption">@bhc_chicken_official</p>
@@ -351,7 +362,7 @@
                                 <img src="./images/icon-bookmark.png" alt="icon-bookmark">
                             </div>
                         </div>
-                        <div class="card">
+                        <div class="card swiper-slide">
                             <div class="card_top">
                                 <img src="./images/Bhc_logo.png" alt="Bhc_logo">
                                 <p class="caption">@bhc_chicken_official</p>
@@ -366,7 +377,7 @@
                                 <img src="./images/icon-bookmark.png" alt="icon-bookmark">
                             </div>
                         </div>
-                        <div class="card">
+                        <div class="card swiper-slide">
                             <div class="card_top">
                                 <img src="./images/Bhc_logo.png" alt="Bhc_logo">
                                 <p class="caption">@bhc_chicken_official</p>
@@ -381,7 +392,7 @@
                                 <img src="./images/icon-bookmark.png" alt="icon-bookmark">
                             </div>
                         </div>
-                        <div class="card">
+                        <div class="card swiper-slide">
                             <div class="card_top">
                                 <img src="./images/Bhc_logo.png" alt="Bhc_logo">
                                 <p class="caption">@bhc_chicken_official</p>
@@ -396,7 +407,7 @@
                                 <img src="./images/icon-bookmark.png" alt="icon-bookmark">
                             </div>
                         </div>
-                        <div class="card">
+                        <div class="card swiper-slide">
                             <div class="card_top">
                                 <img src="./images/Bhc_logo.png" alt="Bhc_logo">
                                 <p class="caption">@bhc_chicken_official</p>

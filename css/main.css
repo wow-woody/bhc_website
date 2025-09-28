@@ -877,9 +877,9 @@ main {
     /* background-color: rgb(107, 92, 92); */
 }
 
-.event_arrow .right_arr {
-    /* border: 1px solid black; */
-}
+/* .event_arrow .right_arr {
+    border: 1px solid black;
+} */
 
 .event_list .m_btn {
     display:none;

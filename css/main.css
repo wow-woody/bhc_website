@@ -862,19 +862,29 @@ main {
 
 
 .event_arrow {
-    position: absolute;
+    /* position: absolute; */
     top: 0;
     left: 0;
     right: 0;
     z-index: 10;
     display: flex;
-    justify-content: space-between;
+    flex-direction: row-reverse;
     pointer-events: none; /* 클릭 문제 방지 */
+    /* background-color: #969696; */
+}
+
+.event_arrow #right_arr,
+.event_arrow #left_arr {
+    background-color: #969696;
+    position:static;
+    display: flex;
+    flex-direction:row-reverse;
 }
 
 
 .event_arrow p {
     pointer-events: auto; /* 버튼 클릭 가능하도록 */
+
 }
 
 

@@ -836,6 +836,7 @@ main {
     /* margin-top: 70px; */
     /* background-color: red; */
     padding: 100px 0px;
+    /* position: relative; */
 }
 
 .section_title {
@@ -843,6 +844,7 @@ main {
     width: 100%;
     font-size: 6rem;
     font-weight: 900;
+    margin-bottom: 50px;
 }
 
 .section_title>span {
@@ -850,24 +852,30 @@ main {
 }
 
 .event_list {
-    /* background-color: blue; */
+    background-color: blue;
     margin: 0 auto;
-    width: 1430px;
+    width: 1368px;
     position: relative;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 
 
-.inner .event_img {
-    /* background-color: blue; */
+.event_arrow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
     display: flex;
-    position: relative;
-    gap: 60px;
-    transition: transform 0.3s ease;
-    user-select: none;
+    justify-content: space-between;
+    pointer-events: none; /* 클릭 문제 방지 */
 }
 
+
+.event_arrow p {
+    pointer-events: auto; /* 버튼 클릭 가능하도록 */
+}
 
 
 .event_img img {
@@ -876,16 +884,6 @@ main {
 }
 
 
-
-.event_arrow {
-    display: flex;
-    justify-content: flex-end;
-    /* background-color: rgb(107, 92, 92); */
-}
-
-.event_arrow .right_arr {
-    /* border: 1px solid black; */
-}
 
 .event_list .m_btn {
     display: none;

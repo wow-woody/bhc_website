@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="./css/style_bhc.css">
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="./css/main_respond.css">
-    <script defer src="./js/event.js"></script>
+    <!-- <script defer src="./js/event.js"></script> -->
 
     <!-- 채아 메인-->
     <!-- <link rel="stylesheet" href="./css/bhc_youtube_respond.css"> -->
@@ -429,30 +429,77 @@
             </section>
 
             <!-- 이벤트 섹션 -->
-            <section class="event_wrap">
+         <section class="event_wrap">
                 <div class="inner">
                     <h2 class=section_title><span>bhc</span>Event</h2>
                     <div class="event_list">
                         <div class="event_arrow">
-                            <p class="right_arr"><a href="#"><img src="./images/left_arrow_event.png"
-                                        alt="right_arrow"></a>
+                            <p class="swiper-button-next" id="right_arr">
+                                <a href="#"><img src="./images/right_arrow_event.png" alt="right_arrow"></a>
                             </p>
-                            <p class="left_arr"><a href="#"><img src="./images/right_arrow_event.png"
-                                        alt="left_arrow"></a>
+                            <p class="swiper-button-prev" id="left_arr">
+                                <a href="#"><img src="./images/left_arrow_event.png" alt="left_arrow"></a>
                             </p>
                         </div>
-                        <div class="event_img">
-                            <a href="#"><img src="./images/img_event1.jpg" alt="event_img1"></a>
-                            <a href="#"><img src="./images/img_event2.jpg" alt="event_img2"></a>
-                            <a href="#"><img src="./images/img_event3.jpg" alt="event_img3"></a>
-                            <a href="#"><img src="./images/img_event4.png" alt="event_img4"></a>
-                            <a href="#"><img src="./images/img_event5.jpg" alt="event_img5"></a>
-                            <a href="#"><img src="./images/img_event6.jpg" alt="event_img6"></a>
+                        <div class="swiper mySwiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide event_img"><a href="#"><img src="./images/img_event1.jpg"
+                                            alt="event_img1"></a></div>
+                                <div class="swiper-slide event_img"><a href="#"><img src="./images/img_event2.jpg"
+                                            alt="event_img2"></a></div>
+                                <div class="swiper-slide event_img"><a href="#"><img src="./images/img_event3.jpg"
+                                            alt="event_img3"></a></div>
+                                <div class="swiper-slide event_img"><a href="#"><img src="./images/img_event4.png"
+                                            alt="event_img4"></a></div>
+                                <div class="swiper-slide event_img"><a href="#"><img src="./images/img_event5.jpg"
+                                            alt="event_img5"></a></div>
+                                <div class="swiper-slide event_img"><a href="#"><img src="./images/img_event6.jpg"
+                                            alt="event_img6"></a></div>
+                            </div>
+
+                            <!-- 만약 페이지네이션 등 필요하면 아래 추가 -->
+                            <!-- <div class="swiper-pagination"></div> -->
                         </div>
+
 
                         <div class="m_btn">
                             <a href="#">bhc event</a>
                         </div>
+                        <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+                        <script>
+                            var swiper = new Swiper(".mySwiper", {
+                                slidesPerView: 3,
+                                spaceBetween: 30,
+                                freeMode: true,
+                                navigation: {
+                                    nextEl: ".swiper-button-next",
+                                    prevEl: ".swiper-button-prev",
+                                },
+                           
+                                breakpoints: {
+                                    0: {
+                                        slidesPerView: 1,
+                                        spaceBetween: 20,
+                                    },
+                                    480: {
+                                        slidesPerView: 1,
+                                        spaceBetween: 20
+                                    },
+                                    768: {
+                                        slidesPerView: 2,
+                                        spaceBetween: 20
+                                    },
+                                    1024: {
+                                        slidesPerView: 3,
+                                        spaceBetween: 30
+                                    }
+                                }
+                            });
+                            document.querySelectorAll('.swiper-button-next a, .swiper-button-prev a').forEach(el => {
+                                el.addEventListener('click', e => e.preventDefault());
+                            });
+
+                        </script>
 
                     </div>
 

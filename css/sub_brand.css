@@ -23,14 +23,14 @@ body {
 }
 
 .sub_title {
-    font-size: 7rem;
+    font-size: 4rem;
     font-weight: 900;
     color: #000000;
 }
 
 /* main */
 .main_Brand {
-    margin-top: 100px;
+    /* margin-top: 100px; */
 }
 
 .main_img {

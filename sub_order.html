@@ -99,7 +99,7 @@
                         <h3>수량</h3>
                         <div class="order_box count">
                             <button>-</button>
-                            <span>1</span>
+                            <span>0</span>
                             <button>+</button>
                         </div>
                     </div>
@@ -448,7 +448,7 @@
                 <div class="total_order">
                     <div class="category">
                         <p>치킨</p>
-                        <strong>콰삭톡</strong>
+                        <strong></strong>
                     </div>
                     <div class="category line">
                         <p>사이드</p>
@@ -460,7 +460,7 @@
                     </div>
                 </div>
                 <div class="total">
-                    <p>총 <strong>23000</strong>원</p>
+                    <p>총 <strong>0</strong>원</p>
                     <span>결제하기</span>
                 </div>
             </div>
@@ -539,8 +539,9 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            const paymentBar = document.querySelector('.order_bottom');
-            const footer = document.getElementById('footer');
+            //결체창
+            const paymentBar = document.querySelector(".order_bottom");
+            const footer = document.querySelector("#footer");
 
             function handleScroll() {
                 const footerTop = footer.getBoundingClientRect().top;
@@ -564,28 +565,24 @@
             // 처음 로딩 시에도 위치 체크
             handleScroll();
 
-            // const total = document.querySelector(".total strong");
-            // const totalBox = document.querySelector(".total");
 
-            // function updateTotal() {
-            //     let sum = 0;
-            //     let categoryPick = { 시즈닝: null, 반마리: null, 사이드: null, 음료소스: null };
-            //     let selectedCount = 0;
+            //주문 count
+            const total = document.querySelector(".total strong");
+            const totalBox = document.querySelector(".total");
 
-            //     document.querySelectorAll(".list").forEach(list => {
-            //         const category = list.classList[1]; // chicken, pizza, side, drink
-            //         list.querySelectorAll("div").forEach(div => {
-            //             let name = div.childNodes[0].textContent.trim();
-            //             let count = parseInt(div.querySelector("span").textContent) || 0;
-            //             let price = parseInt(div.querySelector("strong").textContent) || 0;
-            //             if (count > 0) {
-            //                 sum += count * price;
-            //                 selectedCount++;
-            //                 if (!categoryPick[category]) categoryPick[category] = name;
-            //             }
-            //         });
-            //     });
-            });
+            function updateTotal() {
+                let sum = 0;
+                let categoryPick = { 치킨: null, 사이드: null, 음료소스: null };
+                let selectedCount = 0;
+
+                document.querySelectorAll(".add").forEach(list => {
+                    const category = list.classList[1];
+                    list.querySelectorAll("div").forEach(div =>{
+                        let name = div.childNodes[1].textContent.trim();
+                    })
+                })
+            }
+        });
     </script>
 </body>
 

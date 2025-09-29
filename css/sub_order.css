@@ -152,7 +152,7 @@ header {
 
 /* 주문페이지 */
 main {
-    min-height: 800px;
+    min-height: 940px;
 }
 
 .order_wrap {
@@ -333,6 +333,12 @@ main {
                         justify-content: space-between;
                         border-radius: 50px;
                         padding: 9px 8px;
+                    }
+                }
+
+                .half_order_box {
+                    >.add {
+                        margin-right: 0;
                     }
                 }
 
@@ -568,10 +574,11 @@ footer {
     }
 }
 
-@media screen and (max-width:780px) {
+@media screen and (max-width:786px) {
+
     .order_wrap {
         .inner {
-            display: block;
+            flex-direction: column;
             align-items: center;
 
             .order_left {
@@ -591,18 +598,10 @@ footer {
             }
 
             .order_right {
-                height:auto;
+                height: auto;
+
                 h3 {
                     font-size: 20px;
-                }
-
-                .order_list {
-
-                    .half_order_box,
-                    .seas_order_box {
-                        width: 400px;
-                        padding: 22px 40px;
-                    }
                 }
             }
         }
@@ -615,4 +614,4 @@ footer {
     }
 }
 
-@media screen and (max-width:480px) {}
+@media screen and (max-width:360px) {}

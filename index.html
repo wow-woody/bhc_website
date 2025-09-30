@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="./css/style_bhc.css">
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="./css/main_respond.css">
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
 
 
     <!-- 채아 메인-->
@@ -431,10 +431,22 @@
 
                 <script>
                     window.onload = function () {
+                        const swiperContainer = document.querySelector('.insta_left');
+
+                        // 1. 슬라이드 방향만 RTL로
+                        swiperContainer.setAttribute('dir', 'rtl');
+
+                        // 2. 슬라이드 안 콘텐츠는 다시 LTR로 (원래대로)
+                        const slides = swiperContainer.querySelectorAll('.swiper-slide');
+                        slides.forEach(slide => {
+                            slide.setAttribute('dir', 'ltr');
+                        });
+
                         var swiper = new Swiper(".insta_left", {
-                            slidesPerView: 2,
-                            spaceBetween: 20,
-                            loop: true
+                            slidesPerView: "auto",
+                            spaceBetween: 30,
+                            freeMode: true,
+                            slidesOffsetAfter: 10
                         });
                     }
                 </script>

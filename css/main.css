@@ -671,10 +671,10 @@ main {
     overflow: hidden;
 
     .insta_card_list {
-      display: flex;
-      justify-content: flex-start;
-      flex-direction: row-reverse;
-      gap: 2rem;
+      /* display: flex;
+      justify-content: flex-start; */
+      /* flex-direction: row-reverse; */
+      /* gap: 2rem; */
 
       .card {
         flex: 0 0 40rem;

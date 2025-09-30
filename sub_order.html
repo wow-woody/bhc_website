@@ -568,64 +568,83 @@
 
 
             //주문 count
-            const total = document.querySelector(".total strong");
-            const totalBox = document.querySelector(".total");
+            const total = document.querySelector(".total p strong");
+
+            // 시즈닝 체크박스
+            const seasCheck = document.querySelectorAll('.add_seas input[type="checkbox"]');
+
+            seasCheck.forEach(checkbox => {
+                checkbox.addEventListener('change', updateTotal);
+            });
 
             function updateTotal() {
-                let sum = 0;
-                let categoryPick = { 치킨: null, 사이드: null, 음료소스: null };
-                let selectedCount = 0;
+                let totalSum = 0;
 
-                document.querySelectorAll(".add").forEach(list => {
-                    const category = list.classList[1];
-                    list.querySelectorAll("div").forEach(div => {
-                        const menuSpan = div.querySelector(".menu span");
-                        const countSpan = div.querySelector(".counter span");
-                        list.querySelectorAll("div").forEach(div => {
-                            let name = div.childNodes[0].textContent.trim();
-                            let count = parseInt(countSpan.textContent) || 0;
-                            let price = parseInt(menuSpan.textContent) || 0;
-                            if (count > 0) {
-                                sum += count * price;
-                                selectedCount++;
-                                if (!categoryPick[category]) categoryPick[category] = name;
-                            }
-                        });
-                    });
+                //시즈닝 체크
+                seasCheck.forEach(cb => {
+                    if (cb.checked) {
+                        totalSum += 800;
+                    }
                 });
-                total.textContent = sum.toLocaleString();
 
-                let picks = [];
-                if (categoryPick.half_chicken) picks.push(`${categoryPick.half_chicken}(반마리)`);
-                if (categoryPick.side) picks.push(`${categoryPick.side}`);
-                if (categoryPick.drinkS) picks.push(`${categoryPick.drinkS}`);
+                let halfChickens = document.querySelectorAll(".half_chicken");
+                halfChickens.forEach(item => {
+                    let price = item.querySelector(".menu span").innerText.replace(/[^0-9]/g, '');
+                    let count = parseInt(item.querySelector(".counter span").innerText);
+                    totalSum += price * count;
+                });
 
-                let text = "";
-                if (picks.length > 0) {
-                    const extra = selectedCount - picks.length;
-                    text = `${picks.join(", ")}${extra > 0 ? `외 ${extra}개` : ""}`;
-                }
-                totalBox.innerHTML = `총 <strong>${sum.toLocaleString()}</strong>원`;
+
+                let side = document.querySelectorAll(".add.side");
+                side.forEach(item => {
+                    let price = parseInt(item.querySelector(".menu span").innerText.replace(/[^0-9]/g, ''));
+                    let count = parseInt(item.querySelector(".counter span").innerText);
+                    totalSum += price * count;
+                });
+
+
+                let drink = document.querySelectorAll(".add.drinkS");
+                drink.forEach(item => {
+                    let price = parseInt(item.querySelector(".menu span").innerText.replace(/[^0-9]/g, ''));
+                    let count = parseInt(item.querySelector(".counter span").innerText);
+                    totalSum += price * count;
+                });
+
+                total.innerHTML = totalSum.toLocaleString();
             }
 
-            document.querySelectorAll(".minus").forEach(btn => {
-                btn.addEventListener("click", () => {
-                    let span = btn.nextElementSibling;
-                    let count = parseInt(span.textContent) || 0;
-                    if (count > 0) count--;
-                    span.textContent = count;
-                    updateTotal();
-                })
-            });
-            document.querySelectorAll(".plus").forEach(btn => {
-                btn.addEventListener("click", () => {
-                    let span = btn.previousElementSibling;
-                    let count = parseInt(span.textContent) || 0;
+            // 초기 계산
+            updateTotal();
+
+            let counters = document.querySelectorAll(".counter");
+
+            counters.forEach(counter => {
+                let minus = counter.querySelector(".minus");
+                let plus = counter.querySelector(".plus");
+                let countNum = counter.querySelector("span");
+
+                minus.addEventListener("click", () => {
+                    let count = parseInt(countNum.innerText);
+                    if (count > 0) {
+                        count--;
+                        countNum.innerText = count;
+                        updateTotal();
+                    }
+                });
+
+                plus.addEventListener("click", () => {
+                    let count = parseInt(countNum.innerText);
                     count++;
-                    span.textContent = count;
+                    countNum.innerText = count;
                     updateTotal();
                 });
             });
+
+
+            //결제창 글자
+            // const selectBasic = document.querySelector(".order_left h2");
+            // const showBasic = document.querySelector(".total_order");
+            // showBasic.innerHTML = selectBasic.innerHTML;
         });
     </script>
 </body>

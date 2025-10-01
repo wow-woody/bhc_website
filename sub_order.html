@@ -105,7 +105,7 @@
                     </div>
                     <div class="order_list">
                         <h3>반마리 추가</h3>
-                        <div class="half_order_box">
+                        <div class="half_order_box sildT">
                             <div class="add half_chicken">
                                 <div class="img"><img src="./images/order_page/half_FC.png" alt="후라이드 반마리(뼈)"></div>
                                 <div class="menu">
@@ -154,7 +154,7 @@
                     </div>
                     <div class="order_list">
                         <h3>사이드 추가</h3>
-                        <div class="order_box">
+                        <div class="order_box sildT">
                             <div class="fitH">
                                 <div class="add side">
                                     <div class="img"><img src="./images/order_page/side_Mu.png" alt="치킨무"></div>
@@ -360,7 +360,7 @@
                     </div>
                     <div class="order_list">
                         <h3>음료 & 소스</h3>
-                        <div class="order_box">
+                        <div class="order_box drinkT">
                             <div class="fitH">
                                 <div class="add drinkS">
                                     <div class="img"><img src="./images/order_page/s_haba.png" alt="스윗하바네로소스"></div>
@@ -446,15 +446,15 @@
             </div>
             <div class="order_bottom">
                 <div class="total_order">
-                    <div class="category">
+                    <div class="category sideCategory" id="basic">
                         <p>치킨</p>
                         <strong></strong>
                     </div>
-                    <div class="category line">
+                    <div class="category sideCategory line">
                         <p>사이드</p>
                         <strong></strong>
                     </div>
-                    <div class="category line">
+                    <div class="category drinkCategory line">
                         <p>음료&소스</p>
                         <strong></strong>
                     </div>
@@ -566,9 +566,32 @@
             handleScroll();
 
 
-
+            //
+            //
             //주문 count
             const total = document.querySelector(".total p strong");
+
+            //기본치킨
+            const basPrice = 23000;
+            let baseCount = 1;
+            const baseSpan = document.querySelector(".count span");
+            const baseM = document.querySelector(".count .minus");
+            const baseP = document.querySelector(".count .plus");
+
+            baseSpan.innerHTML = baseCount;
+
+            baseP.addEventListener("click", () => {
+                baseCount++;
+                baseSpan.innerHTML = baseCount;
+                updateTotal();
+            })
+            baseM.addEventListener("click", () => {
+                if (baseCount > 1) {
+                    baseCount--;
+                    baseSpan.innerHTML = baseCount;
+                    updateTotal();
+                }
+            })
 
             // 시즈닝 체크박스
             const seasCheck = document.querySelectorAll('.add_seas input[type="checkbox"]');
@@ -578,7 +601,35 @@
             });
 
             function updateTotal() {
-                let totalSum = 0;
+                let totalSum = basPrice * baseCount;
+                let categorySelect = { sideT: [], drinkT: [] }
+
+                let lists = document.querySelectorAll("half_order_box, order_box");
+                lists.forEach(list => {
+                    let category = list.classList[1];
+                    let items = list.querySelectorAll("add");
+                    items.forEach(item => {
+                        let goodsName = item.querySelector(".menu p");
+                        let price = parseInt(item.querySelector(".menu span").innerHTML);
+                        let count = parseInt(item.querySelector(".counter span").innerHTML);
+                        if (count > 0) {
+                            totalSum += price * count;
+                            categorySelect[category].push(goodsName);
+                        }
+                        console.log(goodsName);
+                    })
+                })
+
+                updateOption("sideCategory strong", categorySelect.sideT);
+                updateOption("drinkCategory strong", categorySelect.drinkT);
+
+                function updateOption(selector, cateItem) {
+                    let selectorShow = document.querySelector(selector);
+                    if (cateItem.length > 0) {
+                        let extra = cateItem.length - 1;
+                        selectorShow.innerHTML = `${cateItem[0]} ${extra > 0 ? `외 ${extra}개`:""}`
+                    }
+                }
 
                 //시즈닝 체크
                 seasCheck.forEach(cb => {
@@ -613,7 +664,6 @@
                 total.innerHTML = totalSum.toLocaleString();
             }
 
-            // 초기 계산
             updateTotal();
 
             let counters = document.querySelectorAll(".counter");
@@ -642,9 +692,9 @@
 
 
             //결제창 글자
-            // const selectBasic = document.querySelector(".order_left h2");
-            // const showBasic = document.querySelector(".total_order");
-            // showBasic.innerHTML = selectBasic.innerHTML;
+            const selectBasic = document.querySelector(".order_left h2");
+            const showBasic = document.querySelector("#basic strong");
+            showBasic.innerHTML = selectBasic.innerHTML;
         });
     </script>
 </body>

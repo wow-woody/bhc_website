@@ -370,6 +370,13 @@ header {
     gap: 46px;
 }
 
+.seasoned,
+.bburinkle,
+.king,
+.hot {
+    display: none;
+}
+
 .menu_items_list {
     display: flex;
     flex-direction: column;

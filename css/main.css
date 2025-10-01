@@ -852,7 +852,7 @@ main {
 }
 
 .event_list {
-    background-color: blue;
+    /* background-color: blue; */
     margin: 0 auto;
     width: 1368px;
     position: relative;
@@ -875,7 +875,7 @@ main {
 
 .event_arrow #right_arr,
 .event_arrow #left_arr {
-    background-color: #969696;
+    /* background-color: #969696; */
     position:static;
     display: flex;
     flex-direction:row-reverse;

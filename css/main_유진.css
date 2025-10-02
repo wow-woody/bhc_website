@@ -151,24 +151,16 @@ header {
 }
 
 /* 메인 - 슬라이드 배너 섹션 */
-/* .main_slider_wrap {
+.main_slider_wrap {
     max-width: 1920px;
     margin: 0 auto;
     padding-top: 120px;
     overflow: hidden;
     position: relative;
 
-} */
-
-.main_slider_wrap {
-    /* max-width: 1920px; */
-    /* padding: 100px 0; */
-    /* height: 1200px; */
-    /* background-color: aqua; */
 }
 
-
-/* .main_slider_list {
+.main_slider_list {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -188,14 +180,12 @@ header {
     display: block;
     width: 100%;
     height: 100%;
-} */
+}
 
 
 .main_slider {
-    padding:210px 0 90px;
     .pager_bar {
-        /* display: flex; */
-        display: none;
+        display: flex;
         margin-top: 2rem;
         gap: 1.5rem;
         justify-content: space-between;
@@ -239,16 +229,6 @@ header {
     }
 }
 
-.swiper-slide img {
-    width: 100%;
-    border-radius: 3rem;
-    transition: 0.5s;
-    /* transform: scale(0.7); */
-}
-
-.swiper-slide-active img {
-    transform: scale(1.3);
-}
 
 /* 메인 - 주문 버튼 섹션 */
 .order_wrap {
@@ -581,7 +561,6 @@ main {
         .inner {
             .section_title {
                 color: #fff;
-                margin-bottom: 5rem;
             }
 
             .bg_text {
@@ -847,13 +826,11 @@ main {
     margin: 0 auto;
 }
 
-
 .event_wrap .inner {
     /* max-width: 1680; */
     /* margin-top: 70px; */
     /* background-color: red; */
-    padding: 100px 0px;
-    /* position: relative; */
+    padding: 100px;
 }
 
 .section_title {
@@ -861,7 +838,6 @@ main {
     width: 100%;
     font-size: 6rem;
     font-weight: 900;
-    margin-bottom: 50px;
 }
 
 .section_title>span {
@@ -871,39 +847,20 @@ main {
 .event_list {
     /* background-color: blue; */
     margin: 0 auto;
-    width: 1368px;
+    width: 1430px;
     position: relative;
-    /* overflow: hidden; */
+    overflow: hidden;
 }
 
 
 
-.event_arrow {
-    /* position: absolute; */
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 10;
+.inner .event_img {
+    /* background-color: blue; */
     display: flex;
-    flex-direction: row-reverse;
-    pointer-events: none; /* 클릭 문제 방지 */
-    /* background-color: #969696; */
+    position: relative;
+    gap: 60px;
+    transition: transform 0.5s;
 }
-
-.event_arrow #right_arr,
-.event_arrow #left_arr {
-    /* background-color: #969696; */
-    position:static;
-    display: flex;
-    flex-direction:row-reverse;
-}
-
-
-.event_arrow p {
-    pointer-events: auto; /* 버튼 클릭 가능하도록 */
-
-}
-
 
 .event_img img {
     border-radius: 20px 0 0 20px;
@@ -911,6 +868,16 @@ main {
 }
 
 
+
+.event_arrow {
+    display: flex;
+    justify-content: flex-end;
+    /* background-color: rgb(107, 92, 92); */
+}
+
+/* .event_arrow .right_arr {
+    border: 1px solid black;
+} */
 
 .event_list .m_btn {
     display: none;

@@ -633,6 +633,14 @@
                 let totalSum = basPrice * baseCount;
                 let categorySelect = { sideT: [], drinkT: [] }
 
+
+                //시즈닝 체크
+                seasCheck.forEach(cb => {
+                    if (cb.checked) {
+                        totalSum += 800;
+                    }
+                });
+
                 let lists = document.querySelectorAll(".order");
                 lists.forEach(list => {
                     let category = list.classList[1];
@@ -640,7 +648,7 @@
                     let items = list.querySelectorAll(".add");
                     items.forEach(item => {
                         let goodsName = item.querySelector(".menu p").innerHTML;
-                        let price = parseInt(item.querySelector(".menu span").innerHTML);
+                        let price = parseInt(item.querySelector(".menu span").innerHTML.replace(/[^0-9]/g, ''));
                         let count = parseInt(item.querySelector(".counter span").innerHTML);
                         if (count > 0) {
                             totalSum += price * count;
@@ -657,39 +665,33 @@
                     let selectorShow = document.querySelector(selector);
                     if (cateItem.length > 0) {
                         let extra = cateItem.length - 1;
-                        selectorShow.innerHTML = `${cateItem[0]} ${extra > 0 ? `외 ${extra}개`:""}`
+                        selectorShow.innerHTML = `${cateItem[0]} ${extra > 0 ? `외 ${extra}개` : ""}`
                     }
                 }
 
-                //시즈닝 체크
-                seasCheck.forEach(cb => {
-                    if (cb.checked) {
-                        totalSum += 800;
-                    }
-                });
 
-                let halfChickens = document.querySelectorAll(".half_chicken");
-                halfChickens.forEach(item => {
-                    let price = item.querySelector(".menu span").innerText.replace(/[^0-9]/g, '');
-                    let count = parseInt(item.querySelector(".counter span").innerText);
-                    totalSum += price * count;
-                });
+                // let halfChickens = document.querySelectorAll(".half_chicken");
+                // halfChickens.forEach(item => {
+                //     let price = item.querySelector(".menu span").innerText.replace(/[^0-9]/g, '');
+                //     let count = parseInt(item.querySelector(".counter span").innerText);
+                //     totalSum += price * count;
+                // });
 
 
-                let side = document.querySelectorAll(".add.side");
-                side.forEach(item => {
-                    let price = parseInt(item.querySelector(".menu span").innerText.replace(/[^0-9]/g, ''));
-                    let count = parseInt(item.querySelector(".counter span").innerText);
-                    totalSum += price * count;
-                });
+                // let side = document.querySelectorAll(".add.side");
+                // side.forEach(item => {
+                //     let price = parseInt(item.querySelector(".menu span").innerText.replace(/[^0-9]/g, ''));
+                //     let count = parseInt(item.querySelector(".counter span").innerText);
+                //     totalSum += price * count;
+                // });
 
 
-                let drink = document.querySelectorAll(".add.drinkS");
-                drink.forEach(item => {
-                    let price = parseInt(item.querySelector(".menu span").innerText.replace(/[^0-9]/g, ''));
-                    let count = parseInt(item.querySelector(".counter span").innerText);
-                    totalSum += price * count;
-                });
+                // let drink = document.querySelectorAll(".add.drinkS");
+                // drink.forEach(item => {
+                //     let price = parseInt(item.querySelector(".menu span").innerText.replace(/[^0-9]/g, ''));
+                //     let count = parseInt(item.querySelector(".counter span").innerText);
+                //     totalSum += price * count;
+                // });
 
                 total.innerHTML = totalSum.toLocaleString();
             }

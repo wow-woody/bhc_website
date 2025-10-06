@@ -6,76 +6,80 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./css/Paperlogy.css">
-    <link rel="stylesheet" href="./css/common.css">
-    <link rel="stylesheet" href="./css/style_bhc.css">
+    <link rel="stylesheet" href="./header/css/bhc_common.css">
+    <link rel="stylesheet" href="./header/css/bhc_style.css">
     <link rel="stylesheet" href="./css/sub_order.css">
+    <link rel="stylesheet" href="./header/css/header_ver2.css">
+    <script defer src="./header/js/header.js"></script>
 </head>
 
 <body>
-    <!-- <header>
-        <div class="wide_inner">
-            <h1 class="logo"><a href="#void"><img src="./images/bhc_Logo.svg" alt="logo"></a></h1>
-            <nav>
-                <ul class="main_menu">
-                    <li>
-                        <a class="main_menu_title" href="#void">메뉴</a>
-                        <ul class="sub_menu">
-                            <li><a href="#void">후라이드</a></li>
-                            <li><a href="#void">양념</a></li>
-                            <li><a href="#void">뿌링클</a></li>
-                            <li><a href="#void">킹시리즈</a></li>
-                            <li><a href="#void">핫시리즈</a></li>
-                        </ul>
+    <header>
+        <div class="header">
+            <div class="wide_inner">
+                <h1 class="logo"><a href="./index.html"><img src="./images/bhc_Logo.svg" alt="logo"></a></h1>
+                <nav>
+                    <ul class="main_menu">
+                        <li>
+                            <a class="main_menu_title menu" href="#void">메뉴</a>
+                            <ul class="sub_menu">
+                                <li><a href="#void">후라이드</a></li>
+                                <li><a href="#void">양념</a></li>
+                                <li><a href="#void">뿌링클</a></li>
+                                <li><a href="#void">킹시리즈</a></li>
+                                <li><a href="#void">핫시리즈</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a class="main_menu_title order" href="./sub_order.html">주문하기</a>
+                            <ul class="sub_menu">
+                                <li><a href="./sub_order.html">온라인 주문</a></li>
+                                <li><a href="./sub_order.html">E-쿠폰</a></li>
+                                <li><a href="./sub_order.html">APP</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a class="main_menu_title store" href="./sub_store">매장</a>
+                        </li>
+                        <li>
+                            <a class="main_menu_title sns" href="./sub_sns.html">bhc소식</a>
+                            <ul class="sub_menu">
+                                <li><a href="./sub_sns.html">YOUTUBE</a></li>
+                                <li><a href="./sub_sns.html">SNS</a></li>
+                                <li><a href="./sub_sns.html">NEWS</a></li>
+                                <li><a href="./sub_sns.html">공지사항</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a class="main_menu_title brand" href="./sub_brand.html">BRAND</a>
+                            <ul class="sub_menu">
+                                <li><a href="./sub_brand.html">bhc소개</a></li>
+                                <li><a href="./sub_brand.html">차별화 전략</a></li>
+                                <li><a href="./sub_brand.html">연혁</a></li>
+                                <li><a href="./sub_brand.html">오시는 길</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a class="main_menu_title mall" href="https://bhcmall.co.kr/main/">bhc Mall</a>
+                        </li>
+                    </ul>
+                </nav>
+                <ul class="gnb">
+                    <li class="search_wrap">
+                        <a class="search" href="#void">
+                            <input type="text" value="메뉴를 입력하세요">
+                            <div class="search_close_btn"></div>
+                        </a>
                     </li>
-                    <li>
-                        <a class="main_menu_title" href="#void">주문하기</a>
-                        <ul class="sub_menu">
-                            <li><a href="#void">온라인 주문</a></li>
-                            <li><a href="#void">E-쿠폰</a></li>
-                            <li><a href="#void">APP</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a class="main_menu_title" href="#void">매장</a>
-                    </li>
-                    <li>
-                        <a class="main_menu_title" href="#void">bhc소식</a>
-                        <ul class="sub_menu">
-                            <li><a href="#void">YOUTUBE</a></li>
-                            <li><a href="#void">SNS</a></li>
-                            <li><a href="#void">NEWS</a></li>
-                            <li><a href="#void">공지사항</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a class="main_menu_title" href="#void">BRAND</a>
-                        <ul class="sub_menu">
-                            <li><a href="#void">bhc소개</a></li>
-                            <li><a href="#void">차별화 전략</a></li>
-                            <li><a href="#void">연혁</a></li>
-                            <li><a href="#void">오시는 길</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a class="main_menu_title" href="#void">bhc Mall</a>
+                    <li class="menu_icon">
+                        <a href="#void">
+                            <div class="menu_close_btn"></div>
+                        </a>
                     </li>
                 </ul>
-            </nav>
-            <div class="search_box">
-                <input type="text" value="메뉴를 입력하세요">
-                <img src="./images/search_icon.svg" alt="search_icon">
             </div>
-            <ul class="gnb">
-                <li class="search">
-                    <a class="search_icon" href="#void"><img src="./images/search_icon.svg" alt="search_icon"></a>
-                    <div class="search_x"><input type="text" value="메뉴를 입력하세요">
-                        <img src="./images/search_x.svg" alt="search_x">
-                    </div>
-                </li>
-                <li class="menu_icon"><a href="#void"><img src="./images/menu_icon.svg" alt="menu_icon"></a></li>
-            </ul>
         </div>
-    </header> -->
+    </header>
 
     <main>
         <section class="order_wrap">
@@ -565,7 +569,7 @@
             </div>
         </div>
     </footer>
-
+</body>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             //결체창
@@ -668,31 +672,6 @@
                         selectorShow.innerHTML = `${cateItem[0]} ${extra > 0 ? `외 ${extra}개` : ""}`
                     }
                 }
-
-
-                // let halfChickens = document.querySelectorAll(".half_chicken");
-                // halfChickens.forEach(item => {
-                //     let price = item.querySelector(".menu span").innerText.replace(/[^0-9]/g, '');
-                //     let count = parseInt(item.querySelector(".counter span").innerText);
-                //     totalSum += price * count;
-                // });
-
-
-                // let side = document.querySelectorAll(".add.side");
-                // side.forEach(item => {
-                //     let price = parseInt(item.querySelector(".menu span").innerText.replace(/[^0-9]/g, ''));
-                //     let count = parseInt(item.querySelector(".counter span").innerText);
-                //     totalSum += price * count;
-                // });
-
-
-                // let drink = document.querySelectorAll(".add.drinkS");
-                // drink.forEach(item => {
-                //     let price = parseInt(item.querySelector(".menu span").innerText.replace(/[^0-9]/g, ''));
-                //     let count = parseInt(item.querySelector(".counter span").innerText);
-                //     totalSum += price * count;
-                // });
-
                 total.innerHTML = totalSum.toLocaleString();
             }
 
@@ -729,6 +708,4 @@
             showBasic.innerHTML = selectBasic.innerHTML;
         });
     </script>
-</body>
-
 </html>

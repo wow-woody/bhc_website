@@ -380,7 +380,7 @@ header {
 .menu_items_list {
     display: flex;
     flex-direction: column;
-    gap: 26px
+    gap: 26px;
 }
 
 .menu_img_box,

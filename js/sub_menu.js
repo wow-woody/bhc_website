@@ -62,4 +62,87 @@ window.onload = function() {
             showCategory('fried', menuButtons[0]);
         }, 100);
     }
+
+    // 팝업 기능 추가
+    setupPopupFunctionality();
 };
+
+// 팝업 기능 설정 함수
+function setupPopupFunctionality() {
+    const moreButtons = document.querySelectorAll('.img_hover_text > a');
+    const popup = document.querySelector('.menu-see-more');
+    const closeBtn = document.querySelector('.menu-see-more-close-btn');
+
+    // 오버레이 생성
+    const overlay = document.createElement('div');
+    overlay.style.cssText = `
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 9999;
+    `;
+    document.body.appendChild(overlay);
+
+    // "더보기" 버튼 클릭 이벤트
+    moreButtons.forEach(button => {
+        button.addEventListener('click', function(e) {
+            e.preventDefault();
+            showPopup();
+        });
+    });
+
+    // 닫기 버튼 클릭 이벤트
+    if (closeBtn) {
+        closeBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            hidePopup();
+        });
+    }
+
+    // 오버레이 클릭 시 팝업 닫기
+    overlay.addEventListener('click', function() {
+        hidePopup();
+    });
+
+    // ESC 키로 팝업 닫기
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && popup && popup.style.display === 'flex') {
+            hidePopup();
+        }
+    });
+
+    // 팝업 표시 함수
+    function showPopup() {
+        if (popup) {
+            // 팝업을 중앙에 배치
+            popup.style.cssText = `
+                display: flex;
+                position: fixed;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 1000px;
+                height: 600px;
+                background: #ffffff;
+                border-radius: 3rem;
+                box-shadow: 0 0px 15px rgba(0, 0, 0, 0.085);
+                z-index: 10000;
+            `;
+            overlay.style.display = 'block';
+            document.body.style.overflow = 'hidden'; // 스크롤 방지
+        }
+    }
+
+    // 팝업 숨김 함수
+    function hidePopup() {
+        if (popup) {
+            popup.style.display = 'none';
+            overlay.style.display = 'none';
+            document.body.style.overflow = ''; // 스크롤 복원
+        }
+    }
+}

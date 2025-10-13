@@ -435,6 +435,7 @@ header {
 }
 
 
+
 .menu_text_box p:first-child {
     color: var(--mainColor);
     font-size: 2rem;
@@ -482,6 +483,112 @@ header {
             }
         }
     }
+}
+.menu-see-more {
+    display: flex;
+    position: relative;
+    width: 1000px;
+    height: 600px;
+    background: #ffffff;
+    border-radius: 3rem;
+    box-shadow: 0 0px 15px rgba(0, 0, 0, 0.085);
+    display: none;
+
+}
+
+
+.menu-see-more-close-btn > img {
+    position: absolute;
+    top: 3rem;
+    right: 3rem;
+    width: 4rem;   
+}
+
+
+.menu-see-more-image {
+    display: flex;
+    width: 40%;
+    justify-content: center;
+    align-items: center;
+    /* border: 1px solid red; */
+}
+
+.menu-see-more > p > img {
+    width: 100%;
+}
+.menu-see-more-text-wrap {
+    display: flex;
+    flex-direction:column;
+    align-self:center;
+    width: 60%;
+    margin-left: 0.5rem;
+    margin-right: 5rem;
+    justify-content: center;
+
+    /* border: 1px solid blue; */
+    
+}
+
+.see-more-title {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    /* align-items: flex-end;
+    gap: 1.5rem; */
+}
+.see-more-title-kr {
+    font-size: 3.2rem;
+    font-weight: 700;
+    color: var(--subColorBK);
+}
+
+.see-more-title-en {
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--mainColor);
+}
+
+
+.see-more-ex-line {
+    width: 100%;
+    height: 0.1rem;
+    background-color: #7E7E7E;
+    margin: 2.5rem 0;
+}
+
+.menu-see-more-ex {
+    font-size: 1.8rem;
+    font-weight: 300;
+    color: #7E7E7E;
+    line-height: 2.5rem;
+    white-space: normal;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    word-break: keep-all;
+}
+
+
+
+.menu-see-more-order-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 17rem;
+    height: 5.5rem;
+    border-radius: 999rem;
+    background-color: var(--subColor);
+    position: absolute;
+    right: 3rem;
+    bottom: 3rem;
+    color: var(--mainColor);
+    font-size: 2.3rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    
+}
+.menu-see-more-order-btn:hover {
+    background-color: var(--mainColor);
+    color: var(--subColor);
 }
 
 

@@ -484,6 +484,7 @@ header {
         }
     }
 }
+
 .menu-see-more {
     display: flex;
     position: relative;
@@ -516,6 +517,7 @@ header {
 .menu-see-more > p > img {
     width: 100%;
 }
+
 .menu-see-more-text-wrap {
     display: flex;
     flex-direction:column;
@@ -536,6 +538,7 @@ header {
     /* align-items: flex-end;
     gap: 1.5rem; */
 }
+
 .see-more-title-kr {
     font-size: 3.2rem;
     font-weight: 700;
@@ -568,7 +571,6 @@ header {
 }
 
 
-
 .menu-see-more-order-btn {
     display: flex;
     align-items: center;
@@ -586,6 +588,8 @@ header {
     transition: all 0.3s ease;
     
 }
+
+
 .menu-see-more-order-btn:hover {
     background-color: var(--mainColor);
     color: var(--subColor);

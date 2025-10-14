@@ -239,14 +239,14 @@ header {
     }
 }
 
-.swiper-slide img {
+.main_slider_list .swiper-slide img {
     width: 100%;
     border-radius: 3rem;
     transition: 0.5s;
     /* transform: scale(0.7); */
 }
 
-.swiper-slide-active img {
+.main_slider_list .swiper-slide-active img {
     transform: scale(1.3);
 }
 
@@ -864,14 +864,6 @@ main {
     /* position: relative; */
 }
 
-.section_title {
-    text-align: center;
-    width: 100%;
-    font-size: 6rem;
-    font-weight: 900;
-    margin-bottom: 50px;
-}
-
 .section_title>span {
     color: var(--mainColor);
 }
@@ -912,11 +904,6 @@ main {
 
 }
 
-.event_arrow p {
-    pointer-events: auto; /* 버튼 클릭 가능하도록 */
-
-}
-
 
 .event_img img {
     border-radius: 20px 0 0 20px;
@@ -925,7 +912,7 @@ main {
 
 
 
-.event_list .m_btn {
+.event_list .eventm_btn {
     display: none;
 }
 

@@ -1,42 +1,54 @@
 // URL 파라미터로 해당 메뉴만 표시
-window.addEventListener('load', function() {
+(function() {
     const params = new URLSearchParams(window.location.search);
     const menu = params.get('menu');
     
     if (menu) {
-        // 기존 스크립트 완료 후 실행
-        setTimeout(function() {
-            // 모든 메뉴 강제 숨기기
-            const allItems = document.querySelectorAll('.menu_items_list');
-            allItems.forEach(item => {
+        // 기존 sub_menu.js 함수 오버라이드
+        const originalOnload = window.onload;
+        
+        window.onload = function() {
+            // 즉시 해당 메뉴만 표시
+            showMenuCategory(menu);
+        };
+        
+        // 메뉴 카테고리 표시 함수
+        function showMenuCategory(categoryClass) {
+            // DOM이 준비될 때까지 대기
+            if (!document.querySelector('.menu_items_list')) {
+                setTimeout(() => showMenuCategory(categoryClass), 50);
+                return;
+            }
+            
+            // 모든 메뉴 숨기기
+            document.querySelectorAll('.menu_items_list').forEach(item => {
                 item.classList.add('hidden');
                 item.style.display = 'none';
                 item.style.opacity = '0';
+                item.style.transform = 'translateY(20px)';
             });
             
-            // 선택된 메뉴만 강제 표시
-            const selectedItems = document.querySelectorAll('.menu_items_list.' + menu);
-            selectedItems.forEach(item => {
+            // 선택된 메뉴만 표시
+            document.querySelectorAll('.menu_items_list.' + categoryClass).forEach((item, index) => {
                 item.classList.remove('hidden');
                 item.style.display = 'flex';
-                item.style.opacity = '1';
-                item.style.transform = 'translateY(0)';
+                
+                // 순차적 페이드인 효과
+                setTimeout(() => {
+                    item.style.opacity = '1';
+                    item.style.transform = 'translateY(0)';
+                }, index * 100);
             });
             
             // 탭 활성화
             const menuList = ['fried', 'seasoned', 'bburinkle', 'King-Series', 'Hot-Series'];
-            const tabIndex = menuList.indexOf(menu);
+            const tabIndex = menuList.indexOf(categoryClass);
             const tabs = document.querySelectorAll('.menu_nav li');
             
-            // 모든 탭 비활성화
             tabs.forEach(tab => tab.classList.remove('active'));
-            
-            // 해당 탭 활성화
             if (tabs[tabIndex]) {
                 tabs[tabIndex].classList.add('active');
             }
-            
-            console.log('메뉴 표시:', menu, '항목 수:', selectedItems.length);
-        }, 500);
+        }
     }
-});
+})();

@@ -29,18 +29,25 @@
 
 .store_info_wrap .location_choice {
     display: flex;
-    justify-content: space-evenly;
+    /* justify-content: space-evenly; */
     gap: 4rem;
 }
+
 .location_choice {
     border-bottom: 1px solid black;
     padding-bottom: 3rem;
 }
+
+.location_box {
+    display: flex;
+    gap: 4rem;
+}
+
 .location_choice .city_box,
 .location_choice .counties_box {
     background: url(../images/city_arrow.svg) no-repeat;
     background-position: right 15px center;
-    display: inline-block; 
+    display: inline-block;
     width: 28rem;
     height: 5.5rem;
     border: 2px solid black;
@@ -52,12 +59,12 @@
 
 .location_choice .city {
     position: relative;
-    /* height: 2rem; */
 }
 
 .location_choice .counties {
     position: relative;
 }
+
 .location_choice .city_list,
 .location_choice .counties_list {
     display: none;
@@ -79,15 +86,17 @@
     font-size: 2rem;
     font-weight: 300;
 }
+
 .location_choice .city_list li:hover,
-.location_choice .counties_list li:hover{
+.location_choice .counties_list li:hover {
     color: var(--pointColor);
     background-color: #E3E3E3;
 }
 
 .location_search {
     display: flex;
-    gap: 3rem
+    gap: 3rem;
+    /* background-color: #000; */
 }
 
 .location_search>input {
@@ -157,6 +166,7 @@
     background: var(--mainColor);
     border-radius: 50%;
 }
+
 /* page */
 .page_area {
     display: flex;
@@ -187,7 +197,8 @@
 }
 
 /* popup */
-.popup_wrap {
+
+/* .popup_wrap {
     position: fixed;
     background: rgba(0, 0, 0, 0.4);
     width: 100%;
@@ -195,61 +206,66 @@
     top: 0;
     left: 0;
     display: none;
+} */
+
+.popup_wrap {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.4);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    /* 팝업과 배경 덮는 부모 */
 }
 
 .popup {
-    display: block;
-    position: absolute;
-    margin: 0 auto;
-    top: 15%;
-    left: 50%;
-    transform: translateX(-50%);
+    position: relative;
     background: #fff;
-    border: 1px solid var(--subColor);
     border-radius: 30px;
-    box-shadow: 9px 7px 11px rgba(0, 0, 0, 0.2);
     width: 40%;
-    height: 80%;
-    /* position: relative; */
+    max-height: 80vh;
+    overflow-y: auto;
+    box-shadow: 9px 7px 11px rgba(0, 0, 0, 0.2);
+    z-index: 1100;
+    /* .popup_wrap보다 위 */
+    padding: 20px;
 }
+
+#map {
+    width: 100%;
+    height: 300px;
+    position: relative;
+    border-radius: 20px;
+    z-index: 1200;
+    /* 팝업 내부에서 더 위에 띄움 */
+}
+
 
 .popup .close_btn {
     position: absolute;
-    top: 15px;
-    right: 15px;
+    top: 30px;
+    right: 25px;
 }
 
-.popup .map {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0 1rem;
-    /* width: 5.7rem;
-    height: 2.3rem; */
-}
-
-.popup .map img {
-    width: 90%;
-    height: auto;
-    display: block;
-    margin: 0 auto;
-    max-width: 100%;
-}
 
 .popup h2 {
-    padding: 3rem 5rem 2rem;
+    padding: 2rem 0 2rem 2rem;
     font-weight: 600;
     font-size: 2.8rem;
 }
 
 .popup .map_title {
-    padding: 2rem 4rem 1.5rem;
+    padding: 2rem 2rem 1rem;
     font-size: 2.2rem;
     font-weight: 600;
 }
 
 .popup .map_items {
-    padding: 0 5rem;
+    padding: 0 1rem;
 }
 
 .popup .map_items li {

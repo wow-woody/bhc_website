@@ -1,0 +1,14 @@
+@media screen and (max-width:1440px){
+    .store .store_items {
+        justify-content: space-around;
+    }
+    .store .name {
+        padding-right: 0;
+    }
+    .store .addr {
+        padding-right: 0;
+    }
+    .store .tel {
+        padding-right: 0;
+    }
+}

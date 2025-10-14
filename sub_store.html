@@ -9,7 +9,12 @@
     <link rel="stylesheet" href="./css/common.css">
     <link rel="stylesheet" href="./css/style_bhc.css">
     <link rel="stylesheet" href="./css/sub_store.css">
+    <link rel="stylesheet" href="./css/store_respond.css">
+    <script src="//dapi.kakao.com/v2/maps/sdk.js?appkey=44dca69168206d3044fb78e789fae64c"></script>
     <script defer src="./js/sub_store.js"></script>
+
+
+
 </head>
 
 <body>
@@ -21,27 +26,29 @@
             </div>
             <div class="store_info_wrap">
                 <div class="location_choice">
-                    <div class="city">
-                        <div class="city_box">시/도</div>
-                        <ul class="city_list">
-                            <li><a href="#">서울특별시</a></li>
-                            <li><a href="#">경기도</a></li>
-                            <li><a href="#">충청남도</a></li>
-                            <li><a href="#">충청북도</a></li>
-                            <li><a href="#">전라남도</a></li>
-                            <li><a href="#">제주특별시</a></li>
-                        </ul>
-                    </div>
-                    <div class="counties">
-                        <div class="counties_box">군/구</div>
-                        <ul class="counties_list">
-                            <li><a href="#">강남구</a></li>
-                            <li><a href="#">강서구</a></li>
-                            <li><a href="#">성동구</a></li>
-                            <li><a href="#">성북구</a></li>
-                            <li><a href="#">중구</a></li>
-                            <li><a href="#">도봉구</a></li>
-                        </ul>
+                    <div class="location_box">
+                        <div class="city">
+                            <div class="city_box">시/도</div>
+                            <ul class="city_list">
+                                <li><a href="#">서울특별시</a></li>
+                                <li><a href="#">경기도</a></li>
+                                <li><a href="#">충청남도</a></li>
+                                <li><a href="#">충청북도</a></li>
+                                <li><a href="#">전라남도</a></li>
+                                <li><a href="#">제주특별시</a></li>
+                            </ul>
+                        </div>
+                        <div class="counties">
+                            <div class="counties_box">군/구</div>
+                            <ul class="counties_list">
+                                <li><a href="#">강남구</a></li>
+                                <li><a href="#">강서구</a></li>
+                                <li><a href="#">성동구</a></li>
+                                <li><a href="#">성북구</a></li>
+                                <li><a href="#">중구</a></li>
+                                <li><a href="#">도봉구</a></li>
+                            </ul>
+                        </div>
                     </div>
                     <div class="location_search">
                         <input type="text" placeholder="매장명 또는 주소를 입력하세요.">
@@ -165,22 +172,22 @@
             </div>
             <div class="store_page_wrap">
                 <div class="page_area">
-                    <a href="#void"><img src="./images/page_btn_first.svg" alt="첫페이지로"></a>
-                    <a href="#void"><img src="./images/page_btn_prev.svg" alt="이전페이지로"></a>
+                    <a href="#"><img src="./images/page_btn_first.svg" alt="첫페이지로"></a>
+                    <a href="#"><img src="./images/page_btn_prev.svg" alt="이전페이지로"></a>
                     <ul class="page_list">
-                        <li><a href="#void">1</a></li>
-                        <li><a href="#void">2</a></li>
-                        <li><a href="#void">3</a></li>
-                        <li><a href="#void">4</a></li>
-                        <li><a href="#void">5</a></li>
-                        <li><a href="#void">6</a></li>
-                        <li><a href="#void">7</a></li>
-                        <li><a href="#void">8</a></li>
-                        <li><a href="#void">9</a></li>
-                        <li><a href="#void">10</a></li>
+                        <li><a href="#">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#">4</a></li>
+                        <li><a href="#">5</a></li>
+                        <li><a href="#">6</a></li>
+                        <li><a href="#">7</a></li>
+                        <li><a href="#">8</a></li>
+                        <li><a href="#">9</a></li>
+                        <li><a href="#">10</a></li>
                     </ul>
-                    <a href="#void"><img src="./images/page_btn_next.svg" alt="다음페이지로"></a>
-                    <a href="#void"><img src="./images/page_btn_last.svg" alt="마지막페이지로"></a>
+                    <a href="#"><img src="./images/page_btn_next.svg" alt="다음페이지로"></a>
+                    <a href="#"><img src="./images/page_btn_last.svg" alt="마지막페이지로"></a>
                 </div>
             </div>
         </div>
@@ -190,7 +197,8 @@
             <p class="close_btn"><a href="#"><img src="./images/bhc_map_close.svg" alt="닫기버튼"></a></p>
             <div class="popup_content">
                 <h2>매장정보</h2>
-                <div class="map"><a href="#"><img src="./images/map_images.png" alt=""></a></div>
+                <!-- <div class="map"><a href="#"><img src="./images/map_images.png" alt=""></a></div> -->
+                <div class="map" id="map"></div>
                 <div class="map_info">
                     <h3 class="map_title">가양역점</h3>
                     <ul class="map_items">
@@ -212,7 +220,6 @@
             </div>
         </div>
     </div>
-    <!-- <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=95c7ab7737f71ac720687cb02b7b788b."></script> -->
 </body>
 
 </html>

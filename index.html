@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>bhc chicken</title>
+
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./css/Paperlogy.css">
     <link rel="shortcut icon" href="./images/favicon.png">
@@ -11,22 +12,38 @@
     <link rel="stylesheet" href="./css/style_bhc.css">
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="./css/main_respond.css">
-    <script defer src="./js/event.js"></script>
+    <script defer src="./js/main.js"></script>
+
+
     <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
-    <script>
-        window.onload = function () {
-            let swiper = new Swiper(".main_slider", {
-                loop: true,
-                autoplay: {
-                    delay: 4000
-                },
-                speed: 1000,
-                slidesPerView: 1.6,
-                spaceBetween: 250,
-                centeredSlides: true
-            })
-        }
-    </script>
+
+
+    <!-- <script>
+       window.addEventListener("load", function () {
+    // 메인 슬라이더
+    if (document.querySelector(".main_slider")) {
+        new Swiper(".main_slider", {
+            loop: true,
+            autoplay: { delay: 4000 },
+            speed: 1000,
+            slidesPerView: 1.6,
+            spaceBetween: 250,
+            centeredSlides: true
+        });
+    }
+
+    // 인스타그램 슬라이더
+    if (document.querySelector(".insta_swiper")) {
+        const swiperContainer = document.querySelector('.insta_swiper');
+        swiperContainer.setAttribute('dir', 'rtl');
+        swiperContainer.querySelectorAll('.swiper-slide').forEach(slide => slide.setAttribute('dir', 'ltr'));
+        new Swiper(".insta_swiper", {
+            slidesPerView: "auto",
+            spaceBetween: 30,
+            freeMode: true,
+            slidesOffsetAfter: 10
+        });
+    }
 
     // 이벤트 슬라이더
     if (document.querySelector(".event_swiper")) {
@@ -371,7 +388,7 @@
 
             <!-- 인스타 섹션 -->
             <section class="insta_wrap">
-                <div class="insta_left swiper">
+                <div class="insta_swiper swiper insta_left">
                     <div class="insta_card_list swiper-wrapper">
                         <div class="card swiper-slide">
                             <div class="card_top">
@@ -463,7 +480,7 @@
                     <a href="#">bhc Instagram</a>
                 </div>
 
-                <script>
+                <!-- <script>
                     window.onload = function () {
                         const swiperContainer = document.querySelector('.insta_left');
 
@@ -483,7 +500,7 @@
                             slidesOffsetAfter: 10
                         });
                     }
-                </script>
+                </script> -->
             </section>
 
 
@@ -500,7 +517,7 @@
                                 <a href="#"><img src="./images/left_arrow_event.png" alt="left_arrow"></a>
                             </p>
                         </div>
-                        <div class="swiper mySwiper">
+                        <div class="event_swiper swiper mySwiper">
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide event_img"><a href="#"><img src="./images/img_event1.jpg"
                                             alt="event_img1"></a></div>
@@ -516,16 +533,12 @@
                                             alt="event_img6"></a></div>
                             </div>
 
-                            <!-- 만약 페이지네이션 등 필요하면 아래 추가 -->
-                            <!-- <div class="swiper-pagination"></div> -->
                         </div>
 
-
-                        <div class="m_btn">
+                        <div class="eventm_btn">
                             <a href="#">bhc event</a>
-                        </div>
-                        <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
-                        <script>
+                        </div>                                            
+                        <!--<script>
                             var swiper = new Swiper(".mySwiper", {
                                 slidesPerView: 3,
                                 spaceBetween: 30,
@@ -557,7 +570,7 @@
                             document.querySelectorAll('.swiper-button-next a, .swiper-button-prev a').forEach(el => {
                                 el.addEventListener('click', e => e.preventDefault());
                             });
-                        </script>
+                        </script> -->
                     </div>
                 </div>
             </section>

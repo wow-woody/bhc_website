@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./css/Paperlogy.css">
+    <link rel="shortcut icon" href="./images/favicon.png">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/style_bhc.css">
+    <link rel="stylesheet" href="./css/main-slider.css">
+    <link rel="stylesheet" href="./css/bhc_header_footer.css">
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <script>
+        window.onload = function () {
+            let swiper = new Swiper(".main_slider", {
+                loop: true,
+                autoplay: {
+                    delay: 4000
+                },
+                speed: 1000,
+                slidesPerView: 1.6,
+                spaceBetween: 250,
+                centeredSlides: true
+            })
+        }
+    </script>
+</head>
+
+<body>
+    <header>
+        <div class="wide_inner">
+            <h1 class="logo"><a href="#void"><img src="./images/bhc_Logo.svg" alt="logo"></a></h1>
+            <nav>
+                <ul class="main_menu">
+                    <li>
+                        <a class="main_menu_title" href="#void">메뉴</a>
+                        <ul class="sub_menu">
+                            <li><a href="#void">후라이드</a></li>
+                            <li><a href="#void">양념</a></li>
+                            <li><a href="#void">뿌링클</a></li>
+                            <li><a href="#void">킹시리즈</a></li>
+                            <li><a href="#void">핫시리즈</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="main_menu_title" href="#void">주문하기</a>
+                        <ul class="sub_menu">
+                            <li><a href="#void">온라인 주문</a></li>
+                            <li><a href="#void">E-쿠폰</a></li>
+                            <li><a href="#void">APP</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="main_menu_title" href="#void">매장</a>
+                    </li>
+                    <li>
+                        <a class="main_menu_title" href="#void">bhc소식</a>
+                        <ul class="sub_menu">
+                            <li><a href="#void">YOUTUBE</a></li>
+                            <li><a href="#void">SNS</a></li>
+                            <li><a href="#void">NEWS</a></li>
+                            <li><a href="#void">공지사항</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="main_menu_title" href="#void">BRAND</a>
+                        <ul class="sub_menu">
+                            <li><a href="#void">bhc소개</a></li>
+                            <li><a href="#void">차별화 전략</a></li>
+                            <li><a href="#void">연혁</a></li>
+                            <li><a href="#void">오시는 길</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="main_menu_title" href="#void">bhc Mall</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="search_box">
+                <input type="text" value="메뉴를 입력하세요">
+                <img src="./images/search_icon.svg" alt="search_icon">
+            </div>
+            <ul class="gnb">
+                <li class="search">
+                    <a class="search_icon" href="#void"><img src="./images/search_icon.svg" alt="search_icon"></a>
+                    <div class="search_x"><input type="text" value="메뉴를 입력하세요">
+                        <img src="./images/search_x.svg" alt="search_x">
+                    </div>
+                </li>
+                <li class="menu_icon"><a href="#void"><img src="./images/menu_icon.svg" alt="menu_icon"></a></li>
+            </ul>
+        </div>
+    </header>
+
+    <div class="main_slider_wrap">
+        <!-- <div class="inner"> -->
+        <div class="main_slider swiper">
+            <div class="main_slider_list swiper-wrapper">
+                <div class="slider1 swiper-slide"><img src="./images/main-slider-3.png" alt="메인슬라이더1"></div>
+                <div class="slider2 swiper-slide"><img src="./images/main-slider-2.png" alt="메인슬라이더2"></div>
+                <div class="slider3 swiper-slide"><img src="./images/main-slider-1.png" alt="메인슬라이더3"></div>
+                <div class="slider4 swiper-slide"><img src="./images/main-slider-4.png" alt="메인슬라이더4"></div>
+                <div class="slider5 swiper-slide"><img src="./images/main-slider-5.png" alt="메인슬라이더5"></div>
+            </div>
+            <div class="pager_bar">
+                <ul class="pager_left">
+                    <li class="stop_btn"><a href="#void"><img src="./images/stop_btn.svg" alt="stop_btn"></a>
+                    </li>
+                    <li class="start_btn"><a href="#void"><img src="./images/start_btn.svg" alt="start_btn"></a>
+                    </li>
+                </ul>
+                <div class="pager_right"><span></span></div>
+            </div>
+            <ul class="pager_btn">
+                <li class="active"><a href="#void"></a></li>
+                <li><a href="#void"></a></li>
+                <li><a href="#void"></a></li>
+                <li><a href="#void"></a></li>
+                <li><a href="#void"></a></li>
+
+            </ul>
+        </div>
+        <!-- </div> -->
+    </div>
+</body>
+
+</html>

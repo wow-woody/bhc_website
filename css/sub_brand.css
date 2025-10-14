@@ -23,20 +23,25 @@ body {
 }
 
 .sub_title {
-    font-size: 7rem;
+    font-size: 4rem;
     font-weight: 900;
     color: #000000;
 }
 
 /* main */
 .main_Brand {
-    margin-top: 100px;
+    /* margin-top: 100px; */
 }
 
 .main_img {
     text-align: center;
 }
 
+.main_img img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
 .main_text {
     margin-top: 20px;
     font-size: 2.8rem;
@@ -287,6 +292,12 @@ body {
     cursor: pointer;
 }
 
+.more_btn:hover {
+    background: #fff;
+    color: var(--pointColor); 
+    border: 1px solid var(--pointColor);            
+}
+
 .close_btn {
     /* position: absolute; */
     display: block;
@@ -300,6 +311,12 @@ body {
     border-radius: 50px;
     border: none;
     cursor: pointer;
+}
+
+.close_btn:hover {
+    background: #fff;  
+    color: var(--pointColor); 
+    border: 1px solid var(--pointColor);            
 }
 
 /* header */
@@ -603,5 +620,108 @@ footer {
     }
 }
 
+@media screen and (max-width:1024px) {
+    .main_text {
+        font-size: 2.2rem;
+        padding: 0 1rem;
+    }
+
+    .main_img {
+        width: 100%;
+    }
+
+
+    .recipe .rec {
+        width: 280px;
+        height: 280px;
+    }
+
+    .recipe .rec .rec_title {
+        font-size: 2.0rem;
+        font-weight: 400;
+    }
+
+    .recipe .rec>span {
+        font-size: 1.0rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    html {
+        font-size: 9px;
+    }
+
+    .inner {
+        padding: 0 20px;
+    }
+
+    .sub_title {
+        font-size: 3rem;
+        text-align: center;
+    }
+
+    .main_text {
+        font-size: 2.0rem;
+        padding: 0 1rem;
+    }
+
+    .recipe {
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+    }
+
+    .recipe .rec {
+        width: 90%;
+        height: auto;
+        padding: 30px 20px;
+    }
+
+    .recipe .rec .rec_title {
+        font-size: 2rem;
+    }
+
+    .recipe .rec>span {
+        font-size: 1.2rem;
+    }
+
+    .main_color .color_wrap {
+        flex-direction: column;
+        align-items: center;
+        gap: 50px;
+    }
+
+    .slogun1,
+    .slogun2 {
+        width: 100%;
+        height: auto;
+        padding: 30px;
+        font-size: 1.4rem;
+        line-height: 2.2rem;
+        text-align: center;
+        flex-direction: column;
+        white-space: nowrap;
+    }
+
+    .year .years {
+        flex-direction: column;
+        text-align: center;
+        width: 90%;
+        padding: 50px 20px;
+        gap: 30px;
+        font-size: 1.6rem;
+    }
+
+    .year .years .history_title {
+        font-size: 4rem;
+    }
+
+    .more_btn,
+    .close_btn {
+        width: 140px;
+        height: 50px;
+        font-size: 1.6rem;
+    }
+}
 
 

@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF_8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>bhc chicken</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
@@ -29,13 +28,27 @@
         }
     </script>
 
-    <!-- 채아 메인-->
-    <!-- <link rel="stylesheet" href="./css/bhc_youtube_respond.css"> -->
+    // 이벤트 슬라이더
+    if (document.querySelector(".event_swiper")) {
+        new Swiper(".event_swiper", {
+            slidesPerView: 3,
+            spaceBetween: 30,
+            freeMode: true,
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev"
+            }
+        });
 
-    <!-- 채아 footer-->
-    <!-- <link rel="stylesheet" href="./css/bhc_respond_ver2.css"> -->
+        document.querySelectorAll('.swiper-button-next a, .swiper-button-prev a').forEach(el => {
+            el.addEventListener('click', e => e.preventDefault());
+        });
+    }
+});
 
+    </script> -->
 </head>
+
 
 <body>
     <header>
@@ -477,7 +490,7 @@
             <!-- 이벤트 섹션 -->
             <section class="event_wrap">
                 <div class="inner">
-                    <h2 class=section_title><span>bhc</span>Event</h2>
+                    <h2 class=section_title id="event_title"><span>bhc</span> Event</h2>
                     <div class="event_list">
                         <div class="event_arrow">
                             <p class="swiper-button-next" id="right_arr">

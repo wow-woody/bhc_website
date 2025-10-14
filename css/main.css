@@ -847,6 +847,14 @@ main {
     margin: 0 auto;
 }
 
+.section_title {
+    /* font-size: 5rem;
+    text-align: center;
+    width: 100%;
+    font-weight: 900;
+    margin-bottom: 50px; */
+}
+
 
 .event_wrap .inner {
     /* max-width: 1680; */
@@ -898,6 +906,11 @@ main {
     flex-direction:row-reverse;
 }
 
+
+.event_arrow p {
+    pointer-events: auto; /* 버튼 클릭 가능하도록 */
+
+}
 
 .event_arrow p {
     pointer-events: auto; /* 버튼 클릭 가능하도록 */

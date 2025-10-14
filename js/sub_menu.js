@@ -3,10 +3,22 @@ window.onload = function() {
     const menuButtons = document.querySelectorAll('.menu_nav li');
     const categories = ['fried', 'seasoned', 'bburinkle', 'King-Series', 'Hot-Series'];
 
+    // 모든 아이콘 상태 강제 초기화 함수
+    function forceResetAllIcons() {
+        menuButtons.forEach(btn => {
+            btn.classList.remove('active');
+            const icon = btn.querySelector('.menu_nav-icon');
+            if (icon) {
+                icon.className = 'menu_nav-icon';
+                icon.removeAttribute('style'); // 인라인 스타일도 제거
+            }
+        });
+    }
+
     // 메뉴 카테고리 부드럽게 보이기 함수
     function showCategory(categoryClass, activeButton) {
-        // 모든 버튼 비활성화
-        menuButtons.forEach(btn => btn.classList.remove('active'));
+        // 강제로 모든 아이콘 상태 초기화
+        forceResetAllIcons();
         
         // 현재 보이는 메뉴들을 페이드아웃
         const currentVisibleItems = document.querySelectorAll('.menu_items_list:not(.hidden)');
@@ -37,8 +49,13 @@ window.onload = function() {
                 }, index * 100); // 각 아이템마다 100ms 지연
             });
             
-            // 클릭된 버튼 활성화
+            // 클릭된 버튼 활성화 및 해당 아이콘 클래스 재설정
             activeButton.classList.add('active');
+            const activeIcon = activeButton.querySelector('.menu_nav-icon');
+            if (activeIcon) {
+                // 완전히 초기화 후 올바른 클래스만 추가
+                activeIcon.className = `menu_nav-icon icon-${categoryClass}`;
+            }
         }, 200); // 페이드아웃 완료 후 실행
     }
 
@@ -50,12 +67,27 @@ window.onload = function() {
         });
     });
 
-    // 초기 로딩 시 첫 번째 메뉴(후라이드) 활성화
-    if (menuButtons[0]) {
+    // URL 파라미터 확인
+    const params = new URLSearchParams(window.location.search);
+    const menu = params.get('menu');
+    
+    // URL 파라미터가 있을 때도 초기화
+    if (menu) {
+        forceResetAllIcons();
+        document.querySelectorAll('.menu_items_list').forEach(section => {
+            section.classList.add('hidden');
+        });
+    }
+    
+    // 초기 로딩 시 첫 번째 메뉴(후라이드) 활성화 (URL 파라미터가 없을 때만)
+    if (menuButtons[0] && !menu) {
         // 초기에는 모든 메뉴 숨기기
         document.querySelectorAll('.menu_items_list').forEach(section => {
             section.classList.add('hidden');
         });
+        
+        // 모든 아이콘 초기화 (페이지 로딩 시에도)
+        forceResetAllIcons();
         
         // 후라이드 메뉴만 보이기
         setTimeout(() => {

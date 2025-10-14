@@ -4,50 +4,66 @@
     const menu = params.get('menu');
     
     if (menu) {
-        // 기존 sub_menu.js 함수 오버라이드
+        // sub_menu.js의 초기화를 덮어쓰기
         const originalOnload = window.onload;
         
         window.onload = function() {
-            // 즉시 해당 메뉴만 표시
-            showMenuCategory(menu);
+            // sub_menu.js의 기존 로직 실행
+            if (originalOnload) originalOnload();
+            
+            // 파라미터에 따른 메뉴 표시
+            setTimeout(() => {
+                const menuButtons = document.querySelectorAll('.menu_nav li');
+                const categories = ['fried', 'seasoned', 'bburinkle', 'King-Series', 'Hot-Series'];
+                const index = categories.indexOf(menu);
+                
+                if (index >= 0 && menuButtons[index]) {
+                    // sub_menu.js의 showCategory 함수 활용
+                    showCategoryFromHeader(menu, menuButtons[index]);
+                }
+            }, 150);
         };
         
-        // 메뉴 카테고리 표시 함수
-        function showMenuCategory(categoryClass) {
-            // DOM이 준비될 때까지 대기
-            if (!document.querySelector('.menu_items_list')) {
-                setTimeout(() => showMenuCategory(categoryClass), 50);
-                return;
-            }
+        // sub_menu.js와 동일한 로직으로 메뉴 표시
+        function showCategoryFromHeader(categoryClass, activeButton) {
+            const menuButtons = document.querySelectorAll('.menu_nav li');
             
-            // 모든 메뉴 숨기기
-            document.querySelectorAll('.menu_items_list').forEach(item => {
-                item.classList.add('hidden');
-                item.style.display = 'none';
-                item.style.opacity = '0';
-                item.style.transform = 'translateY(20px)';
+            // 강제로 모든 아이콘 상태 초기화 (sub_menu.js와 동일)
+            menuButtons.forEach(btn => {
+                btn.classList.remove('active');
+                const icon = btn.querySelector('.menu_nav-icon');
+                if (icon) {
+                    icon.className = 'menu_nav-icon';
+                    icon.removeAttribute('style');
+                }
             });
             
-            // 선택된 메뉴만 표시
-            document.querySelectorAll('.menu_items_list.' + categoryClass).forEach((item, index) => {
-                item.classList.remove('hidden');
-                item.style.display = 'flex';
+            // 모든 메뉴 숨기기
+            document.querySelectorAll('.menu_items_list').forEach(section => {
+                section.classList.add('hidden');
+                section.style.opacity = '0';
+                section.style.transform = 'translateY(20px)';
+            });
+            
+            // 선택한 카테고리만 보이기
+            const targetSections = document.querySelectorAll(`.menu_items_list.${categoryClass}`);
+            targetSections.forEach((section, index) => {
+                section.classList.remove('hidden');
+                section.style.display = 'flex';
                 
-                // 순차적 페이드인 효과
+                // 순차적으로 페이드인 효과
                 setTimeout(() => {
-                    item.style.opacity = '1';
-                    item.style.transform = 'translateY(0)';
+                    section.style.opacity = '1';
+                    section.style.transform = 'translateY(0)';
                 }, index * 100);
             });
             
-            // 탭 활성화
-            const menuList = ['fried', 'seasoned', 'bburinkle', 'King-Series', 'Hot-Series'];
-            const tabIndex = menuList.indexOf(categoryClass);
-            const tabs = document.querySelectorAll('.menu_nav li');
-            
-            tabs.forEach(tab => tab.classList.remove('active'));
-            if (tabs[tabIndex]) {
-                tabs[tabIndex].classList.add('active');
+            // 클릭된 버튼 활성화 및 해당 아이콘 클래스 재설정
+            activeButton.classList.add('active');
+            const activeIcon = activeButton.querySelector('.menu_nav-icon');
+            if (activeIcon) {
+                // 완전히 초기화 후 올바른 클래스만 추가 (sub_menu.js와 동일)
+                activeIcon.className = `menu_nav-icon icon-${categoryClass}`;
             }
         }
     }

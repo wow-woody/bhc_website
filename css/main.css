@@ -231,7 +231,7 @@ header {
                 display: block;
                 width: 28rem;
                 height: 0.8rem;
-                background: var(--color-primary);
+                background: var(--mainColor);
                 border-radius: 1rem;
                 margin: 0 0.2rem;
             }
@@ -265,7 +265,6 @@ header {
 
 .order_wrap .order_list>div {
     width: 100%;
-
     a {
         display: flex;
         padding: 32px 26px;
@@ -281,10 +280,10 @@ header {
     }
 }
 
-.order_wrap .order_list>div:hover a {
-    border: 0.5px solid transparent;
-    outline: 2px solid var(--color-primary);
-    background: #fff;
+.order_wrap .order_list>div:hover a{
+        border: 0.5px solid transparent;
+        outline: 2px solid var(--mainColor);
+        background: #fff;
 }
 
 .order_wrap .img_box {
@@ -855,7 +854,14 @@ main {
     margin-bottom: 50px; */
 }
 
+.event_wrap .section_title {
+    color: var(--subColor);
+    margin-bottom: 50px;
 
+    span:first-child {
+        color: var(--mainColor);
+    }
+}
 .event_wrap .inner {
     /* max-width: 1680; */
     /* margin-top: 70px; */

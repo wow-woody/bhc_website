@@ -5,7 +5,86 @@
 
 
 /* 메인 - 주문 버튼 섹션 */
+@media screen and (max-width:1024px) {
+    .main_slider_wrap {
+        padding-top: 90px;
+    }
 
+    .order_wrap .order_list .order3 {
+        display: none;
+    }
+
+    .order_list .text_box>.order_ex {
+        margin: 8px 0 0 8px;
+    }
+}
+
+@media screen and (max-width:920px) {
+    .main_slider_wrap {
+        padding-top: 90px;
+    }
+
+    .order_wrap .order_list .order3 {
+        display: block;
+    }
+
+    .order_list .text_box>.order_ex {
+        font-size: 1.2rem;
+    }
+
+    .order_wrap .order_list {
+        /* display: flex; */
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .order_wrap .order_list>div {
+        width: calc(100% /2 - 30px);
+    }
+
+    .order_wrap .order_list>div a {
+        padding: 30px 10px;
+        gap: 10px;
+    }
+}
+
+@media screen and (max-width:568px) {
+    html{
+        font-size: 8px;
+    }
+    .main_slider_wrap {
+        padding-top: 60px;
+    }
+
+    .order_wrap {
+        padding: 70px 0 70px;
+    }
+
+    .order_wrap .order_list>div {
+        width: calc(80% /2 -20px)
+    }
+
+    .order_wrap .order_list>div a {
+        padding: 20px 5px;
+        gap: 10px;
+    }
+    .order_list .text_box>.order_title {
+        font-size: 2rem;
+    }
+
+    .order_list .text_box>.order_ex{
+        font-size: 1rem;
+    }
+    .order_wrap img {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    .order_wrap .order_list>div {
+        width: calc(80% /2)
+    }
+}
 
 /* 메인 - 메뉴 섹션 */
 
@@ -210,7 +289,58 @@
 }
 
 /* 메인 - 유튜브 섹션- */
+@media screen and (max-width:1200px) {
+    main {
+        .youtube_wrap {
+            .inner {
+                .bg_text {
+                    display: none;
+                }
 
+                .youtube_img01 {
+                    display: none;
+                }
+
+            }
+        }
+    }
+}
+
+@media screen and (max-width:1080px) {
+    main {
+        .youtube_wrap {
+            .inner {
+                .video_wrap {
+                    width: 100%;
+
+                    .youtube_img02 {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:1024px) {
+    html {
+        font-size: 8px;
+    }
+
+    main{
+        .youtube_wrap{
+            height: 100%;
+            padding: 100px 0;
+        }
+    }
+}
+
+
+@media screen and (max-width:600px) {
+    html {
+        font-size: 5px;
+    }
+}
 
 /* 메인 - 인스타 섹션 */
 @media screen and (max-width: 1024px) {
@@ -391,15 +521,16 @@
         }
     }
 
-    .event_list .m_btn {
+    .event_list .eventm_btn {
         display: block;
         /* 1280px 이하에서만 보이게 설정 */
-        margin-top: 30px;
+        margin-top: 50px;
         text-align: center;
+        
         /* position:absolute; */
     }
 
-    .event_list .m_btn a {
+    .event_list .eventm_btn a {
         width: 170px;
         height: 50px;
         /* 추가: 요소 높이 지정 */
@@ -420,7 +551,7 @@
         box-sizing: border-box;
     }
 
-    .event_list .m_btn a:hover {
+    .event_list .eventm_btn a:hover {
         background-image: url(../images/arrow_mbtn_or.svg);
         background-color: #fff;
         color: var(--mainColor);

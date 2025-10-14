@@ -488,8 +488,8 @@ header {
 .menu-see-more {
     display: flex;
     position: relative;
-    width: 1000px;
-    height: 600px;
+    width: 100rem;
+    height: 60rem;
     background: #ffffff;
     border-radius: 3rem;
     box-shadow: 0 0px 15px rgba(0, 0, 0, 0.085);
@@ -502,7 +502,7 @@ header {
     position: absolute;
     top: 3rem;
     right: 3rem;
-    width: 4rem;   
+    width: 3.5rem;   
 }
 
 
@@ -533,10 +533,10 @@ header {
 
 .see-more-title {
     display: flex;
-    flex-direction: column;
-    gap: 0.4rem;
-    /* align-items: flex-end;
-    gap: 1.5rem; */
+    /* flex-direction: column;
+    gap: 0.4rem; */
+    align-items: flex-end;
+    gap: 1.5rem;
 }
 
 .see-more-title-kr {
@@ -570,7 +570,13 @@ header {
     word-break: keep-all;
 }
 
-
+.menu-see-more-ex-sub {
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: #7E7E7E;
+    line-height: 2.1rem;
+    
+}
 .menu-see-more-order-btn {
     display: flex;
     align-items: center;
@@ -586,7 +592,7 @@ header {
     font-size: 2.3rem;
     font-weight: 600;
     transition: all 0.3s ease;
-    
+    cursor: pointer;
 }
 
 
@@ -595,7 +601,30 @@ header {
     color: var(--subColor);
 }
 
+.see-more-wrap-bg-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+}
 
+/* 팝업 표시/숨김 클래스 */
+.menu-see-more.show {
+    position: fixed !important;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important;
+    z-index: 10001 !important;
+    display: flex !important;
+}
+
+.see-more-wrap-bg-overlay.show {
+    display: block !important;
+}
 
 /* footer */
 footer {

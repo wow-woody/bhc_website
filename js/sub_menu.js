@@ -65,84 +65,48 @@ window.onload = function() {
 
     // 팝업 기능 추가
     setupPopupFunctionality();
+    
+    // 팝업 닫기 버튼 호버 효과 - 360도 회전 애니메이션
+    const closeImg = document.querySelector('.menu-see-more-close-btn > img');
+    if (closeImg) {
+        closeImg.style.cursor = 'pointer'; // 손가락 커서로 변경
+        closeImg.addEventListener('mouseenter', () => {
+            closeImg.style.transform = 'rotate(180deg)'; // 마우스 올리면 360도 회전
+            closeImg.style.transition = 'transform 0.75s ease'; // 0.75초 부드러운 회전
+        });
+        closeImg.addEventListener('mouseleave', () => {
+            closeImg.style.transform = 'rotate(0deg)'; // 마우스 떠나면 원래 각도로 복귀
+        });
+    }
 };
 
-// 팝업 기능 설정 함수
+
+// 메뉴 상세보기 팝업 기능
 function setupPopupFunctionality() {
-    const moreButtons = document.querySelectorAll('.img_hover_text > a');
-    const popup = document.querySelector('.menu-see-more');
-    const closeBtn = document.querySelector('.menu-see-more-close-btn');
-
-    // 오버레이 생성
-    const overlay = document.createElement('div');
-    overlay.style.cssText = `
-        display: none;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.5);
-        z-index: 9999;
-    `;
-    document.body.appendChild(overlay);
-
-    // "더보기" 버튼 클릭 이벤트
-    moreButtons.forEach(button => {
-        button.addEventListener('click', function(e) {
-            e.preventDefault();
-            showPopup();
-        });
-    });
-
-    // 닫기 버튼 클릭 이벤트
-    if (closeBtn) {
-        closeBtn.addEventListener('click', function(e) {
-            e.preventDefault();
-            hidePopup();
-        });
+    const popup = document.querySelector('.menu-see-more'); // 팝업창 요소
+    const overlay = document.createElement('div'); // 배경 어둡게 처리용 오버레이 생성
+    overlay.className = 'see-more-wrap-bg-overlay';
+    document.body.appendChild(overlay); // body에 오버레이 추가하여 전체 화면 덮음
+    
+    // 팝업 열기/닫기 토글 함수 - CSS 클래스로 제어
+    function togglePopup(show) {
+        popup.classList.toggle('show', show); // .show 클래스로 팝업 중앙 표시
+        overlay.classList.toggle('show', show); // .show 클래스로 배경 어둡게 처리
+        document.body.style.overflow = show ? 'hidden' : ''; // 팝업 열릴 때 배경 스크롤 방지
     }
-
-    // 오버레이 클릭 시 팝업 닫기
-    overlay.addEventListener('click', function() {
-        hidePopup();
-    });
-
-    // ESC 키로 팝업 닫기
-    document.addEventListener('keydown', function(e) {
-        if (e.key === 'Escape' && popup && popup.style.display === 'flex') {
-            hidePopup();
-        }
-    });
-
-    // 팝업 표시 함수
-    function showPopup() {
-        if (popup) {
-            // 팝업을 중앙에 배치
-            popup.style.cssText = `
-                display: flex;
-                position: fixed;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                width: 1000px;
-                height: 600px;
-                background: #ffffff;
-                border-radius: 3rem;
-                box-shadow: 0 0px 15px rgba(0, 0, 0, 0.085);
-                z-index: 10000;
-            `;
-            overlay.style.display = 'block';
-            document.body.style.overflow = 'hidden'; // 스크롤 방지
-        }
-    }
-
-    // 팝업 숨김 함수
-    function hidePopup() {
-        if (popup) {
-            popup.style.display = 'none';
-            overlay.style.display = 'none';
-            document.body.style.overflow = ''; // 스크롤 복원
-        }
-    }
+    
+    // 메뉴 아이템의 "더보기" 버튼 클릭 시 팝업 열기
+    document.querySelectorAll('.img_hover_text > a').forEach(btn => 
+        btn.onclick = e => (e.preventDefault(), togglePopup(true)) // 링크 기본동작 방지 후 팝업 열기
+    );
+    
+    // X 닫기 버튼 클릭 시 팝업 닫기
+    document.querySelector('.menu-see-more-close-btn').onclick = e => 
+        (e.preventDefault(), togglePopup(false)); // 팝업 닫기
+    
+    // 배경 오버레이 클릭 시 팝업 닫기 - UX 편의성
+    overlay.onclick = () => togglePopup(false);
+    
+    // ESC 키 누르면 팝업 닫기 - 키보드 접근성
+    document.onkeydown = e => e.key === 'Escape' && togglePopup(false);
 }

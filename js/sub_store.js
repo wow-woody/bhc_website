@@ -1,18 +1,29 @@
 
-let mapDetail = document.querySelector(".store");
+let storeItem = document.querySelector(".store");
 let popup = document.querySelector(".popup_wrap");
 let closeBtn = document.querySelector(".popup .close_btn");
 let cityBox = document.querySelector(".city_box");
 let countiesBox = document.querySelector(".counties_box");
 let cityList = document.querySelector(".city_list");
 let countiesList = document.querySelector(".counties_list");
+let mapDetail = document.querySelector(".store .detail");
 
-console.log(mapDetail);
+console.log(storeItem);
 
-mapDetail.addEventListener("click", () => {
+//위치 디테일
+mapDetail.addEventListener("mouseenter", () => {
+    mapDetail.classList.add("active");
+})
+
+mapDetail.addEventListener("mouseout", () => {
+    mapDetail.classList.remove("active");
+})
+
+//지도
+storeItem.addEventListener("click", () => {
     popup.style.display = "flex";
 
-    // 카카오맵일 경우 (map은 지도 객체)
+
     setTimeout(() => {
         map.relayout();
     }, 100);  // 팝업이 열리고 DOM 변경 반영 후 호출
@@ -25,36 +36,43 @@ closeBtn.addEventListener("click", (e) => {
 });
 
 
-var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
-    mapOption = { 
-        center: new kakao.maps.LatLng(37.5618815, 126.8511103), // 지도의 중심좌표
-        level: 3 // 지도의 확대 레벨
+var mapContainer = document.getElementById('map'),
+    mapOption = {
+        center: new kakao.maps.LatLng(37.5618815, 126.8511103),
+        level: 3
     };
 
 var map = new kakao.maps.Map(mapContainer, mapOption);
 
-// 마커가 표시될 위치입니다 
-var markerPosition  = new kakao.maps.LatLng(37.5618815, 126.8511103); 
+var imageSrc = "../images/bhc-ms.svg",
+    imageSize = new kakao.maps.Size(50, 50),
+    imageOption = { offset: new kakao.maps.Point(27, 69) }; 
 
-// 마커를 생성합니다 
+var markerImage = new kakao.maps.MarkerImage(imageSrc, imageSize, imageOption),
+    markerPosition = new kakao.maps.LatLng(37.5618815, 126.8511103);
+
 var marker = new kakao.maps.Marker({
-    position: markerPosition
+    position: markerPosition,
+    image: markerImage 
 });
 
-// 마커가 지도 위에 표시되도록 설정합니다
+
 marker.setMap(map);
 
-var iwContent = '<div style="padding-left:30px;">BHC 가양점 <br><a href="https://map.kakao.com/link/map/Hello World!,37.5618815, 126.8511103" </div>', // 인포윈도우에 표출될 내용으로 HTML 문자열이나 document element가 가능합니다
-    iwPosition = new kakao.maps.LatLng(37.5618815, 126.8511103); //인포윈도우 표시 위치입니다
+var content = '<div class="customoverlay">' +
+    '  <a href="https://map.kakao.com/link/map/26628353" target="_blank">' +
+    '    <span class="title">BHC가양점</span>' +
+    '  </a>' +
+    '</div>';
 
-// 인포윈도우를 생성합니다
-var infowindow = new kakao.maps.InfoWindow({
-    position : iwPosition, 
-    content : iwContent 
+var position = new kakao.maps.LatLng(37.5618815, 126.8511103);
+
+var customOverlay = new kakao.maps.CustomOverlay({
+    map: map,
+    position: position,
+    content: content,
+    yAnchor: 1
 });
-  
-// 마커 위에 인포윈도우를 표시합니다. 두번째 파라미터인 marker를 넣어주지 않으면 지도 위에 표시됩니다
-infowindow.open(map, marker); 
 
 //지역선택
 cityBox.addEventListener("click", () => {
@@ -69,3 +87,5 @@ countiesBox.addEventListener("click", () => {
 countiesList.addEventListener("click", () => {
     countiesList.style.display = "none";
 })
+
+

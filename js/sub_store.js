@@ -10,7 +10,6 @@ let mapDetail = document.querySelector(".store .detail");
 
 console.log(storeItem);
 
-//위치 디테일
 mapDetail.addEventListener("mouseenter", () => {
     mapDetail.classList.add("active");
 })
@@ -23,9 +22,9 @@ mapDetail.addEventListener("mouseout", () => {
 storeItem.addEventListener("click", () => {
     popup.style.display = "flex";
 
-
     setTimeout(() => {
         map.relayout();
+        map.setCenter(markerPosition);
     }, 100);  // 팝업이 열리고 DOM 변경 반영 후 호출
 });
 
@@ -38,26 +37,30 @@ closeBtn.addEventListener("click", (e) => {
 
 var mapContainer = document.getElementById('map'),
     mapOption = {
-        center: new kakao.maps.LatLng(37.5618815, 126.8511103),
-        level: 3
+        // center: new kakao.maps.LatLng(37.5618815, 126.8511103),
+        center: new kakao.maps.LatLng(37.5630503, 126.8501181),
+        level: 4
     };
 
 var map = new kakao.maps.Map(mapContainer, mapOption);
 
 var imageSrc = "../images/bhc-ms.svg",
     imageSize = new kakao.maps.Size(50, 50),
-    imageOption = { offset: new kakao.maps.Point(27, 69) }; 
+    imageOption = { offset: new kakao.maps.Point(27, 69) }; //마커의 좌표와 일치시킬 이미지 안에서의 좌표를 설정
 
+// 마커의 이미지정보를 가지고 있는 마커이미지를 생성
 var markerImage = new kakao.maps.MarkerImage(imageSrc, imageSize, imageOption),
-    markerPosition = new kakao.maps.LatLng(37.5618815, 126.8511103);
+    markerPosition = new kakao.maps.LatLng(37.5618815, 126.8511103); // 마커가 표시될 위치
 
 var marker = new kakao.maps.Marker({
     position: markerPosition,
-    image: markerImage 
+    image: markerImage // 마커이미지 설정 
 });
 
 
 marker.setMap(map);
+map.setCenter(markerPosition);
+
 
 var content = '<div class="customoverlay">' +
     '  <a href="https://map.kakao.com/link/map/26628353" target="_blank">' +
@@ -65,8 +68,10 @@ var content = '<div class="customoverlay">' +
     '  </a>' +
     '</div>';
 
+// 커스텀 오버레이가 표시될 위치
 var position = new kakao.maps.LatLng(37.5618815, 126.8511103);
 
+// 커스텀 오버레이를 생성
 var customOverlay = new kakao.maps.CustomOverlay({
     map: map,
     position: position,

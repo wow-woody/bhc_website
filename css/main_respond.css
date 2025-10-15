@@ -243,7 +243,7 @@
         }
     }
 
-    .event_list .m_btn {
+    .event_list .eventm_btn {
         display: block;
         /* 1280px 이하에서만 보이게 설정 */
         margin-top: 30px;
@@ -251,7 +251,7 @@
         /* position:absolute; */
     }
 
-    .event_list .m_btn a {
+    .event_list .evnetm_btn a {
         width: 170px;
         height: 50px;
         /* 추가: 요소 높이 지정 */

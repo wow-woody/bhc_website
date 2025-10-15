@@ -235,6 +235,7 @@ body {
     color: var(--mainColor);
     width: 800px;
     height: 240px;
+    gap: 30px;
     align-items: center;
     text-align: center;
     line-height: 30px;

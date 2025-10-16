@@ -921,9 +921,49 @@ footer {
 @media screen and (max-width:640px) {
 
     html{}
-
-    .container {
+        
+    .menu-see-more {
+        width: 90%;
+        height: 53.5%;
+        flex-direction: column;
+        justify-content:center;
+        align-items: center;
     }
+
+    .menu-see-more-text-wrap {
+        margin: 0;
+        flex-wrap: wrap;
+        align-content: center;
+        align-items: center;
+        
+    }
+
+    .see-more-title {
+        gap: 0.5rem;
+        margin-top: 2.5rem;
+        flex-direction: column;
+        align-items:center
+    }
+
+    .see-more-ex-line {
+        margin: 2.5rem auto;
+        width: 130%;
+        display: block;
+    }
+
+    .menu-see-more-ex,
+    .menu-see-more-ex-sub {
+        width: 125%;
+        text-align: center;
+    }
+
+    .menu-see-more-order-btn {
+        position: static;
+        width: 25%;
+    }
+
+
+
 
     .menu_img_box,
     .menu_plus_btn_box {
@@ -993,12 +1033,19 @@ footer {
         width: 14rem;
     }
 
+    /* 새로운 메뉴 버튼 디자인 */
+    .menu_keyword_btn_ul_list {
+        gap:0.5rem;
+    }
 
+    .menu_keyword_btn_ul_list li {
+        height: 100%;
+    }
 
-
-
-
-   
+    .menu_keyword_btn_ul_list li a{
+        width: 10rem;
+        font-size: 1.5rem;
+    }
 
     .menu_guide_wrap > .inner > .top_img_box {
         width: 100%;

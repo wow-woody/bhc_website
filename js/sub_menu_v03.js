@@ -142,3 +142,8 @@ function setupPopupFunctionality() {
     // ESC 키 누르면 팝업 닫기 - 키보드 접근성
     document.onkeydown = e => e.key === 'Escape' && togglePopup(false);
 }
+
+
+
+// menu-see-more-ex <br> 태그 제거
+document.querySelector('.exBrDelete').remove();

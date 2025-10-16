@@ -1,0 +1,121 @@
+@media screen and (max-width:1024px) {
+
+    html {
+        font-size: 8px;
+    }
+
+    .sub_slider_wrap .sub_slider_bottom>.section_title {
+        color: #fff;
+        padding-top: 1rem;
+        /* line-height: 10; */
+        font-size: 3rem;
+    }
+
+    .sub_slider_bottom {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .section_title {
+        font-size: 4rem;
+    }
+
+    .event_page_wrap {
+        padding-top: 5rem;
+
+        .inner {
+            .event_wrap {
+                .tab_btn_list {
+                    width: auto;
+                    padding: 3rem 0;
+                    /* >li {
+                        width: 100%;
+                    } */
+
+                    .active {
+                        a {
+                            &::after {
+                                display: none;
+                            }
+                        }
+                    }
+
+                    .ended {
+                        display: none;
+                    }
+
+                    .event_content_wrap {
+                        justify-content: center;
+
+                        .content_list_wrap {
+                            >ul {
+                                >li {
+                                    display: none;
+                                }
+
+                                >li:first-child {
+                                    display: block;
+                                }
+                            }
+
+                        }
+                    }
+                }
+            }
+
+
+            .footer_rolling {
+                .rolling_text1 {
+                    font-size: 8rem;
+                }
+
+                .rolling_text2 {
+                    font-size: 4rem;
+                }
+            }
+
+        }
+
+    }
+}
+
+
+@media screen and (max-width:680px) {
+
+    html {
+        font-size: 7px;
+    }
+
+    .swiper-pagination-bullet {
+        gap: 2rem;
+        height: 1.2rem;
+        width: 1.2rem;
+        background: #eee;
+        border-radius: 10px;
+        transition: 0.6s;
+    }
+
+    .swiper-pagination-bullet-active {
+        width: 4rem !important;
+        background: var(--mainColor);
+    }
+
+
+    .section_title {
+        font-size: 4rem;
+    }
+
+    .event_page_wrap {
+        padding-top: 5rem;
+
+        .inner {
+            .footer_rolling {
+                display: none;
+            }
+
+        }
+
+    }
+}

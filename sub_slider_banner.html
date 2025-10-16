@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./css/Paperlogy.css">
+    <link rel="stylesheet" href="./css/bhc_common.css">
+    <link rel="stylesheet" href="./css/bhc_style.css">
+    <link rel="stylesheet" href="./css/sub_slider_wrap.css">
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <script>
+        window.onload = function () {
+            const swiper = new Swiper(".slider_wrap", {
+                effect: "fade",
+                loop: true,
+                autoplay: {
+                    delay: 3000
+                },
+                pagination: {
+                    el: ".swiper-pagination"
+                }
+            })
+        }
+    </script>
+
+</head>
+
+<body>
+    <div class="sub_slider_wrap">
+        <div class="inner">
+            <div class="slider_wrap swiper">
+                <ul class="sub_slider_list swiper-wrapper">
+                    <li class="sub_slider swiper-slide">
+                        <a href="#">
+                            <span class="play_btn">
+                                <img src="./images/play_btn.svg" alt="paly_btn">
+                            </span>
+                            <p class="video">
+                                <video src="./video/bhc_video_01.mp4"></video>
+                            </p>
+                        </a>
+                    </li>
+                    <li class="sub_slider swiper-slide">
+                        <a href="#">
+                            <span class="play_btn">
+                                <img src="./images/play_btn.svg" alt="paly_btn">
+                            </span>
+                            <p class="video">
+                                <video src="./video/bhc_video_02.mp4"></video>
+                            </p>
+                        </a>
+                    </li>
+                    <li class="sub_slider swiper-slide">
+                        <a href="#">
+                            <span class="play_btn">
+                                <img src="./images/play_btn.svg" alt="paly_btn">
+                            </span>
+                            <p class="video">
+                                <video src="./video/bhc_video_01.mp4"></video>
+                            </p>
+                        </a>
+                    </li>
+                    <li class="sub_slider swiper-slide">
+                        <a href="#">
+                            <span class="play_btn">
+                                <img src="./images/play_btn.svg" alt="paly_btn">
+                            </span>
+                            <p class="video">
+                                <video src="./video/bhc_video_01.mp4"></video>
+                            </p>
+                        </a>
+                    </li>
+                    <li class="sub_slider swiper-slide">
+                        <a href="#">
+                            <span class="play_btn">
+                                <img src="./images/play_btn.svg" alt="paly_btn">
+                            </span>
+                            <p class="video">
+                                <video src="./video/bhc_video_01.mp4"></video>
+                            </p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="sub_slider_bottom">
+                <h3 class="section_title">BRAND FILM</h3>
+                <div class="pager_btn swiper-pagination"></div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

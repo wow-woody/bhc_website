@@ -4,14 +4,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Bhc 매장</title>
     <link rel="stylesheet" href="./css/Paperlogy.css">
+    <link rel="shortcut icon" href="./images/favicon.png">
     <link rel="stylesheet" href="./css/common.css">
     <link rel="stylesheet" href="./css/style_bhc.css">
+    <link rel="stylesheet" href="./css/bhc_header.css">
+    <link rel="stylesheet" href="./css/bhc_footer.css">
     <link rel="stylesheet" href="./css/sub_store.css">
+    <link rel="stylesheet" href="./css/store_respond.css">
+    <script src="//dapi.kakao.com/v2/maps/sdk.js?appkey=44dca69168206d3044fb78e789fae64c"></script>
+    <script defer src="./js/sub_store.js"></script>
+    <script async src="./js/bhc_header_footer.js"></script>
+
+
+
 </head>
 
 <body>
+    <header id="header"></header>
+
     <div class="container">
         <div class="inner">
             <div class="store_title_wrap">
@@ -19,7 +31,36 @@
                 <p><img src="./images/bhc_store.png" alt="bhc 매장"></p>
             </div>
             <div class="store_info_wrap">
-                <form></form>
+                <div class="location_choice">
+                    <div class="location_box">
+                        <div class="city">
+                            <div class="city_box">시/도</div>
+                            <ul class="city_list">
+                                <li><a href="#">서울특별시</a></li>
+                                <li><a href="#">경기도</a></li>
+                                <li><a href="#">충청남도</a></li>
+                                <li><a href="#">충청북도</a></li>
+                                <li><a href="#">전라남도</a></li>
+                                <li><a href="#">제주특별시</a></li>
+                            </ul>
+                        </div>
+                        <div class="counties">
+                            <div class="counties_box">군/구</div>
+                            <ul class="counties_list">
+                                <li><a href="#">강남구</a></li>
+                                <li><a href="#">강서구</a></li>
+                                <li><a href="#">성동구</a></li>
+                                <li><a href="#">성북구</a></li>
+                                <li><a href="#">중구</a></li>
+                                <li><a href="#">도봉구</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="location_search">
+                        <input type="text" placeholder="매장명 또는 주소를 입력하세요.">
+                        <!-- <p><a href="#"><img src="./images/bhc_store_search_ye.svg" alt="검색"></a></p> -->
+                    </div>
+                </div>
                 <div class="store_info">
                     <div class="store_info_list">
                         <div class="store">
@@ -28,7 +69,7 @@
                                     <li class="name">가양역점</li>
                                     <li class="addr">서울 강서구 화곡로69길 71 (등촌동, 등촌8단지주공아파트)</li>
                                     <li class="tel">02-404-2010</li>
-                                    <li class="detail"><img src="./images/bhc_location_bk.svg" alt="스토어 상세"></li>
+                                    <li class="detail default"></li>
                                 </ul>
                             </a>
                         </div>
@@ -38,7 +79,7 @@
                                     <li class="name">가양역점</li>
                                     <li class="addr">서울 강서구 화곡로69길 71 (등촌동, 등촌8단지주공아파트)</li>
                                     <li class="tel">02-404-2010</li>
-                                    <li class="detail"><img src="./images/bhc_location_bk.svg" alt="스토어 상세"></li>
+                                    <li class="detail"></li>
                                 </ul>
                             </a>
                         </div>
@@ -48,7 +89,7 @@
                                     <li class="name">가양역점</li>
                                     <li class="addr">서울 강서구 화곡로69길 71 (등촌동, 등촌8단지주공아파트)</li>
                                     <li class="tel">02-404-2010</li>
-                                    <li class="detail"><img src="./images/bhc_location_bk.svg" alt="스토어 상세"></li>
+                                    <li class="detail"></li>
                                 </ul>
                             </a>
                         </div>
@@ -58,7 +99,7 @@
                                     <li class="name">가양역점</li>
                                     <li class="addr">서울 강서구 화곡로69길 71 (등촌동, 등촌8단지주공아파트)</li>
                                     <li class="tel">02-404-2010</li>
-                                    <li class="detail"><img src="./images/bhc_location_bk.svg" alt="스토어 상세"></li>
+                                    <li class="detail"></li>
                                 </ul>
                             </a>
                         </div>
@@ -68,7 +109,7 @@
                                     <li class="name">가양역점</li>
                                     <li class="addr">서울 강서구 화곡로69길 71 (등촌동, 등촌8단지주공아파트)</li>
                                     <li class="tel">02-404-2010</li>
-                                    <li class="detail"><img src="./images/bhc_location_bk.svg" alt="스토어 상세"></li>
+                                    <li class="detail"></li>
                                 </ul>
                             </a>
                         </div>
@@ -78,7 +119,7 @@
                                     <li class="name">가양역점</li>
                                     <li class="addr">서울 강서구 화곡로69길 71 (등촌동, 등촌8단지주공아파트)</li>
                                     <li class="tel">02-404-2010</li>
-                                    <li class="detail"><img src="./images/bhc_location_bk.svg" alt="스토어 상세"></li>
+                                    <li class="detail"></li>
                                 </ul>
                             </a>
                         </div>
@@ -88,7 +129,7 @@
                                     <li class="name">가양역점</li>
                                     <li class="addr">서울 강서구 화곡로69길 71 (등촌동, 등촌8단지주공아파트)</li>
                                     <li class="tel">02-404-2010</li>
-                                    <li class="detail"><img src="./images/bhc_location_bk.svg" alt="스토어 상세"></li>
+                                    <li class="detail"></li>
                                 </ul>
                             </a>
                         </div>
@@ -98,7 +139,7 @@
                                     <li class="name">가양역점</li>
                                     <li class="addr">서울 강서구 화곡로69길 71 (등촌동, 등촌8단지주공아파트)</li>
                                     <li class="tel">02-404-2010</li>
-                                    <li class="detail"><img src="./images/bhc_location_bk.svg" alt="스토어 상세"></li>
+                                    <li class="detail"></li>
                                 </ul>
                             </a>
                         </div>
@@ -108,7 +149,7 @@
                                     <li class="name">가양역점</li>
                                     <li class="addr">서울 강서구 화곡로69길 71 (등촌동, 등촌8단지주공아파트)</li>
                                     <li class="tel">02-404-2010</li>
-                                    <li class="detail"><img src="./images/bhc_location_bk.svg" alt="스토어 상세"></li>
+                                    <li class="detail"></li>
                                 </ul>
                             </a>
                         </div>
@@ -118,7 +159,7 @@
                                     <li class="name">가양역점</li>
                                     <li class="addr">서울 강서구 화곡로69길 71 (등촌동, 등촌8단지주공아파트)</li>
                                     <li class="tel">02-404-2010</li>
-                                    <li class="detail"><img src="./images/bhc_location_bk.svg" alt="스토어 상세"></li>
+                                    <li class="detail"></li>
                                 </ul>
                             </a>
                         </div>
@@ -128,27 +169,16 @@
                                     <li class="name">가양역점</li>
                                     <li class="addr">서울 강서구 화곡로69길 71 (등촌동, 등촌8단지주공아파트)</li>
                                     <li class="tel">02-404-2010</li>
-                                    <li class="detail"><img src="./images/bhc_location_bk.svg" alt="스토어 상세"></li>
+                                    <li class="detail"></li>
                                 </ul>
                             </a>
                         </div>
-                        <div class="store">
-                            <a href="#">
-                                <ul class="store_items">
-                                    <li class="name">가양역점</li>
-                                    <li class="addr">서울 강서구 화곡로69길 71 (등촌동, 등촌8단지주공아파트)</li>
-                                    <li class="tel">02-404-2010</li>
-                                    <li class="detail"><img src="./images/bhc_location_bk.svg" alt="스토어 상세"></li>
-                                </ul>
-                            </a>
-                        </div>
-
                     </div>
                 </div>
             </div>
             <div class="store_page_wrap">
                 <div class="page_area">
-                    <a href="#"><img src="./images/page_btn_first.svg" alt="첫페이지로"></a>
+                    <a href="#" class="arr"><img src="./images/page_btn_first.svg" alt="첫페이지로"></a>
                     <a href="#"><img src="./images/page_btn_prev.svg" alt="이전페이지로"></a>
                     <ul class="page_list">
                         <li><a href="#">1</a></li>
@@ -163,28 +193,35 @@
                         <li><a href="#">10</a></li>
                     </ul>
                     <a href="#"><img src="./images/page_btn_next.svg" alt="다음페이지로"></a>
-                    <a href="#"><img src="./images/page_btn_last.svg" alt="마지막페이지로"></a>
+                    <a href="#" class="arr"><img src="./images/page_btn_last.svg" alt="마지막페이지로"></a>
                 </div>
             </div>
         </div>
     </div>
+    <footer id="footer"></footer>
     <div class="popup_wrap">
         <div class="popup">
             <p class="close_btn"><a href="#"><img src="./images/bhc_map_close.svg" alt="닫기버튼"></a></p>
             <div class="popup_content">
                 <h2>매장정보</h2>
-                <div class="map"><a href="#"><img src="./images/map_images.png" alt=""></a></div>
+                <!-- <div class="map"><a href="#"><img src="./images/map_images.png" alt=""></a></div> -->
+                <div class="map" id="map"></div>
                 <div class="map_info">
                     <h3 class="map_title">가양역점</h3>
                     <ul class="map_items">
-                        <li><img src="./images/bhc_map_location.svg" alt="주소"><span>주소</span><span>서울 강서구 화곡로69길
+                        <li><img src="./images/bhc_map_location.svg" alt="주소"><span
+                                class="map_popup_title">주소</span><span>서울 강서구 화곡로69길
                                 71</span></li>
-                        <li><img src="./images/bhc_map_tell.svg" alt="전화번호"><span>전화번호</span><span>02-404-2010</span>
+                        <li><img src="./images/bhc_map_tell.svg" alt="전화번호"><span
+                                class="map_popup_title">전화번호</span><span>02-404-2010</span>
                         </li>
-                        <li><img src="./images/bhc_map_time.svg" alt="영업시간"><span>영업시간</span><span>평일/주말:
+                        <li><img src="./images/bhc_map_time.svg" alt="영업시간"><span
+                                class="map_popup_title">영업시간</span><span>평일/주말:
                                 12:00~23:30</span></li>
-                        <li><img src="./images/bhc_map_calendar.svg" alt="휴무일"><span>휴무일</span><span>매주 목요일</span></li>
-                        <li><img src="./images/bhc_map_subway.svg" alt="가까운역"><span>가까운역 </span><span>가양역</span></li>
+                        <li><img src="./images/bhc_map_calendar.svg" alt="휴무일"><span
+                                class="map_popup_title">휴무일</span><span>매주 목요일</span></li>
+                        <li><img src="./images/bhc_map_subway.svg" alt="가까운역"><span class="map_popup_title">가까운역
+                            </span><span>가양역</span></li>
                     </ul>
                 </div>
             </div>

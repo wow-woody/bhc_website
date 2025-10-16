@@ -136,12 +136,34 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-    // 480px
-    let sideShow = document.querySelector(".sideT")
-    let btn = document.querySelector("button")
+    // 480px 버튼 
 
-    btn.addEventListener("click", function () {
-        sideShow.style.display = "block";
-        console.log(btn);
-    })
+    if (window.innerWidth <= 480) {
+        let Buttons = document.querySelectorAll(".order_list>h3>button")
+
+        Buttons.forEach((btn) => {
+            btn.addEventListener("click", function () {
+                const orderList = this.closest(".order_list");
+                const arrowBtn = orderList.querySelector(".order");
+
+                if (arrowBtn) {
+                    if (arrowBtn.style.display === "block") {
+                        arrowBtn.style.display = "none";
+                    } else {
+                        arrowBtn.style.display = "block";
+                    }
+                }
+            });
+        });
+
+        document.addEventListener("click", function (e) {
+            const outSide = e.target.closest(".order_list");
+            if (!outSide) {
+                document.querySelectorAll(".order").forEach(el => {
+                    el.style.display = "none";
+                });
+            }
+        });
+    }
+
 });

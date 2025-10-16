@@ -51,7 +51,7 @@ main {
                 font-size: 2.4rem;
                 margin: 50px 0 15px;
 
-                button{
+                button {
                     display: none;
                 }
             }
@@ -62,14 +62,14 @@ main {
                 .seas_order_box {
                     border: 2px solid #d9d9d9;
                     border-radius: 20px;
-                    width: 500px;
+                    width: 50rem;
                     padding: 22px 40px;
                 }
 
                 .order_box {
                     border: 2px solid #d9d9d9;
                     border-radius: 20px;
-                    width: 500px;
+                    width: 50rem;
                     padding: 22px 10px 22px 20px;
                 }
 
@@ -314,6 +314,22 @@ main {
                 h3 {
                     font-size: 20px;
                 }
+
+                .order_list {
+
+                    .half_order_box,
+                    .seas_order_box {
+                        width: 60rem;
+                    }
+
+                    .order_box {
+                        width: 60rem;
+                    }
+
+                    &:last-child{
+                        margin-bottom: 120px;
+                    }
+                }
             }
         }
 
@@ -359,7 +375,7 @@ main {
                     padding-bottom: 6px;
                     border-bottom: 1px solid var(--mainColor);
 
-                    button{
+                    button {
                         display: block;
                     }
                 }
@@ -372,7 +388,7 @@ main {
                         display: none;
                     }
 
-                    .seas_order_box{
+                    .seas_order_box {
                         width: 300px;
                         padding: 22px 30px;
                     }
@@ -388,12 +404,11 @@ main {
                         border: none;
                         width: 300px;
                         padding: 22px 0;
-                        
+
                     }
 
                     .fitH {
                         height: max-content;
-                        overflow: none;
                     }
 
                     .count {
@@ -418,9 +433,11 @@ main {
                         }
                     }
 
-                    .order{
+                    .order {
                         display: none;
                     }
+
+                    
                 }
             }
         }
@@ -445,7 +462,7 @@ main {
                 padding: 10px 20px;
                 gap: 0;
 
-                span{
+                span {
                     margin-left: 25px;
                 }
             }

@@ -44,7 +44,7 @@ function showCategory(catClass) {
 			list.style.opacity = 0;
 			list.style.transition = 'opacity 1s';
 			setTimeout(() => { list.style.opacity = 1; }, 10);
-		}, i * 300);
+		}, i * 120);
 	});
 }
 

@@ -18,6 +18,7 @@
         align-items: center;
     }
 
+
     .section_title {
         font-size: 4rem;
     }
@@ -111,6 +112,7 @@
         padding-top: 5rem;
 
         .inner {
+
             .footer_rolling {
                 display: none;
             }

@@ -19,7 +19,7 @@ main {
 
         .order_left {
             h2 {
-                font-size: 40px;
+                font-size: 4rem;
                 margin: 25px 0 20px;
             }
 
@@ -48,8 +48,12 @@ main {
             }
 
             h3 {
-                font-size: 24px;
+                font-size: 2.4rem;
                 margin: 50px 0 15px;
+
+                button{
+                    display: none;
+                }
             }
 
             .order_list {
@@ -222,11 +226,12 @@ main {
                 gap: 13px;
 
                 strong {
-                    font-size: 2.3rem;
+                    font-size: 2.2rem;
                 }
             }
 
             .line {
+                word-break: keep-all;
                 border-left: 0.5px solid #D9D9D9;
             }
         }
@@ -246,11 +251,11 @@ main {
             gap: 13px;
 
             strong {
-                font-size: 2.1rem;
+                font-size: 2.3rem;
             }
 
             span {
-                font-size: 2rem;
+                font-size: 2.2rem;
                 cursor: pointer;
             }
         }
@@ -266,25 +271,19 @@ main {
     .order_wrap {
         .inner {
             gap: 40px;
+
+            .order_right {
+                .order_list {
+                    font-size: 1.8rem;
+                }
+            }
         }
 
         .order_bottom {
             width: 100%;
 
-            .total_order {
-                .category {
-                    p {
-                        font-size: 1.4rem;
-                    }
-
-                    strong {
-                        font-size: 1.8rem;
-                    }
-                }
-            }
-
             .total {
-                width: 21rem;
+                width: 23rem;
             }
         }
     }
@@ -298,12 +297,8 @@ main {
             align-items: center;
 
             .order_left {
-                h2 {
-                    font-size: 30px;
-                }
 
                 >p {
-                    width: 400px;
                     aspect-ratio: 5/3;
 
                     img {
@@ -323,6 +318,8 @@ main {
         }
 
         .order_bottom {
+            font-size: 1.8rem;
+
             .total_order {
                 height: 100px;
             }
@@ -330,7 +327,7 @@ main {
     }
 }
 
-@media screen and (max-width:360px) {
+@media screen and (max-width:480px) {
     .order_wrap {
 
         .inner {
@@ -341,7 +338,6 @@ main {
                 }
 
                 >p {
-                    width: 300px;
                     aspect-ratio: 4/2;
 
                     img {
@@ -356,10 +352,16 @@ main {
                 }
 
                 h3 {
+                    display: flex;
+                    justify-content: space-between;
                     font-size: 16px;
                     margin: 50px 0 15px;
                     padding-bottom: 6px;
                     border-bottom: 1px solid var(--mainColor);
+
+                    button{
+                        display: block;
+                    }
                 }
 
                 .order_list {
@@ -370,17 +372,23 @@ main {
                         display: none;
                     }
 
-                    .half_order_box,
-                    .seas_order_box {
+                    .seas_order_box{
+                        width: 300px;
+                        padding: 22px 30px;
+                    }
+
+                    .half_order_box {
                         border: none;
                         width: 300px;
                         padding: 15px 0;
+                        display: none;
                     }
 
                     .order_box {
                         border: none;
                         width: 300px;
                         padding: 22px 0;
+                        
                     }
 
                     .fitH {
@@ -408,7 +416,10 @@ main {
                             gap: 18px;
                             padding: 7px 6px;
                         }
+                    }
 
+                    .order{
+                        display: none;
                     }
                 }
             }
@@ -426,13 +437,17 @@ main {
 
             .total {
                 border-radius: 30px 30px 0 0;
-                width: 95%;
+                width: 80%;
                 height: 80px;
                 flex-direction: row;
                 align-items: center;
-                justify-content: space-evenly;
+                justify-content: center;
                 padding: 10px 20px;
                 gap: 0;
+
+                span{
+                    margin-left: 25px;
+                }
             }
         }
     }

@@ -21,12 +21,9 @@
         font-size: 8px;
     }
 
-    .location_search {
-        justify-content: space-between;
-    }
-
-    .location_search>input {
-        width: 90%;
+    .store_title_wrap .store_title {
+        font-size: 6rem;
+        top: 65%;
     }
 
     .store .store_items {
@@ -74,11 +71,12 @@
 
     .store_title_wrap .store_title {
         font-size: 6rem;
+        top: 65%;
     }
 
 }
 
-@media screen and (max-width:440px) {
+@media screen and (max-width:500px) {
     .page_area .arr {
         display: none;
     }
@@ -93,4 +91,8 @@
         top: 3rem;
     }
 
+    .store_title_wrap .store_title {
+        font-size: 4rem;
+        top: 70%;
+    }
 }

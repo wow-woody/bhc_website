@@ -31,31 +31,34 @@
 }
 
 .store_info_wrap .location_choice {
-    display: flex;
-    /* justify-content: space-evenly; */
-    gap: 4rem;
+    display: grid;
+    gap: 3rem;
 }
 
 .location_choice {
-    border-bottom: 1px solid black;
+    max-width: 1244px;
+    margin: 0 auto;
     padding-bottom: 3rem;
+    position: relative;
 }
 
+.store_info_list {
+    border-top: 1px solid rgb(61, 61, 61);
+}
 .location_box {
     display: flex;
     gap: 3rem;
-    width: 50%;
+    width: 100%;
 }
 
 .location_choice .city_box,
 .location_choice .counties_box {
-    /* position: relative; */
     background: url(../images/city_arrow.svg) no-repeat;
     background-position: right 15px center;
     display: inline-block;
     width: 100%;
     height: 5.5rem;
-    border: 2px solid black;
+    border: 2px solid var(--mainColor);
     border-radius: 3rem;
     text-indent: 2rem;
     line-height: 5.5rem;
@@ -65,8 +68,6 @@
 .location_choice .city {
     position: relative;
     width: 50%;
-    margin-left: 2rem;
-    /* padding-left: 3rem; */
 }
 
 .location_choice .counties {
@@ -87,6 +88,7 @@
     border: 0.6px solid #747474;
     border-radius: 1.5rem;
     overflow: hidden;
+    z-index: 10;
 }
 
 .location_choice .city_list li,
@@ -104,25 +106,20 @@
 
 .location_search {
     display: flex;
-    gap: 3rem;
-    width: 50%;
-    /* background-color: #000; */
+    width: 100%;
 }
 
 .location_search>input {
-    width: 80%;
+    width: 100%;
     height: 5.5rem;
-    border: 2px solid black;
+    border: 2px solid var(--mainColor);
     border-radius: 3rem;
     text-indent: 2rem;
     font-size: 1.6rem;
     font-weight: 500;
     color: #000;
-}
-
-.location_search>p img {
-    width: 5rem;
-    height: 5.5rem;
+    background: url(../images/search_icon.svg) no-repeat right 10px center;
+    background-size: 4rem 4rem;
 }
 
 .store_info {
@@ -141,7 +138,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    /* border-bottom: 1px solid #7E7E7E; */
 }
 
 
@@ -216,16 +212,6 @@
 
 /* popup */
 
-/* .popup_wrap {
-    position: fixed;
-    background: rgba(0, 0, 0, 0.4);
-    width: 100%;
-    height: 100vh;
-    top: 0;
-    left: 0;
-    display: none;
-} */
-
 .popup_wrap {
     position: fixed;
     top: 0;
@@ -237,7 +223,6 @@
     justify-content: center;
     align-items: center;
     z-index: 1000;
-    /* 팝업과 배경 덮는 부모 */
 }
 
 .popup {
@@ -249,7 +234,6 @@
     overflow-y: auto;
     box-shadow: 9px 7px 11px rgba(0, 0, 0, 0.2);
     z-index: 1100;
-    /* .popup_wrap보다 위 */
     padding: 20px;
     position: absolute;
     top: 13rem;
@@ -261,7 +245,6 @@
     position: relative;
     border-radius: 20px;
     z-index: 1200;
-    /* 팝업 내부에서 더 위에 띄움 */
 }
 
 
@@ -297,7 +280,6 @@
 
 .popup .map_items li img {
     width: 18px;
-    /* margin-right: 0.5rem; */
 }
 
 .popup .map_items li span {

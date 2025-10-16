@@ -445,6 +445,7 @@ button, input, input[type="button"], input[type="submit"], input[type="reset"] {
     flex-direction: column;
     gap: 0.6rem;
     text-align: center;
+    /* padding-top: 2rem; */
 }
 
 

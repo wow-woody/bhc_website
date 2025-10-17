@@ -46,3 +46,20 @@ address {
     position: absolute;
     top: -99999px;
 }
+
+
+/* button, input, input[type="button"], input[type="submit"], input[type="reset"] {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    line-height: inherit;
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    background: none;
+    cursor: pointer;
+} */

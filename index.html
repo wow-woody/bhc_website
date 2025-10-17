@@ -96,31 +96,39 @@
         </div>
     </header> -->
     <header id="header"></header>
+
     <main>
         <!-- 메인 슬라이드 배너 섹션 -->
         <div class="main_slider_wrap">
-            <div class="inner">
-                <div class="main_slider">
-                    <div class="main_slider_list">
-                        <div class="slider1"><img src="./images/main-slider-3.png" alt="메인슬라이더1"></div>
-                        <div class="slider2"><img src="./images/main-slider-2.png" alt="메인슬라이더2"></div>
-                        <div class="slider3"><img src="./images/main-slider-1.png" alt="메인슬라이더3"></div>
-                        <div class="slider4"><img src="./images/main-slider-4.png" alt="메인슬라이더4"></div>
-                        <div class="slider5"><img src="./images/main-slider-5.png" alt="메인슬라이더5"></div>
-                    </div>
-                    <div class="pager_bar">
-                        <ul class="pager_left">
-                            <li class="stop_btn"><a href="#void"><img src="./images/stop_btn.svg" alt="stop_btn"></a>
-                            </li>
-                            <li class="start_btn"><a href="#void"><img src="./images/start_btn.svg" alt="start_btn"></a>
-                            </li>
-                        </ul>
-                        <div class="pager_right"><span></span></div>
-                    </div>
+            <!-- <div class="inner"> -->
+            <div class="main_slider swiper">
+                <div class="main_slider_list swiper-wrapper">
+                    <div class="slider1 swiper-slide"><img src="./images/main-slider-3.png" alt="메인슬라이더1"></div>
+                    <div class="slider2 swiper-slide"><img src="./images/main-slider-2.png" alt="메인슬라이더2"></div>
+                    <div class="slider3 swiper-slide"><img src="./images/main-slider-1.png" alt="메인슬라이더3"></div>
+                    <div class="slider4 swiper-slide"><img src="./images/main-slider-4.png" alt="메인슬라이더4"></div>
+                    <div class="slider5 swiper-slide"><img src="./images/main-slider-5.png" alt="메인슬라이더5"></div>
                 </div>
-            </div>
-        </div>
+                <div class="pager_bar">
+                    <ul class="pager_left">
+                        <li class="stop_btn"><a href="#void"><img src="./images/stop_btn.svg" alt="stop_btn"></a>
+                        </li>
+                        <li class="start_btn"><a href="#void"><img src="./images/start_btn.svg" alt="start_btn"></a>
+                        </li>
+                    </ul>
+                    <div class="pager_right"><span></span></div>
+                </div>
+                <ul class="pager_btn">
+                    <li class="active"><a href="#void"></a></li>
+                    <li><a href="#void"></a></li>
+                    <li><a href="#void"></a></li>
+                    <li><a href="#void"></a></li>
+                    <li><a href="#void"></a></li>
 
+                </ul>
+            </div>
+            <!-- </div> -->
+        </div>
         <!-- 주문 버튼 섹션 -->
         <div class="container">
             <section class="order_wrap">
@@ -344,7 +352,7 @@
 
             <!-- 인스타 섹션 -->
             <section class="insta_wrap">
-                <div class="insta_left swiper">
+                <div class="insta_swiper swiper insta_left">
                     <div class="insta_card_list swiper-wrapper">
                         <div class="card swiper-slide">
                             <div class="card_top">
@@ -436,7 +444,7 @@
                     <a href="https://www.instagram.com/bhc_chicken_official">bhc Instagram</a>
                 </div>
 
-                <script>
+                <!-- <script>
                     window.onload = function () {
                         const swiperContainer = document.querySelector('.insta_left');
 
@@ -456,41 +464,80 @@
                             slidesOffsetAfter: 10
                         });
                     }
-                </script>
+                </script> -->
             </section>
+
 
             <!-- 이벤트 섹션 -->
             <section class="event_wrap">
                 <div class="inner">
-                    <h2 class=section_title><span>bhc</span>Event</h2>
+                    <h2 class=section_title id="event_title"><span>bhc</span> Event</h2>
                     <div class="event_list">
                         <div class="event_arrow">
-                            <p class="right_arr"><a href="#"><img src="./images/left_arrow_event.png"
-                                        alt="right_arrow"></a>
+                            <p class="swiper-button-next" id="right_arr">
+                                <a href="#"><img src="./images/right_arrow_event.png" alt="right_arrow"></a>
                             </p>
-                            <p class="left_arr"><a href="#"><img src="./images/right_arrow_event.png"
-                                        alt="left_arrow"></a>
+                            <p class="swiper-button-prev" id="left_arr">
+                                <a href="#"><img src="./images/left_arrow_event.png" alt="left_arrow"></a>
                             </p>
                         </div>
-                        <div class="event_img">
-                            <a href="#"><img src="./images/img_event1.jpg" alt="event_img1"></a>
-                            <a href="#"><img src="./images/img_event2.jpg" alt="event_img2"></a>
-                            <a href="#"><img src="./images/img_event3.jpg" alt="event_img3"></a>
-                            <a href="#"><img src="./images/img_event4.png" alt="event_img4"></a>
-                            <a href="#"><img src="./images/img_event5.jpg" alt="event_img5"></a>
-                            <a href="#"><img src="./images/img_event6.jpg" alt="event_img6"></a>
+                        <div class="event_swiper swiper mySwiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide event_img"><a href="#"><img src="./images/img_event1.jpg"
+                                            alt="event_img1"></a></div>
+                                <div class="swiper-slide event_img"><a href="#"><img src="./images/img_event2.jpg"
+                                            alt="event_img2"></a></div>
+                                <div class="swiper-slide event_img"><a href="#"><img src="./images/img_event3.jpg"
+                                            alt="event_img3"></a></div>
+                                <div class="swiper-slide event_img"><a href="#"><img src="./images/img_event4.png"
+                                            alt="event_img4"></a></div>
+                                <div class="swiper-slide event_img"><a href="#"><img src="./images/img_event5.jpg"
+                                            alt="event_img5"></a></div>
+                                <div class="swiper-slide event_img"><a href="#"><img src="./images/img_event6.jpg"
+                                            alt="event_img6"></a></div>
+                            </div>
+
                         </div>
 
-                        <div class="m_btn">
+                        <div class="eventm_btn">
                             <a href="#">bhc event</a>
-                        </div>
+                        </div>                                            
+                        <!--<script>
+                            var swiper = new Swiper(".mySwiper", {
+                                slidesPerView: 3,
+                                spaceBetween: 30,
+                                freeMode: true,
+                                navigation: {
+                                    nextEl: ".swiper-button-next",
+                                    prevEl: ".swiper-button-prev",
+                                },
 
+                                // breakpoints: {
+                                //     0: {
+                                //         slidesPerView: 1,
+                                //         spaceBetween: 20,
+                                //     },
+                                //     480: {
+                                //         slidesPerView: 1,
+                                //         spaceBetween: 20
+                                //     },
+                                //     768: {
+                                //         slidesPerView: 2,
+                                //         spaceBetween: 20
+                                //     },
+                                //     1024: {
+                                //         slidesPerView: 3,
+                                //         spaceBetween: 30
+                                //     }
+                                // }
+                            });
+                            document.querySelectorAll('.swiper-button-next a, .swiper-button-prev a').forEach(el => {
+                                el.addEventListener('click', e => e.preventDefault());
+                            });
+                        </script> -->
                     </div>
-
-
                 </div>
             </section>
-            <script src="./js/event.js"></script>
         </div>
     </main>
 

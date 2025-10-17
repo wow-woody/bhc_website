@@ -12,10 +12,10 @@
     <link rel="stylesheet" href="./css/bhc_header.css">
     <link rel="stylesheet" href="./css/bhc_footer.css">
     <link rel="stylesheet" href="./css/sub_menu.css">
-    <link rel="stylesheet" href="./css/sub_menu_respond.css">
+    <!-- <link rel="stylesheet" href="./css/sub_menu_respond.css"> -->
     <script async src="./js/bhc_header_footer.js"></script>
-    <script async src="./js/bhc_header_menu.js"></script>
-    <script src="./js/sub_menu.js"></script>
+    <script async src="./js/bhc_header_menu_v02.js"></script>
+    <script defer src="./js/sub_menu_v03.js"></script>
 
 </head>
 
@@ -30,44 +30,71 @@
                     <img src="./images/menu_page/menu_page-top.jpg" alt="상단_이미지">
                     <p>새로운 맛의 시작! bhc!</p>
                 </div>
+                <div class="menu_search_container">
+                        <div class="menu_search_wrap">
+                            <p>
+                                <img class="menu_search_icon" src="./images/menu_page/icon_mene_search.svg"
+                                    alt="메뉴 검색 아이콘">
+                            </p>
+
+                            <input class="menu_search_input_box" type="text" placeholder="메뉴를 입력하세요">
+                            <button class="menu_search_btn" onclick="do_search();">메뉴 검색</button>
+                        </div>
+                    </div>
+                    <div class="menu_keyword_btn_container">
+                        <div class="menu_keyword_btn_wrap">
+                            <ul class="menu_keyword_btn_ul_list">
+                                <li><a class="menu_keyword_btn_fried menu_nav-icon" href="#void">#후라이드</a></li>
+                                <li><a class="menu_keyword_btn_seasoned menu_nav-icon" href="#void">#양념</a></li>
+                                <li><a class="menu_keyword_btn_bburinkle menu_nav-icon" href="#void">#뿌링클</a></li>
+                                <li><a class="menu_keyword_btn_King-Series menu_nav-icon" href="#void">#킹시리즈</a></li>
+                                <li><a class="menu_keyword_btn_Hot-Series menu_nav-icon" href="#void">#핫시리즈</a></li>
+                            </ul>
+                        </div>
+                    </div>
                 <div class="menu_items">
-                    <ul class="menu_nav">
+                    <!-- <ul class="menu_nav">
                         <li>
                             <a href="#">
-                                <!-- <img src="./images/menu_page/icon_nav_01_fried_gray.svg" alt="fried menu icon"> -->
                                 <div class="menu_nav-icon icon-fried" aria-label="fried menu icon"></div>
                                 <p>후라이드</p>
                             </a>
                         </li>
                         <li>
                             <a href="#">
-                                <!-- <img src="./images/menu_page/icon_nav_01_fried_gray.svg" alt="fried menu icon"> -->
                                 <div class="menu_nav-icon icon-seasoned" aria-label="fried menu icon"></div>
                                 <p>양념</p>
                             </a>
                         </li>
                         <li>
                             <a href="#">
-                                <!-- <img src="./images/menu_page/icon_nav_01_fried_gray.svg" alt="fried menu icon"> -->
                                 <div class="menu_nav-icon icon-bburinkle" aria-label="fried menu icon"></div>
                                 <p>뿌링클</p>
                             </a>
                         </li>
                         <li>
                             <a href="#">
-                                <!-- <img src="./images/menu_page/icon_nav_01_fried_gray.svg" alt="fried menu icon"> -->
                                 <div class="menu_nav-icon icon-King-Series" aria-label="fried menu icon"></div>
                                 <p>킹시리즈</p>
                             </a>
                         </li>
                         <li>
                             <a href="#">
-                                <!-- <img src="./images/menu_page/icon_nav_01_fried_gray.svg" alt="fried menu icon"> -->
                                 <div class="menu_nav-icon icon-Hot-Series" aria-label="fried menu icon"></div>
                                 <p>핫시리즈</p>
                             </a>
                         </li>
-                    </ul>
+                    </ul> -->
+                    <!-- <img src="../images/search_icon.svg" alt="메뉴 검색 아이콘"> -->
+                    
+                    <!-- <ul class="menu_search_container">
+                        <li class="menu_search_box">
+                            <input type="text" placeholder="메뉴를 입력하세요">
+                        </li>
+                        <li class="menu_search_btn">
+                            <a href="#void">메뉴 검색</a>
+                        </li>
+                    </ul> -->
                     <div class="menu_list">
                         <div class="menu_items_warp">
 
@@ -109,7 +136,7 @@
                                         <p class="see-more-title-en">Kwasaktok whole</p>
                                     </div>
                                     <div class="see-more-ex-line"></div>
-                                    <p class="menu-see-more-ex">극강의 바삭함! 콰삭킹에 스윗 칠리톡, 버터 비스킷톡, 트리플 페퍼톡을 <br>톡!톡! 뿌려 즐기는
+                                    <p class="menu-see-more-ex">극강의 바삭함! 콰삭킹에 스윗 칠리톡, 버터 비스킷톡, 트리플 페퍼톡을 <br class="exBrDelete">톡!톡! 뿌려 즐기는
                                         신개념
                                         치킨으로 가장 선호하는 부위만 모은 윙, 봉, 닭다리 콤보 (*톡톡팩과 함께 제공됩니다.)
                                     <p class="menu-see-more-ex-sub">

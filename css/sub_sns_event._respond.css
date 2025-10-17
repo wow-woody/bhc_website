@@ -1,0 +1,156 @@
+@media screen and (max-width:1024px) {
+
+    html {
+        font-size: 8px;
+    }
+
+    .event_page_wrap {
+        padding-top: 5rem;
+
+        .inner {
+            .event_wrap {
+                .tab_btn_list {
+                    width: auto;
+                    padding: 8rem 0;
+                    display: flex;
+                    gap: 4rem;
+                    justify-content: space-between;
+                    margin: 5rem auto;
+
+                    /* >li {
+                        width: 100%;
+                    } */
+
+                    .active {
+                        a {
+                            &::after {
+                                display: none;
+                            }
+                        }
+                    }
+
+                    .ended {
+                        display: none;
+                    }
+
+                    .event_content_wrap {
+                        justify-content: center;
+
+                        .content_list_wrap {
+                            >ul {
+                                >li {
+                                    display: none;
+                                }
+
+                                >li:first-child {
+                                    display: block;
+                                }
+                            }
+
+                        }
+                    }
+                }
+            }
+
+
+            .footer_rolling {
+                .rolling_text1 {
+                    font-size: 8rem;
+                }
+
+                .rolling_text2 {
+                    font-size: 4rem;
+                }
+            }
+
+        }
+
+        @media screen and (max-width:480px) {
+            html {
+                font-size: 7px;
+            }
+
+            .event_page_wrap {
+                padding-top: 5rem;
+
+                .inner {
+                    .event_wrap {
+
+                        .event_content_wrap {
+                            justify-content: center;
+
+                            .content_list_wrap {
+                                >ul {
+                                    >li {
+                                        display: none;
+                                    }
+
+                                    >li:first-child {
+                                        display: block;
+                                    }
+                                }
+
+
+
+                                &.active {
+                                    display: block;
+
+                                    .event_page_btn_wrap {
+                                        margin: 8rem auto;
+                                        display: flex;
+                                        justify-content: center;
+                                        align-items: center;
+                                        gap: 1.2rem;
+
+                                        >a {
+                                            display: block;
+                                            gap: 3rem;
+
+                                            img {
+                                                width: 2rem;
+                                                height: 2rem;
+                                            }
+                                        }
+                                    }
+
+                                    .event_page_btn_list {
+                                        display: flex;
+                                        gap: 5rem;
+                                        justify-content: space-between;
+                                        margin: 0 4rem 0;
+
+                                        .page_btn {
+                                            a {
+                                                display: flex;
+                                                justify-content: center;
+                                                align-items: center;
+                                                font-weight: 600;
+                                                color: var(--subColor);
+                                                width: 4rem;
+                                                height: 4rem;
+                                                border-radius: 50%;
+                                            }
+
+                                            &.active {
+                                                a {
+                                                    font-weight: 700;
+                                                    background: var(--pointColor);
+                                                    color: #fff;
+                                                    color: var(--pointColor);
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .footer_rolling {
+                display: none;
+            }
+
+        }
+    }
+}

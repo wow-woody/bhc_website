@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF_8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>bhc chicken</title>
+
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./css/Paperlogy.css">
     <link rel="shortcut icon" href="./images/favicon.png">
@@ -15,112 +15,95 @@
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="./css/main_respond.css">
     <script async src="./js/bhc_header_footer.js"></script>
-
-    <script async src="./js/bhc_header_menu_v02.js"></script>
-    
     <script defer src="./js/main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
-    
 
-    <!-- 채아 메인-->
-    <!-- <link rel="stylesheet" href="./css/bhc_youtube_respond.css"> -->
 
-    <!-- 채아 footer-->
-    <!-- <link rel="stylesheet" href="./css/bhc_respond_ver2.css"> -->
 
+    <!-- <script>
+       window.addEventListener("load", function () {
+    // 메인 슬라이더
+    if (document.querySelector(".main_slider")) {
+        new Swiper(".main_slider", {
+            loop: true,
+            autoplay: { delay: 4000 },
+            speed: 1000,
+            slidesPerView: 1.6,
+            spaceBetween: 250,
+            centeredSlides: true
+        });
+    }
+
+    // 인스타그램 슬라이더
+    if (document.querySelector(".insta_swiper")) {
+        const swiperContainer = document.querySelector('.insta_swiper');
+        swiperContainer.setAttribute('dir', 'rtl');
+        swiperContainer.querySelectorAll('.swiper-slide').forEach(slide => slide.setAttribute('dir', 'ltr'));
+        new Swiper(".insta_swiper", {
+            slidesPerView: "auto",
+            spaceBetween: 30,
+            freeMode: true,
+            slidesOffsetAfter: 10
+        });
+    }
+
+    // 이벤트 슬라이더
+    if (document.querySelector(".event_swiper")) {
+        new Swiper(".event_swiper", {
+            slidesPerView: 3,
+            spaceBetween: 30,
+            freeMode: true,
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev"
+            }
+        });
+
+        document.querySelectorAll('.swiper-button-next a, .swiper-button-prev a').forEach(el => {
+            el.addEventListener('click', e => e.preventDefault());
+        });
+    }
+});
+
+    </script> -->
 </head>
 
+
 <body>
-    <!-- <header>
-        <div class="wide_inner">
-            <h1 class="logo"><a href="#void"><img src="./images/bhc_Logo.svg" alt="logo"></a></h1>
-            <nav>
-                <ul class="main_menu">
-                    <li>
-                        <a class="main_menu_title" href="#void">메뉴</a>
-                        <ul class="sub_menu">
-                            <li><a href="#void">후라이드</a></li>
-                            <li><a href="#void">양념</a></li>
-                            <li><a href="#void">뿌링클</a></li>
-                            <li><a href="#void">킹시리즈</a></li>
-                            <li><a href="#void">핫시리즈</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a class="main_menu_title" href="#void">주문하기</a>
-                        <ul class="sub_menu">
-                            <li><a href="#void">온라인 주문</a></li>
-                            <li><a href="#void">E-쿠폰</a></li>
-                            <li><a href="#void">APP</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a class="main_menu_title" href="#void">매장</a>
-                    </li>
-                    <li>
-                        <a class="main_menu_title" href="#void">bhc소식</a>
-                        <ul class="sub_menu">
-                            <li><a href="#void">YOUTUBE</a></li>
-                            <li><a href="#void">SNS</a></li>
-                            <li><a href="#void">NEWS</a></li>
-                            <li><a href="#void">공지사항</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a class="main_menu_title" href="#void">BRAND</a>
-                        <ul class="sub_menu">
-                            <li><a href="#void">bhc소개</a></li>
-                            <li><a href="#void">차별화 전략</a></li>
-                            <li><a href="#void">연혁</a></li>
-                            <li><a href="#void">오시는 길</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a class="main_menu_title" href="#void">bhc Mall</a>
-                    </li>
-                </ul>
-            </nav>
-            <div class="search_box">
-                <input type="text" value="메뉴를 입력하세요">
-                <img src="./images/search_icon.svg" alt="search_icon">
-            </div>
-            <ul class="gnb">
-                <li class="search">
-                    <a class="search_icon" href="#void"><img src="./images/search_icon.svg" alt="search_icon"></a>
-                    <div class="search_x"><input type="text" value="메뉴를 입력하세요">
-                        <img src="./images/search_x.svg" alt="search_x">
-                    </div>
-                </li>
-                <li class="menu_icon"><a href="#void"><img src="./images/menu_icon.svg" alt="menu_icon"></a></li>
-            </ul>
-        </div>
-    </header> -->
     <header id="header"></header>
+
     <main>
         <!-- 메인 슬라이드 배너 섹션 -->
         <div class="main_slider_wrap">
-            <div class="inner">
-                <div class="main_slider">
-                    <div class="main_slider_list">
-                        <div class="slider1"><img src="./images/main-slider-3.png" alt="메인슬라이더1"></div>
-                        <div class="slider2"><img src="./images/main-slider-2.png" alt="메인슬라이더2"></div>
-                        <div class="slider3"><img src="./images/main-slider-1.png" alt="메인슬라이더3"></div>
-                        <div class="slider4"><img src="./images/main-slider-4.png" alt="메인슬라이더4"></div>
-                        <div class="slider5"><img src="./images/main-slider-5.png" alt="메인슬라이더5"></div>
-                    </div>
-                    <div class="pager_bar">
-                        <ul class="pager_left">
-                            <li class="stop_btn"><a href="#void"><img src="./images/stop_btn.svg" alt="stop_btn"></a>
-                            </li>
-                            <li class="start_btn"><a href="#void"><img src="./images/start_btn.svg" alt="start_btn"></a>
-                            </li>
-                        </ul>
-                        <div class="pager_right"><span></span></div>
-                    </div>
+            <!-- <div class="inner"> -->
+            <div class="main_slider swiper">
+                <div class="main_slider_list swiper-wrapper">
+                    <div class="slider1 swiper-slide"><img src="./images/main-slider-3.png" alt="메인슬라이더1"></div>
+                    <div class="slider2 swiper-slide"><img src="./images/main-slider-2.png" alt="메인슬라이더2"></div>
+                    <div class="slider3 swiper-slide"><img src="./images/main-slider-1.png" alt="메인슬라이더3"></div>
+                    <div class="slider4 swiper-slide"><img src="./images/main-slider-4.png" alt="메인슬라이더4"></div>
+                    <div class="slider5 swiper-slide"><img src="./images/main-slider-5.png" alt="메인슬라이더5"></div>
                 </div>
-            </div>
-        </div>
+                <div class="pager_bar">
+                    <ul class="pager_left">
+                        <li class="stop_btn"><a href="#void"><img src="./images/stop_btn.svg" alt="stop_btn"></a>
+                        </li>
+                        <li class="start_btn"><a href="#void"><img src="./images/start_btn.svg" alt="start_btn"></a>
+                        </li>
+                    </ul>
+                    <div class="pager_right"><span></span></div>
+                </div>
+                <ul class="pager_btn">
+                    <li class="active"><a href="#void"></a></li>
+                    <li><a href="#void"></a></li>
+                    <li><a href="#void"></a></li>
+                    <li><a href="#void"></a></li>
+                    <li><a href="#void"></a></li>
 
+                </ul>
+            </div>
+            <!-- </div> -->
+        </div>
         <!-- 주문 버튼 섹션 -->
         <div class="container">
             <section class="order_wrap">
@@ -344,7 +327,7 @@
 
             <!-- 인스타 섹션 -->
             <section class="insta_wrap">
-                <div class="insta_left swiper">
+                <div class="insta_swiper swiper insta_left">
                     <div class="insta_card_list swiper-wrapper">
                         <div class="card swiper-slide">
                             <div class="card_top">
@@ -429,14 +412,14 @@
                     <p class="sentence">@bhc_chicken_official 인스타그램을 팔로우해보세요!<br>
                         Bhc chicken의 주요 소식들을 가장 먼저 확인할 수 있습니다.</p>
                     <p class="bhc_btn">
-                        <a href="https://www.instagram.com/bhc_chicken_official">bhc Instagram</a>
+                        <a href="#">bhc Instagram</a>
                     </p>
                 </div>
                 <div class="bhc_btn_M">
-                    <a href="https://www.instagram.com/bhc_chicken_official">bhc Instagram</a>
+                    <a href="#">bhc Instagram</a>
                 </div>
 
-                <script>
+                <!-- <script>
                     window.onload = function () {
                         const swiperContainer = document.querySelector('.insta_left');
 
@@ -456,114 +439,84 @@
                             slidesOffsetAfter: 10
                         });
                     }
-                </script>
+                </script> -->
             </section>
+
 
             <!-- 이벤트 섹션 -->
             <section class="event_wrap">
                 <div class="inner">
-                    <h2 class=section_title><span>bhc</span>Event</h2>
+                    <h2 class=section_title id="event_title"><span>bhc</span> Event</h2>
                     <div class="event_list">
                         <div class="event_arrow">
-                            <p class="right_arr"><a href="#"><img src="./images/left_arrow_event.png"
-                                        alt="right_arrow"></a>
+                            <p class="swiper-button-next" id="right_arr">
+                                <a href="#"><img src="./images/right_arrow_event.png" alt="right_arrow"></a>
                             </p>
-                            <p class="left_arr"><a href="#"><img src="./images/right_arrow_event.png"
-                                        alt="left_arrow"></a>
+                            <p class="swiper-button-prev" id="left_arr">
+                                <a href="#"><img src="./images/left_arrow_event.png" alt="left_arrow"></a>
                             </p>
                         </div>
-                        <div class="event_img">
-                            <a href="#"><img src="./images/img_event1.jpg" alt="event_img1"></a>
-                            <a href="#"><img src="./images/img_event2.jpg" alt="event_img2"></a>
-                            <a href="#"><img src="./images/img_event3.jpg" alt="event_img3"></a>
-                            <a href="#"><img src="./images/img_event4.png" alt="event_img4"></a>
-                            <a href="#"><img src="./images/img_event5.jpg" alt="event_img5"></a>
-                            <a href="#"><img src="./images/img_event6.jpg" alt="event_img6"></a>
+                        <div class="event_swiper swiper mySwiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide event_img"><a href="#"><img src="./images/img_event1.jpg"
+                                            alt="event_img1"></a></div>
+                                <div class="swiper-slide event_img"><a href="#"><img src="./images/img_event2.jpg"
+                                            alt="event_img2"></a></div>
+                                <div class="swiper-slide event_img"><a href="#"><img src="./images/img_event3.jpg"
+                                            alt="event_img3"></a></div>
+                                <div class="swiper-slide event_img"><a href="#"><img src="./images/img_event4.png"
+                                            alt="event_img4"></a></div>
+                                <div class="swiper-slide event_img"><a href="#"><img src="./images/img_event5.jpg"
+                                            alt="event_img5"></a></div>
+                                <div class="swiper-slide event_img"><a href="#"><img src="./images/img_event6.jpg"
+                                            alt="event_img6"></a></div>
+                            </div>
+
                         </div>
 
-                        <div class="m_btn">
+                        <div class="eventm_btn">
                             <a href="#">bhc event</a>
-                        </div>
+                        </div>                                            
+                        <!--<script>
+                            var swiper = new Swiper(".mySwiper", {
+                                slidesPerView: 3,
+                                spaceBetween: 30,
+                                freeMode: true,
+                                navigation: {
+                                    nextEl: ".swiper-button-next",
+                                    prevEl: ".swiper-button-prev",
+                                },
 
+                                // breakpoints: {
+                                //     0: {
+                                //         slidesPerView: 1,
+                                //         spaceBetween: 20,
+                                //     },
+                                //     480: {
+                                //         slidesPerView: 1,
+                                //         spaceBetween: 20
+                                //     },
+                                //     768: {
+                                //         slidesPerView: 2,
+                                //         spaceBetween: 20
+                                //     },
+                                //     1024: {
+                                //         slidesPerView: 3,
+                                //         spaceBetween: 30
+                                //     }
+                                // }
+                            });
+                            document.querySelectorAll('.swiper-button-next a, .swiper-button-prev a').forEach(el => {
+                                el.addEventListener('click', e => e.preventDefault());
+                            });
+                        </script> -->
                     </div>
-
-
                 </div>
             </section>
-            <script src="./js/event.js"></script>
         </div>
     </main>
 
-    <footer id="foorer"></footer>
-    <!-- <footer>
-        <div class="footer_top">
-            <div class="wide_inner">
-                <div class="footer_top_left">
-                    <ul class="info">
-                        <li><a href="#void">이용약관</a></li>
-                        <li><a href="#void">개인정보 처리방침</a></li>
-                        <li><a href="#void">위치기반서비스 이용약관</a></li>
-                        <li><a href="#void">영상정보처리기기 운영방침</a></li>
-                        <li><a href="#void">이메일무단수집거부</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer_top_right">
-                    <ul class="sns_list">
-                        <li><a href="#"><img src="./images/insta_icon.svg" alt="insta_icon"></a></li>
-                        <li><a href="#"><img src="./images/youtube_icon.svg" alt="youtube_icon"></a></li>
-                        <li><a href="#"><img src="./images/face_icon.svg" alt="face_icon"></a></li>
-                    </ul>
-
-                    <div class="site_map_wrap">
-                        <a class="site_map" href="#void">패밀리 사이트<img src="./images/arrow_icon.svg" alt="arrow_icon"></a>
-                        <ul class="site_list">
-                            <li><a href="#void">패밀리 사이트</a></li>
-                            <li><a href="#void">다이닝브랜즈그룹</a></li>
-                            <li><a href="#void">BHC MALL</a></li>
-                            <li><a href="#void">OUTBACK</a></li>
-                            <li><a href="#void">창고43</a></li>
-                            <li><a href="#void">큰맘할매순대국</a></li>
-                            <li><a href="#void">그램그램</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="footer_bottom">
-            <div class="wide_inner">
-                <div class="footer_bottom_left">
-                    <p class="footer_logo"><img src="./images/bhc_footer_logo.svg" alt="footer_logo"></p>
-                    <address>
-                        <p>
-                            <span>대표 : 송호섭</span>
-                            <span>주소 : 서울시 송파구 올림픽로 300, 19층 (신천동)</span>
-                        </p>
-                        <p>
-                            <span>다이닝브랜즈그룹 주식회사</span>
-                            <span>사업자등록번호 : 215-86-61559</span>
-                            <span>통신판매업 : 제2014-서울송파-0593호</span>
-                        </p>
-                        <p>
-                            <span>문의전화 : 02-6204-3406</span>
-                            <span> FAX : 02-6988-2199</span>
-                        </p>
-                    </address>
-                    <p class="copy">Copyright © 2024. 다이닝브랜즈그룹 주식회사. All Rights reserved.</p>
-                </div>
-                <div class="footer_bottom_right">
-                    <ul class="footer_menu">
-                        <li><a href="#void">메뉴</a></li>
-                        <li><a href="#void">주문하기</a></li>
-                        <li><a href="#void">매장</a></li>
-                        <li><a href="#void">bhc소식</a></li>
-                        <li><a href="#void">BRAND</a></li>
-                        <li><a href="#void">bhc Mall</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </footer> -->
+    <footer id="footer"></footer>
 </body>
 
 </html>

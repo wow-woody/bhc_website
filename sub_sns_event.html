@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bhc Event</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./css/Paperlogy.css">
+    <link rel="stylesheet" href="./css/bhc_common.css">
+     <link rel="stylesheet" href="./css/style_bhc.css">
+     <link rel="stylesheet" href="./css/bhc_header.css">
+     <link rel="stylesheet" href="./css/bhc_footer.css">
+    <link rel="stylesheet" href="./css/sub_sns_event.css">
+    <link rel="stylesheet" href="./css/sub_sns_event_respond.css">
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <script>
+        window.onload = function () {
+            const swiper = new Swiper(".slider_wrap", {
+                effect: "fade",
+                loop: true,
+                autoplay: {
+                    delay: 3000
+                },
+                pagination: {
+                    el: ".swiper-pagination"
+                }
+            })
+        }
+    </script>
+    <!-- <script async src="./js/bhc_header_footer.js"></script> -->
+    <script defer src="./js/sub_event.js"></script>
+</head>
+
+<body>
+    <!-- header -->
+    <header id="header"></header>
+    <!-- main -->
+    <div class="sub_slider_wrap">
+        <div class="inner">
+            <div class="slider_wrap swiper">
+                <ul class="sub_slider_list swiper-wrapper">
+                    <li class="sub_slider swiper-slide">
+                        <a href="#">
+                            <span class="play_btn">
+                                <img src="./images/play_btn.svg" alt="paly_btn">
+                            </span>
+                            <p class="video">
+                                <video src="./video/bhc_video_01.mp4"></video>
+                            </p>
+                        </a>
+                    </li>
+                    <li class="sub_slider swiper-slide">
+                        <a href="#">
+                            <span class="play_btn">
+                                <img src="./images/play_btn.svg" alt="paly_btn">
+                            </span>
+                            <p class="video">
+                                <video src="./video/bhc_video_02.mp4"></video>
+                            </p>
+                        </a>
+                    </li>
+                    <li class="sub_slider swiper-slide">
+                        <a href="#">
+                            <span class="play_btn">
+                                <img src="./images/play_btn.svg" alt="paly_btn">
+                            </span>
+                            <p class="video">
+                                <video src="./video/bhc_video_03.mp4"></video>
+                            </p>
+                        </a>
+                    </li>
+                    <li class="sub_slider swiper-slide">
+                        <a href="#">
+                            <span class="play_btn">
+                                <img src="./images/play_btn.svg" alt="paly_btn">
+                            </span>
+                            <p class="video">
+                                <video src="./video/bhc_video_04.mp4"></video>
+                            </p>
+                        </a>
+                    </li>
+                    <li class="sub_slider swiper-slide">
+                        <a href="#">
+                            <span class="play_btn">
+                                <img src="./images/play_btn.svg" alt="paly_btn">
+                            </span>
+                            <p class="video">
+                                <video src="./video/bhc_video_05.mp4"></video>
+                            </p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="sub_slider_bottom">
+                <h3 class="section_title">BRAND FILM</h3>
+                <div id="pager_btn" class="swiper-pagination"></div>
+            </div>
+        </div>
+    </div>
+
+
+    <section class="event_page_wrap">
+        <div class="inner">
+            <h3 class="section_title"><span>bhc</span> Event</h3>
+            <div class="event_wrap">
+                <ul class="tab_btn_list">
+                    <li class="ongoing active"><a href="#void">진행 중 / 진행 예정인 이벤트</a></li>
+                    <li class="ended"><a href="#void">종료된 이벤트</a></li>
+                </ul>
+                <div class="event_content_wrap">
+                    <div class="content_list_wrap active">
+                        <ul class="ongoing_content_list">
+                            <li>
+                                <a href="#void">
+                                    <div class="img_box img_box1"><img src="./images/sub_event_01.png" alt="사이드위크1">
+                                    </div>
+                                    <div class="text_box">
+                                        <strong>NEW 사이드위크</strong>
+                                        <span>뿌링 카이막 치즈볼</span>
+                                        <p class="event_date">2025-10-23 ~ 2025-10-29</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#void">
+                                    <div class="img_box img_box2"><img src="./images/sub_event_02.png" alt="사이드위크2">
+                                    </div>
+                                    <div class="text_box">
+                                        <strong>NEW 사이드위크</strong>
+                                        <span>카이막 치즈볼</span>
+                                        <p class="event_date">2025-10-16 ~ 2025-10-22</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#void">
+                                    <div class="img_box img_box3"><img src="./images/sub_event_03.png" alt="애드닭"></div>
+                                    <div class="text_box">
+                                        <span>한마리로 아쉽닭?</span>
+                                        <strong>더하닭 애드닭!</strong>
+                                        <p class="event_date">2025-05-14 ~ 2025-12-31</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#void">
+                                    <div class="img_box img_box1"><img src="./images/sub_event_01.png" alt="사이드위크1">
+                                    </div>
+                                    <div class="text_box">
+                                        <strong>NEW 사이드위크</strong>
+                                        <span>뿌링 카이막 치즈볼</span>
+                                        <p class="event_date">2025-10-23 ~ 2025-10-29</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#void">
+                                    <div class="img_box img_box2"><img src="./images/sub_event_02.png" alt="사이드위크2">
+                                    </div>
+                                    <div class="text_box">
+                                        <strong>NEW 사이드위크</strong>
+                                        <span>카이막 치즈볼</span>
+                                        <p class="event_date">2025-10-16 ~ 2025-10-22</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#void">
+                                    <div class="img_box img_box3"><img src="./images/sub_event_03.png" alt="애드닭"></div>
+                                    <div class="text_box">
+                                        <span>한마리로 아쉽닭?</span>
+                                        <strong>더하닭 애드닭!</strong>
+                                        <p class="event_date">2025-05-14 ~ 2025-12-31</p>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="content_list_wrap ended">
+                        <ul class="ended_content_list">
+                            <li>
+                                <a href="#void">
+                                    <div class="text_box">
+                                        <p class="event_title">
+                                            <strong>NEW 사이드위크</strong>
+                                            <span>카이막 치즈볼</span>
+                                        </p>
+                                        <p class="event_date">2025-10-16 ~ 2025-10-22</p>
+                                    </div>
+                                    <div class="img_box img_box1"><img src="./images/sub_event_01.png" alt="사이드위크1">
+                                    </div>
+                                    <div class="ended_box">종료된 이벤트</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#void">
+                                    <div class="text_box">
+                                        <p class="event_title">
+                                            <strong>NEW 사이드위크</strong>
+                                            <span>카이막 치즈볼</span>
+                                        </p>
+                                        <p class="event_date">2025-10-16 ~ 2025-10-22</p>
+                                    </div>
+                                    <div class="img_box img_box2"><img src="./images/sub_event_02.png" alt="사이드위크2">
+                                    </div>
+                                    <div class="ended_box">종료된 이벤트</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#void">
+                                    <div class="text_box">
+                                        <p class="event_title">
+                                            <span>한마리로 아쉽닭?</span>
+                                            <strong>더하닭 애드닭!</strong>
+                                        </p>
+                                        <p class="event_date">2025-05-14 ~ 2025-12-31</p>
+                                    </div>
+                                    <div class="img_box img_box3"><img src="./images/sub_event_03.png" alt="애드닭"></div>
+                                    <div class="ended_box">종료된 이벤트</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#void">
+                                    <div class="text_box">
+                                        <p class="event_title">
+                                            <strong>NEW 사이드위크</strong>
+                                            <span>카이막 치즈볼</span>
+                                        </p>
+                                        <p class="event_date">2025-10-16 ~ 2025-10-22</p>
+                                    </div>
+                                    <div class="img_box img_box1"><img src="./images/sub_event_01.png" alt="사이드위크1">
+                                    </div>
+                                    <div class="ended_box">종료된 이벤트</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#void">
+                                    <div class="text_box">
+                                        <p class="event_title">
+                                            <strong>NEW 사이드위크</strong>
+                                            <span>카이막 치즈볼</span>
+                                        </p>
+                                        <p class="event_date">2025-10-16 ~ 2025-10-22</p>
+                                    </div>
+                                    <div class="img_box img_box2"><img src="./images/sub_event_02.png" alt="사이드위크2">
+                                    </div>
+                                    <div class="ended_box">종료된 이벤트</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#void">
+                                    <div class="text_box">
+                                        <p class="event_title">
+                                            <span>한마리로 아쉽닭?</span>
+                                            <strong>더하닭 애드닭!</strong>
+                                        </p>
+                                        <p class="event_date">2025-05-14 ~ 2025-12-31</p>
+                                    </div>
+                                    <div class="img_box img_box3"><img src="./images/sub_event_03.png" alt="애드닭"></div>
+                                    <div class="ended_box">종료된 이벤트</div>
+                                </a>
+                            </li>
+                        </ul>
+
+                        <div class="event_page_btn_wrap">
+                            <a href="#void" class="arr"><img src="./images/page_btn_first.svg" alt="첫페이지로"></a>
+                            <a href="#void"><img src="./images/page_btn_prev.svg" alt="이전페이지로"></a>
+                            <ul class="event_page_btn_list">
+                                <li class="page_btn active"><a href="#void">1</a></li>
+                                <li class="page_btn"><a href="#void">2</a></li>
+                                <li class="page_btn"><a href="#void">3</a></li>
+                                <li class="page_btn"><a href="#void">4</a></li>
+                                <li class="page_btn"><a href="#void">5</a></li>
+                                <li class="page_btn"><a href="#void">6</a></li>
+                                <li class="page_btn"><a href="#void">7</a></li>
+                                <li class="page_btn"><a href="#void">8</a></li>
+                                <li class="page_btn"><a href="#void">9</a></li>
+                                <li class="page_btn"><a href="#void">10</a></li>
+                            </ul>
+                            <a href="#void"><img src="./images/page_btn_next.svg" alt="다음페이지로"></a>
+                            <a href="#void" class="arr"><img src="./images/page_btn_last.svg" alt="마지막페이지로"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+    <div class="footer_rolling">
+        <div class="rolling_text1">
+            <span>BHC CHICKEN&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+            <span>BHC CHICKEN&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+            <span>BHC CHICKEN&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+
+            <span>BHC CHICKEN&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+            <span>BHC CHICKEN&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+            <span>BHC CHICKEN&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+
+            <span>BHC CHICKEN&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+            <span>BHC CHICKEN&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+            <span>BHC CHICKEN&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+
+            <span>BHC CHICKEN&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+            <span>BHC CHICKEN&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+            <span>BHC CHICKEN&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+        </div>
+        <div class="rolling_text2">
+            <span> Better Happier Choice&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+            <span> Better Happier Choice&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+            <span> Better Happier Choice&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+
+            <span> Better Happier Choice&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+            <span> Better Happier Choice&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+            <span> Better Happier Choice&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+
+            <span> Better Happier Choice&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+            <span> Better Happier Choice&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+            <span> Better Happier Choice&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+
+            <span> Better Happier Choice&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+            <span> Better Happier Choice&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+            <span> Better Happier Choice&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+        </div>
+    </div>
+
+    <!-- footer -->
+    <footer id="footer"></footer>
+</body>
+
+</html>

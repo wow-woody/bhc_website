@@ -1,0 +1,147 @@
+@media screen and (max-width:1024px) {
+
+    html {
+        font-size: 8px;
+    }
+
+    .sub_slider_wrap .sub_slider_bottom>.section_title {
+        color: #fff;
+        padding-top: 1rem;
+        /* line-height: 10; */
+        font-size: 3rem;
+    }
+
+    .sub_slider_bottom {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .section_title {
+        font-size: 4rem;
+    }
+
+    .sub_youtube_wrap {
+        background: #eee;
+
+        .inner {
+            height: inherit;
+
+            .youtube_wrap {
+                .youtube_list {
+                    height: 55rem;
+
+                    .youtube2 {
+                        display: none;
+                    }
+
+                }
+
+                .bhc_img {
+                    display: none;
+                }
+
+                .bhc_btn {
+                    right: unset;
+                    left: 50%;
+                    bottom: 0;
+                    transform: translateX(-50%);
+                }
+            }
+        }
+    }
+
+    F .footer_rolling {
+        .rolling_text1 {
+            font-size: 8rem;
+        }
+
+        .rolling_text2 {
+            font-size: 4rem;
+        }
+    }
+}
+
+/* 680 이하 */
+@media screen and (max-width:780px) {
+
+    html {
+        font-size: 7px;
+    }
+
+    .swiper-pagination-bullet {
+        gap: 2rem;
+        height: 1.2rem;
+        width: 1.2rem;
+        background: #eee;
+        border-radius: 10px;
+        transition: 0.6s;
+    }
+
+    .swiper-pagination-bullet-active {
+        width: 4rem !important;
+        background: var(--mainColor);
+    }
+
+    /* 탭버튼 */
+    .sub_tab_btn_wrap {
+        .tab_btn_list {
+            .tab_btn {
+                a {
+                    span {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+
+    .sub_youtube_wrap {
+        background: #eee;
+        /* height: 100; */
+
+        .inner {
+            height: inherit;
+
+            .youtube_wrap {
+                width: 100vw;
+
+                .youtube_list {
+                    .shorts {
+                        display: none;
+                    }
+
+                    .youtube1 {
+                        /* position: static; */
+                        right: unset;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                    }
+
+                    .section_title {
+                        left: 50%;
+                        top: unset;
+                        transform: translateX(-50%);
+                    }
+                }
+
+                .bhc_img {
+                    display: none;
+                }
+
+                .bhc_btn {
+                    right: unset;
+                    left: 50%;
+                    bottom: 0;
+                    transform: translateX(-50%);
+                }
+            }
+        }
+    }
+
+    .footer_rolling {
+        display: none;
+    }
+}

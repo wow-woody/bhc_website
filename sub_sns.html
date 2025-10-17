@@ -5,15 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>bhc 소식</title>
-    <link rel="stylesheet" href="./css/Paperlogy.css">
-    <link rel="stylesheet" href="./css/bhc_common.css">
-    <link rel="stylesheet" href="./css/bhc_style.css">
-    <link rel="stylesheet" href="./css/sub_sns.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./css/Paperlogy.css">
     <link rel="stylesheet" href="./css/bhc_common.css">
-    <link rel="stylesheet" href="./css/bhc_style.css">
-    <link rel="stylesheet" href="./css/sub_slider_wrap.css">
+    <link rel="stylesheet" href="./css/style_bhc.css">
+    <link rel="stylesheet" href="./css/bhc_header.css">
+    <link rel="stylesheet" href="./css/bhc_footer.css">
+    <link rel="stylesheet" href="./css/sub_sns.css">
+    <link rel="stylesheet" href="./css/sub_sns_respond.css">
+
     <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
     <script>
         window.onload = function () {
@@ -29,10 +29,11 @@
             })
         }
     </script>
+    <!-- <script async src="./js/bhc_header_footer.js"></script> -->
 </head>
 
 <body>
-
+    <header id="header"></header>
     <div class="sub_slider_wrap">
         <div class="inner">
             <div class="slider_wrap swiper">
@@ -73,7 +74,7 @@
                                 <img src="./images/play_btn.svg" alt="paly_btn">
                             </span>
                             <p class="video">
-                                <video src="./video/bhc_video_01.mp4"></video>
+                                <video src="./video/bhc_video_04.mp4"></video>
                             </p>
                         </a>
                     </li>
@@ -83,7 +84,7 @@
                                 <img src="./images/play_btn.svg" alt="paly_btn">
                             </span>
                             <p class="video">
-                                <video src="./video/bhc_video_01.mp4"></video>
+                                <video src="./video/bhc_video_05.mp4"></video>
                             </p>
                         </a>
                     </li>
@@ -91,7 +92,7 @@
             </div>
             <div class="sub_slider_bottom">
                 <h3 class="section_title">BRAND FILM</h3>
-                <div class="pager_btn swiper-pagination"></div>
+                <div id="pager_btn" class="swiper-pagination"></div>
             </div>
         </div>
     </div>
@@ -101,10 +102,10 @@
             <h3 class="section_title blind">sub button</h3>
             <ul class="tab_btn_list">
                 <li class="tab_btn active"><a href="#void">ALL</a></li>
-                <li class="tab_btn"><a href="#void">bhc Instagram</a></li>
-                <li class="tab_btn"><a href="#void">bhc Youtube</a></li>
-                <li class="tab_btn"><a href="#void">bhc Event</a></li>
-                <li class="tab_btn"><a href="#void">bhc 공지사항</a></li>
+                <li class="tab_btn"><a href="#void"><span>bhc&nbsp;</span>Instagram</a></li>
+                <li class="tab_btn"><a href="#void"><span>bhc&nbsp;</span>Youtube</a></li>
+                <li class="tab_btn"><a href="#void"><span>bhc&nbsp;</span>Event</a></li>
+                <li class="tab_btn"><a href="https://www.bhc.co.kr/event/notice.asp"><span>bhc&nbsp;</span>공지사항</a></li>
             </ul>
         </div>
     </div>
@@ -115,17 +116,17 @@
             <div class="inner">
                 <div class="sub_insta_top">
                     <h3 class="section_title"><span>bhc</span> Instagram</h3>
-                    <p class="bhc_btn"><a href="#void">bhc Instagram</a></p>
+                    <p class="bhc_btn"><a href="https://www.instagram.com/bhc_chicken_official/">bhc Instagram</a></p>
                 </div>
                 <div class="insta">
                     <ul class="insta_list">
-                        <li class="insta_card">
-                            <a href="#void">
+                        <li class="insta_card card1">
+                            <a href="https://www.instagram.com/p/DOvOPa7iYmF/?img_index=1">
                                 <div class="card_top">
-                                    <p class="sns_logo"><img src="./images/Bhc_logo.png" alt="bhc_sns_logo"></p>
+                                    <p class="sns_logo"><img src="./images/bhc_sns_logo.jpg" alt="bhc_sns_logo"></p>
                                     <p class="sns_id">bhc_chicken_official</p>
                                 </div>
-                                <div class="card_img"></div>
+                                <div class="card_img img1"></div>
                                 <div class="card_footer">
                                     <div class="card_footer_left">
                                         <p><img src="./images/icon_heart.svg" alt=""></p>
@@ -135,16 +136,23 @@
                                     <div class="card_footer_right">
                                         <img src="./images/icon_bookmark.svg" alt="">
                                     </div>
+                                </div>
+                                <div class="text_box">
+                                    <!-- <strong>PICK YOUR<br>CHEESE BALL !</strong> -->
+                                    <!-- <strong>𝐏𝐈𝐂𝐊 𝐘𝐎𝐔𝐑 𝐂𝐇𝐄𝐄𝐒𝐄 𝐁𝐀𝐋𝐋!</strong> -->
+                                    <strong>PICK<br>YOUR<br>CHEESE BALL !</strong>
+                                    <span>골라 먹는 아이스크림처럼 고르는 재미가 있는<br>4가지 bhc 치즈볼!</span>
+                                    <!-- <span>지금 바로 소개합니다!</span> -->
                                 </div>
                             </a>
                         </li>
-                        <li class="insta_card">
-                            <a href="#void">
+                        <li class="insta_card card2">
+                            <a href="https://www.instagram.com/p/DJRB4MjBiYl/">
                                 <div class="card_top">
-                                    <p class="sns_logo"><img src="./images/Bhc_logo.png" alt="bhc_sns_logo"></p>
+                                    <p class="sns_logo"><img src="./images/bhc_sns_logo.jpg" alt="bhc_sns_logo"></p>
                                     <p class="sns_id">bhc_chicken_official</p>
                                 </div>
-                                <div class="card_img"></div>
+                                <div class="card_img img2"></div>
                                 <div class="card_footer">
                                     <div class="card_footer_left">
                                         <p><img src="./images/icon_heart.svg" alt=""></p>
@@ -154,16 +162,22 @@
                                     <div class="card_footer_right">
                                         <img src="./images/icon_bookmark.svg" alt="">
                                     </div>
+                                </div>
+                                <div class="text_box">
+                                    <!-- <strong>𝐌𝐘 𝐛𝐡𝐜 𝐂𝐇𝐈𝐂𝐊𝐄𝐍 𝐇𝐄𝐑𝐎</strong> -->
+                                    <!-- <strong>MY bhc<br>CHICKEN HERO</strong> -->
+                                    <strong>MY<br>bhc CHICKEN<br>HERO</strong>
+                                    <span>뿌링클을 들고 나타난 꼬마 히어로가 🧒🏻<br>우리 집 테이블 위를 접수했다?! 👀💥</span>
                                 </div>
                             </a>
                         </li>
-                        <li class="insta_card">
-                            <a href="#void">
+                        <li class="insta_card card3">
+                            <a href="https://www.instagram.com/p/DO8F-_iCOhZ/">
                                 <div class="card_top">
-                                    <p class="sns_logo"><img src="./images/Bhc_logo.png" alt="bhc_sns_logo"></p>
+                                    <p class="sns_logo"><img src="./images/bhc_sns_logo.jpg" alt="bhc_sns_logo"></p>
                                     <p class="sns_id">bhc_chicken_official</p>
                                 </div>
-                                <div class="card_img"></div>
+                                <div class="card_img img3"></div>
                                 <div class="card_footer">
                                     <div class="card_footer_left">
                                         <p><img src="./images/icon_heart.svg" alt=""></p>
@@ -173,6 +187,12 @@
                                     <div class="card_footer_right">
                                         <img src="./images/icon_bookmark.svg" alt="">
                                     </div>
+                                </div>
+                                <div class="text_box">
+                                    <strong>맛초킹<br>10주년 기념<br>Lucky Draw🍀</strong>
+                                    <!-- <strong>맛초킹 10주년 기념<br>Lucky Draw🍀</strong> -->
+                                    <!-- <strong>🍀 𝐋𝐔𝐂𝐊𝐘 𝐃𝐑𝐀𝐖</strong> -->
+                                    <span>bhc가 준비한 특별한 행운!<br>지금 바로 bhc 앱에서 열어보세요!</span>
                                 </div>
                             </a>
                         </li>
@@ -185,26 +205,52 @@
             <div class="inner">
                 <div class="youtube_wrap">
                     <div class="youtube_list">
-                        <div class="shorts">
+                        <div class="video_wrap shorts">
                             <a href="#void">
-                                <span class="play_btn"><img src="./images/play_btn.svg" alt="paly_btn"></span>
-                                <video src=""></video>
+                                <div class="text_box">
+                                    <strong>MORE JUICY</strong>
+                                    <span>입안 가득 터지는 도파민</span>
+                                    <span>10년 동안 함께한 그 맛</span>
+                                    <strong>맛초킹</strong>
+                                </div>
+                                <div class="video_box">
+                                    <span class="play_btn"><img src="./images/play_btn.svg" alt="paly_btn"></span>
+                                    <video src="./video/bhc_shorts_01.mp4"></video>
+                                </div>
                             </a>
                         </div>
-                        <div class="youtube youtube1">
+                        <div class="video_wrap youtube youtube1">
                             <a href="#void">
-                                <span class="play_btn"><img src="./images/play_btn.svg" alt="paly_btn"></span>
-                                <video src=""></video>
+                                <div class="text_box">
+                                    <strong>MORE JUICY</strong>
+                                    <span>입안 가득 터지는 도파민</span>
+                                    <span>10년 동안 함께한 그 맛</span>
+                                    <strong>맛초킹</strong>
+                                </div>
+                                <div class="video_box">
+                                    <span class="play_btn"><img src="./images/play_btn.svg" alt="paly_btn"></span>
+                                    <video src="./video/bhc_video_05.mp4"></video>
+                                </div>
+
                             </a>
                         </div>
-                        <div class="youtube youtube2">
-                            <a href="#void">
-                                <span class="play_btn"><img src="./images/play_btn.svg" alt="paly_btn"></span>
-                                <video src=""></video>
+                        <div class="video_wrap youtube youtube2">
+                            <a href="https://www.youtube.com/watch?v=NM-ZcCoMxgc&t=4s">
+                                <div class="text_box">
+                                    <strong>『맛초킹 10주년 생일 파티 초대장』</strong>
+                                    <span>도파민 터지는 극강의 자극 푸드🔥</span>
+                                    <span>맛초킹 10주년 생일 파티에 참석하고 싶다면?</span>
+                                    <span>지금 바로 초킹한 파티 영상을 확인해 보세요!</span>
+                                </div>
+                                <div class="video_box">
+                                    <span class="play_btn"><img src="./images/play_btn.svg" alt="paly_btn"></span>
+                                    <video src="./video/bhc_youtube_06.mp4"></video>
+                                </div>
+
                             </a>
                         </div>
                         <h3 class="section_title"><span>bhc</span> Youtube</h3>
-                        <p class="bhc_btn"><a href="#void">bhc Youtube</a></p>
+                        <p class="bhc_btn"><a href="https://www.youtube.com/@bhcchicken">bhc Youtube</a></p>
                         <p class="bhc_img"><img src="./images/bhc_01.png" alt="bhcimg"></p>
                     </div>
 
@@ -213,7 +259,6 @@
             </div>
         </section>
 
-
         <section class="sub_event_wrap">
             <div class="inner">
                 <h3 class="section_title"><span>bhc</span> Event</h3>
@@ -221,30 +266,71 @@
                     <ul class="event_list">
                         <li class="event_card">
                             <a href="#void">
-                                <p class="text_box"></p>
-                                <p class="img_box"><img src="" alt=""></p>
+                                <div class="text_box">
+                                    <p class="event_title">
+                                        <strong>NEW 사이드위크</strong>
+                                        <span>카이막 치즈볼</span>
+                                    </p>
+                                    <p class="event_date">2025-10-16 ~ 2025-10-22</p>
+                                </div>
+                                <p class="img_box img_box1"><img src="./images/sub_event_02.png" alt="사이드위크"></p>
+                                <div class="more_btn">자세히 보기</div>
                             </a>
                         </li>
                         <li class="event_card">
                             <a href="#void">
-                                <p class="text_box"></p>
-                                <p class="img_box"><img src="" alt=""></p>
+                                <div class="text_box">
+                                    <p class="event_title">
+                                        <span>한마리로 아쉽닭?</span>
+                                        <strong>더하닭 애드닭!</strong>
+                                    </p>
+                                    <p class="event_date">2025-05-14 ~ 2025-12-31</p>
+                                </div>
+                                <p class="img_box img_box2"> <img src="./images/sub_event_03.png" alt="애드닭"></p>
+                                <div class="more_btn">자세히 보기</div>
                             </a>
-                        </li>
                     </ul>
-                    <p class="bhc_btn"><a href="#void">bhc Event</a></p>
+                    <p class="bhc_btn"><a href="./sub_sns_event.html">bhc Event</a></p>
                 </div>
             </div>
         </section>
     </div>
 
     <div class="footer_rolling">
-        <p class="rolling_text1">
-            BHC CHICKEN&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;BHC CHICKEN&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;BHC CHICKEN&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;BHC CHICKEN&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        </p>
-        <p class="rolling_text2">
-            Better Happier Choice&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Better Happier Choice&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Better Happier Choice&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Better Happier Choice&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        </p>
+        <div class="rolling_text1">
+            <span>BHC CHICKEN&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+            <span>BHC CHICKEN&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+            <span>BHC CHICKEN&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+
+            <span>BHC CHICKEN&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+            <span>BHC CHICKEN&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+            <span>BHC CHICKEN&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+
+            <span>BHC CHICKEN&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+            <span>BHC CHICKEN&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+            <span>BHC CHICKEN&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+
+            <span>BHC CHICKEN&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+            <span>BHC CHICKEN&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+            <span>BHC CHICKEN&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+        </div>
+        <div class="rolling_text2">
+            <span> Better Happier Choice&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+            <span> Better Happier Choice&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+            <span> Better Happier Choice&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+
+            <span> Better Happier Choice&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+            <span> Better Happier Choice&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+            <span> Better Happier Choice&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+
+            <span> Better Happier Choice&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+            <span> Better Happier Choice&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+            <span> Better Happier Choice&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+
+            <span> Better Happier Choice&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+            <span> Better Happier Choice&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+            <span> Better Happier Choice&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+        </div>
     </div>
 </body>
 
